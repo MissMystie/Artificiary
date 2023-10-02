@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fda73e03be9eb4e8f88f060654b236, type: 3}
+  m_Name: Inkblade
+  m_EditorClassIdentifier: 
+  name: Inkblade
+  icon: {fileID: 0}
+  standard:
+    regular:
+      frontSkill: {fileID: 11400000, guid: f8fd3ebbfb23ad54faf170fe16bbbe05, type: 2}
+      upSkill: {fileID: 11400000, guid: 00c1d6880f67b8e43ac8b89297bf0f7c, type: 2}
+      downSkill: {fileID: 11400000, guid: bfaa3e989b0a5af47907a18b0558e475, type: 2}
+  charged:
+    regular:
+      frontSkill: {fileID: 11400000, guid: 29b0cadae027e8b46bcdb9aa5de2f286, type: 2}
+      upSkill: {fileID: 11400000, guid: 29b0cadae027e8b46bcdb9aa5de2f286, type: 2}
+      downSkill: {fileID: 11400000, guid: 29b0cadae027e8b46bcdb9aa5de2f286, type: 2}

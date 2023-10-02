@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Terrain
+  - Water
+  - UI
+  - Player
+  - Enemies
+  - Object
+  - Interactible
+  - Projectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Camera
+  m_SortingLayers:
+  - name: Far BG
+    uniqueID: 908308183
+    locked: 0
+  - name: Background
+    uniqueID: 1343799495
+    locked: 0
+  - name: Props BG
+    uniqueID: 1139846359
+    locked: 0
+  - name: Level
+    uniqueID: 3894751725
+    locked: 0
+  - name: 'Props '
+    uniqueID: 752473193
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: FX BG
+    uniqueID: 957506711
+    locked: 0
+  - name: Interactible
+    uniqueID: 4064770159
+    locked: 0
+  - name: Enemies
+    uniqueID: 905530583
+    locked: 0
+  - name: Player
+    uniqueID: 87436935
+    locked: 0
+  - name: FX
+    uniqueID: 381627133
+    locked: 0
+  - name: Foreground
+    uniqueID: 2128372585
+    locked: 0
+  - name: FG
+    uniqueID: 2786513055
+    locked: 0
+  - name: UI
+    uniqueID: 2270715133
+    locked: 0
