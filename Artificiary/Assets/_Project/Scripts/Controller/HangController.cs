@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Mystie
+namespace Mystie.Gameplay
 {
     public class HangController : MoveController
     {

@@ -4,7 +4,6 @@ using UnityEngine;
 using MoreMountains.Feedbacks;
 using Mystie.Core;
 using System;
-using Mystie.Core;
 
 namespace Mystie.Physics
 {
@@ -38,13 +37,22 @@ namespace Mystie.Physics
         [Header("Physics")]
 
         public bool applyGravity = true;
-        [SerializeField] private float mass = 1f;
+        [SerializeField] private Stat mass = new Stat(1f);
         [SerializeField] private Vector2 gravity = new Vector2(0f, -10f);
+
+        [Space]
+
+        public Stat acc = new Stat(0.2f);
+        public Stat accAir = new Stat(0.1f);
+        public Stat friction = new Stat(0.4f);
+        public Stat drag = new Stat(0.0051f);
 
         public Vector2 weight
         {
             get { return mass * gravity; }
         }
+
+        [Space]
 
         [SerializeField] private float maxVelocity = 40f;
         [SerializeField] private bool applyVelocityCap = true;

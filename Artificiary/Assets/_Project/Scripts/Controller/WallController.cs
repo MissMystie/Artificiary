@@ -4,9 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace Mystie
+namespace Mystie.Gameplay
 {
     public class WallController : MoveController
     {

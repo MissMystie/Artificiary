@@ -34,6 +34,38 @@ MonoBehaviour:
     m_Localized: UI
     m_Metadata:
       m_Items: []
+  - m_Id: 60475188256178176
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475467353554944
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475724040765440
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475705770377216
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479533756448768
+    m_Localized: Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479598742994944
+    m_Localized: Sound Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479404215369728
+    m_Localized: Lead Programmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60480361389096960
+    m_Localized: Role
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

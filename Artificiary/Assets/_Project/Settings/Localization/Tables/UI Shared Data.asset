@@ -15,20 +15,52 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: 7c0bf794a9be80f4fb0bd1ab6cadccaf
   m_Entries:
+  - m_Id: 60475467353554944
+    m_Key: Credits/Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475705770377216
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475724040765440
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60475188256178176
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
   - m_Id: 48678121422716928
-    m_Key: Master Volume
+    m_Key: Volume/Master
     m_Metadata:
       m_Items: []
   - m_Id: 48678226573918208
-    m_Key: Music Volume
+    m_Key: 'Volume/Music '
     m_Metadata:
       m_Items: []
   - m_Id: 48678231909072896
-    m_Key: Sound Effects Volume
+    m_Key: Volume/Sound Effects
     m_Metadata:
       m_Items: []
   - m_Id: 48678237135175680
-    m_Key: UI Volume
+    m_Key: 'Volume/UI '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479404215369728
+    m_Key: Credits/Role/Lead Programmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479533756448768
+    m_Key: Credits/Role/Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60479598742994944
+    m_Key: Credits/Role/Sound Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60480361389096960
+    m_Key: Credits/Role
     m_Metadata:
       m_Items: []
   m_Metadata:

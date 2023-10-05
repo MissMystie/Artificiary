@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mystie
+namespace Mystie.Gameplay
 {
     public class StunState : BaseState
     {

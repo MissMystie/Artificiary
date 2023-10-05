@@ -1,3 +1,4 @@
+using Mystie.ChemEngine;
 using Mystie.Gameplay;
 using Mystie.Physics;
 using System.Collections;
@@ -43,6 +44,20 @@ namespace Mystie.Core
             set { _health = value; }
         }
 
+        [SerializeField] private ChemObject _chem;
+        public ChemObject Chem
+        {
+            get { return _chem ? _chem : (_chem = GetComponent<ChemObject>()); }
+            set { _chem = value; }
+        }
+
+        [SerializeField] private StatusManager _status;
+        public StatusManager Status
+        {
+            get { return _status ? _status : (_status = GetComponent<StatusManager>()); }
+            set { _status = value; }
+        }
+
         [SerializeField] private HurtBox _hurtBox;
         public HurtBox HurtBox
         {
@@ -55,6 +70,13 @@ namespace Mystie.Core
         {
             get { return _hitBox ? _hitBox : (_hitBox = GetComponent<HitBox>()); }
             set { _hitBox = value; }
+        }
+
+        [SerializeField] private SpriteManager _sprite;
+        public SpriteManager Sprite
+        {
+            get { return _sprite ? _sprite : (_sprite = GetComponentInChildren<SpriteManager>()); }
+            set { _sprite = value; }
         }
 
         [SerializeField] private Animator _anim;
@@ -71,11 +93,11 @@ namespace Mystie.Core
             set { _stateManager = value; }
         }
 
-        [SerializeField] private SkillManager _SkillManager;
+        [SerializeField] private SkillManager _skillManager;
         public SkillManager SkillManager
         {
-            get { return _SkillManager ? _SkillManager : (_SkillManager = GetComponent<SkillManager>()); }
-            set { _SkillManager = value; }
+            get { return _skillManager ? _skillManager : (_skillManager = GetComponent<SkillManager>()); }
+            set { _skillManager = value; }
         }
     }
 }

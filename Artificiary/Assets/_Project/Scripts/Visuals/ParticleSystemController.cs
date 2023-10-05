@@ -82,6 +82,48 @@ namespace Mystie
             }
         }
 
+        #region Particle Systems
+
+        public void Play()
+        {
+            if (effects.IsNullOrEmpty()) return;
+
+            gameObject.SetActive(true);
+
+            foreach (ParticleSystem ps in effects)
+            {
+                if (ps != null) ps.Play();
+                else Debug.LogError("PFXSystem: no particle system assigned. (" + gameObject.name + ")");
+            }
+        }
+
+        public void Stop()
+        {
+            foreach (ParticleSystem ps in effects)
+                ps.Stop();
+
+            gameObject.SetActive(false);
+        }
+
+        public void DetachParticles(bool setAutodestroy = true, bool destroy = false)
+        {
+            if (effects.IsNullOrEmpty()) return;
+
+            foreach (ParticleSystem ps in effects)
+            {
+                ps.transform.parent = null; // splits particles off so it doesn't get deleted with the parent
+                var main = ps.main;
+                main.stopAction = ParticleSystemStopAction.Destroy;
+                ps.Stop(); // this stops the particle from creating more bits
+                SetShape();
+            }
+
+            //gameObject.SetActive(false);
+            //Destroy(this);
+        }
+
+        #endregion
+
         #region Set Shape 
 
         public bool ValidateShape()

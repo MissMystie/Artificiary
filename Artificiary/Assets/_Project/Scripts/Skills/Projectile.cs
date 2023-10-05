@@ -1,6 +1,5 @@
 using FMODUnity;
 using Mystie.Core;
-using Mystie.Core;
 using Mystie.Physics;
 using System;
 using System.Collections;

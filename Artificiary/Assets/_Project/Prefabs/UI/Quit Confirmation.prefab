@@ -440,7 +440,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5041487993213249189}
   - component: {fileID: 8974232780159005328}
-  - component: {fileID: 8339371465157954741}
   - component: {fileID: 5615112384125060713}
   m_Layer: 5
   m_Name: Quit Confirmation
@@ -504,31 +503,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
---- !u!114 &8339371465157954741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993754208622667803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427270ca9a82f5f43ba753d5b4ee637e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buses:
-  - name: Master
-    busType: 0
-    slider: {fileID: 0}
-  - name: Music
-    busType: 0
-    slider: {fileID: 0}
-  - name: SFX
-    busType: 0
-    slider: {fileID: 0}
-  - name: UI
-    busType: 0
-    slider: {fileID: 0}
 --- !u!225 &5615112384125060713
 CanvasGroup:
   m_ObjectHideFlags: 0

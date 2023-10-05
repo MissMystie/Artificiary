@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Mystie
+namespace Mystie.Gameplay
 {
     public class StateManager : MonoBehaviour, IRespawnable
     {

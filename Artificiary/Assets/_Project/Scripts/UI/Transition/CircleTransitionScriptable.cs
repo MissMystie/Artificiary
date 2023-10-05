@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mystie.UI.Transition
 {
-    [CreateAssetMenu(fileName = "Circle Transition", menuName = "Custom Data/Scene Transitions/Circle")]
+    [CreateAssetMenu(fileName = "Circle Transition", menuName = "CustomData/Scene Transitions/Circle")]
     public class CircleTransitionScriptable : AbstractSceneTransitionScriptable
     {
         public Sprite circleSprite;

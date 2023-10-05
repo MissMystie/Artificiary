@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7930056551702204635}
   - component: {fileID: 1590090585443956532}
-  - component: {fileID: 9033612260366843845}
   - component: {fileID: 495088756637471393}
+  - component: {fileID: 6727827525123496956}
   m_Layer: 5
   m_Name: Main Menu Confirmation
   m_TagString: Untagged
@@ -74,31 +74,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
---- !u!114 &9033612260366843845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2230853975611858606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427270ca9a82f5f43ba753d5b4ee637e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buses:
-  - name: Master
-    busType: 0
-    slider: {fileID: 0}
-  - name: Music
-    busType: 0
-    slider: {fileID: 0}
-  - name: SFX
-    busType: 0
-    slider: {fileID: 0}
-  - name: UI
-    busType: 0
-    slider: {fileID: 0}
 --- !u!225 &495088756637471393
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -111,6 +86,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6727827525123496956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230853975611858606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc2ead508c680747872759156b7d179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1323629344874974116}
 --- !u!1 &2340098987867585351
 GameObject:
   m_ObjectHideFlags: 0

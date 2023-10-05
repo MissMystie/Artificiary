@@ -23,17 +23,17 @@ MonoBehaviour:
     path: 
     defaultVolume: 1
   - name: Music
-    type: 0
+    type: 1
     key: volume_music
-    path: 
+    path: BGM
     defaultVolume: 1
   - name: Sound Effects
     type: 2
     key: volume_sfx
-    path: 
+    path: SFX
     defaultVolume: 1
   - name: UI
     type: 3
     key: volume_ui
-    path: 
+    path: UI
     defaultVolume: 1

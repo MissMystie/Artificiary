@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917344699399861461}
+  - component: {fileID: 1194698839081208875}
   - component: {fileID: 119999515574027845}
   - component: {fileID: 2840718245077314645}
   m_Layer: 0
@@ -33,6 +34,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194698839081208875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616813198185352898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c29bb18fa83784cb4dd516417f7f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 119999515574027845}
+  shape: 0
+  sprite: {fileID: 0}
+  col: {fileID: 0}
+  setShape: 1
+  pointSize: 0.0625
+  scaleToArea: 0
+  emissionRate: 10
+  scaleMaxParticles: 0
+  maxParticles: 1
 --- !u!198 &119999515574027845
 ParticleSystem:
   m_ObjectHideFlags: 0

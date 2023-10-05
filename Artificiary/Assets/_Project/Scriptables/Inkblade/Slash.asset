@@ -40,6 +40,8 @@ MonoBehaviour:
     angle: 15
   recoil: {x: -5, y: 0}
   recoilIgnoreTags: []
+  recoilOverrideX: 1
+  recoilOverrideY: 1
   hitSfx:
     Guid:
       Data1: 0

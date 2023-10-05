@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6d9e38a613f854eaec1cad0156d0c3, type: 3}
+  m_Name: Shock Status
+  m_EditorClassIdentifier: 
+  data:
+    dmgPerTick:
+      value: 0
+      type: 0
+    tickTime: 2
+    expires: 1
+    duration: 12
+    spreadRadius: 2
+    spreadChance: 1
+    shockPFX: {fileID: 1194698839081208875, guid: a06d732c425d842498de1a58b1a381ee, type: 3}
+    shockProcPFX: {fileID: 0}
+    shockSFX:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    shockProcSFX:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    shockStopSFX:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 

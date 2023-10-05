@@ -1,10 +1,9 @@
 using FMODUnity;
 using Mystie.Core;
-using Mystie.Core;
 using System;
 using UnityEngine;
 
-namespace Mystie
+namespace Mystie.Gameplay
 {
     public class GroundController : MoveController
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Mystie.UI.Transition
 {
-    [CreateAssetMenu(fileName = "Fade Transition", menuName = "Custom Data/Scene Transitions/Fade")]
+    [CreateAssetMenu(fileName = "Fade Transition", menuName = "CustomData/Scene Transitions/Fade")]
     public class FadeTransitionScriptable : AbstractSceneTransitionScriptable
     {
         public Color color = Color.black;

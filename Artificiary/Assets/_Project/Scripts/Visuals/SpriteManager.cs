@@ -1,3 +1,5 @@
+using Mystie.Core;
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +9,22 @@ namespace Mystie
 {
     public class SpriteManager : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer masterSprite;
-        [SerializeField] private List<SpriteRenderer> sprites = new List<SpriteRenderer>();
+        public SpriteRenderer masterSprite;
+        public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
+        private Material baseMaterial;
+
+        private void Awake()
+        {
+            baseMaterial = masterSprite.sharedMaterial;
+            UpdateSprites();
+        }
 
         private void Update()
         {
             UpdateSprites();
         }
 
+        [Button()]
         public void UpdateSprites()
         {
             if (masterSprite == null) return;
@@ -28,6 +38,23 @@ namespace Mystie
                     sprite.sortingLayerID = masterSprite.sortingLayerID;
                 }
             }
+        }
+
+        public void SetMaterial(Material mat)
+        {
+            masterSprite.sharedMaterial = mat;
+            UpdateSprites();
+        }
+
+        public void ResetMaterial()
+        {
+            masterSprite.sharedMaterial = baseMaterial;
+            UpdateSprites();
+        }
+
+        public static implicit operator SpriteRenderer(SpriteManager spriteManager)
+        {
+            return spriteManager.masterSprite;
         }
 
         private void Reset()
