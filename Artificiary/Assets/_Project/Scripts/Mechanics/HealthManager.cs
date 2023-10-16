@@ -39,25 +39,27 @@ namespace Mystie.Core
 
         public bool disableOnDeath = true;
         public float deathDelay = 0f;
-        [SerializeField] private string deathAnimParam = "death";
-        [SerializeField] private string stunAnimParam = "stunned";
-        public GameObject deathFXPrefab;
-        public UnityEvent onDeathEvent = new UnityEvent();
-
-        [Header("Feedback")]
-
-        [SerializeField] private MMFeedbacks hurtFX;
-        [SerializeField] private MMFeedbacks deathFX;
-        [SerializeField] private MMBlink iFramesFX;
-        [SerializeField] private MMFeedbacks stunFX;
 
         [Space]
 
-        [SerializeField] private MMFeedbacks shieldFX;
-        [SerializeField] private MMFeedbacks shieldHurtFX;
-        [SerializeField] private MMBlink iFramesShieldFX;
-        [SerializeField] private MMFeedbacks shieldGainFX;
-        [SerializeField] private MMFeedbacks shieldExpireFX;
+        [Foldout("Feedback")][SerializeField] private string deathAnimParam = "death";
+        [Foldout("Feedback")][SerializeField] private string stunAnimParam = "stunned";
+        [Foldout("Feedback")] public GameObject deathFXPrefab;
+
+        [Space]
+
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks hurtFX;
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks deathFX;
+        [Foldout("Feedback")][SerializeField] private MMBlink iFramesFX;
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks stunFX;
+
+        [Space]
+
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks shieldFX;
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks shieldHurtFX;
+        [Foldout("Feedback")][SerializeField] private MMBlink iFramesShieldFX;
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks shieldGainFX;
+        [Foldout("Feedback")][SerializeField] private MMFeedbacks shieldExpireFX;
 
         private void Start()
         {
@@ -158,7 +160,6 @@ namespace Mystie.Core
             if (deathFXPrefab != null)
                 Instantiate(deathFXPrefab, transform.position, Quaternion.identity);
 
-            onDeathEvent?.Invoke();
             onDeath?.Invoke(this);
 
             yield return new WaitForSeconds(deathDelay);

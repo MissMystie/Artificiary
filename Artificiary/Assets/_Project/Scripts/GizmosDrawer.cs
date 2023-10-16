@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Mystie
+namespace Mystie.Utils
 {
     public class GizmosDrawer : MonoBehaviour
     {

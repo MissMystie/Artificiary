@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mystie.Core
+namespace Mystie.Utils
 {
     public static class GizmosExtensions
     {

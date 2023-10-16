@@ -19,14 +19,14 @@ MonoBehaviour:
   hitFrameEnd: 1
   sfx:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  projectile: {fileID: 0}
+      Data1: -61346143
+      Data2: 1141267688
+      Data3: -2064699734
+      Data4: 865760579
+    Path: event:/sfx/player/player_fireball
+  projectile: {fileID: 4608664112111611831, guid: 72ecab4ceff402842818eff61b814573, type: 3}
   strength: 20
   aimType: 0
   fixedAngle: 0
-  recoilStrength: 5
-  recoilOverridesVelocity: 1
+  recoilStrength: 0
+  recoilOverridesVelocity: 0

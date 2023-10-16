@@ -1,4 +1,5 @@
 using Mystie.Core;
+using Mystie.Utils;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Mystie.Physics
         public enum Type { FIXED, RADIAL, VELOCITY, NORMAL, REFLECT }
         public Type type = Type.FIXED;
 
-        [SerializeField] float strength = 15f;
+        [SerializeField] float strength = 10f;
 
         [AllowNesting]
         [EnableIf("type", Type.RADIAL)]

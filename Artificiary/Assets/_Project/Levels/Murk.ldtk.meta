@@ -20,10 +20,16 @@ ScriptedImporter:
   _createLevelBoundsTrigger: 0
   _intGridValues:
   - _key: IntGrid_1
+    _asset: {fileID: 11400000, guid: 0ead509c528d81f4fa41b8b4091f1c7d, type: 2}
+  - _key: IntGrid_2
     _asset: {instanceID: 0}
   - _key: BG_1
     _asset: {instanceID: 0}
-  _entities: []
+  - _key: BG_2
+    _asset: {instanceID: 0}
+  _entities:
+  - _key: Streetlight
+    _asset: {fileID: 5611808076400679663, guid: a7e72c0d51a9bc547aa8b4d4aeb8cb38, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

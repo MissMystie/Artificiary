@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9149002870934981267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,14 +49,14 @@ MonoBehaviour:
   effects:
   - {fileID: 502988140006405138}
   shape: 0
-  sprite: {fileID: 0}
-  col: {fileID: 0}
+  _sprite: {fileID: 0}
+  _col: {fileID: 0}
   setShape: 1
-  pointSize: 0.0625
-  scaleToArea: 0
-  emissionRate: 10
-  scaleMaxParticles: 0
-  maxParticles: 1
+  _pointSize: 0.0625
+  _scaleToArea: 0
+  _emissionRate: 10
+  _scaleMaxParticles: 0
+  _maxParticles: 1
 --- !u!198 &502988140006405138
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4820,7 +4820,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0

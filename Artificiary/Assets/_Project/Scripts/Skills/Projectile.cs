@@ -1,6 +1,7 @@
 using FMODUnity;
 using Mystie.Core;
 using Mystie.Physics;
+using Mystie.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,6 +25,16 @@ namespace Mystie.Gameplay
         public float recoilStrength = 5f;
         public bool recoilOverridesVelocity = false;
 
+        public override SkillState Initiate(Entity entity)
+        {
+            if (entity == null) return null;
+
+            Debug.Log("Used skill " + name);
+
+            OnHitFrameStart(entity);
+            return null;
+        }
+
         public override void OnStart(Entity entity) { }
 
         public override void OnEnd(Entity entity) { }
@@ -43,12 +54,12 @@ namespace Mystie.Gameplay
                 default: 
                     velocity = Vector2.right.Rotate(fixedAngle);
                     if (entity.Phys != null) 
-                        velocity.x *= entity.Phys.faceDir;
+                        velocity.x *= entity.faceDir;
                     break;
             }
 
             velocity = velocity.normalized * strength;
-            Emit(projectile, entity.transform.position, velocity, entity);
+            Emit(projectile, entity.Emitter.emitPoint.position, velocity, entity);
         }
 
         public override void OnHitFrameEnd(Entity entity) { }
@@ -75,6 +86,8 @@ namespace Mystie.Gameplay
             {
                 PhysicsObject physObj = Instantiate(projectile.gameObject, pos, Quaternion.identity).GetComponent<PhysicsObject>();
                 physObj.transform.eulerAngles = new Vector3(0f, 0f, Vector2.SignedAngle(Vector2.right, shootV.normalized));
+                foreach(Collider2D col in physObj.gameObject.GetComponentsInChildren<Collider2D>())
+                    Physics2D.IgnoreCollision(emitter.Collider, col);
                 physObj.SetVelocity(shootV);
                 return physObj;
             }

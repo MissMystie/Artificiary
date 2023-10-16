@@ -1,5 +1,6 @@
 using Mystie.Core;
 using Mystie.Physics;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,9 +21,14 @@ namespace Mystie
 
         [SerializeField] protected bool dealsDmg = true;
         [SerializeField] protected Damage dmg = new Damage(1);
-
+        [SerializeField] protected bool disableOnContact = true;
         [SerializeField] protected bool dealsKB = true;
-        [SerializeField] protected Force knockback;
+        [ShowIf("dealsKB")][SerializeField] protected Force knockback;
+        
+        [Space]
+
+        [SerializeField] protected bool disableOnDmgDealt = true;
+        [SerializeField] private GameObject damageFX;
 
         [Space]
 
@@ -42,6 +48,13 @@ namespace Mystie
             if (dealsKB) target.TakeHit(dmg, knockback.GetVelocity(col, target.Col));
 
             OnDmgDealtEvent(target);
+
+            if (disableOnDmgDealt)
+            {
+                if (damageFX != null) Instantiate(damageFX, transform.position, Quaternion.identity);
+                gameObject.SetActive(false);
+            }
+
             return true;
         }
 

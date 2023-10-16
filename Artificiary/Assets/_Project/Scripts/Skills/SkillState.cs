@@ -38,7 +38,7 @@ namespace Mystie.Gameplay
                 return;
             }
 
-            inputX = ctx.phys.faceDir;
+            inputX = ctx.entity.faceDir;
 
             skill.OnStart(ctx.entity);
 

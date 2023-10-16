@@ -144,14 +144,21 @@ namespace Mystie.Gameplay
         {
             if (skill == null) return;
 
-            isUsingSkill = true;
             skillState = skill.Initiate(entity);
-            skillState.onSkillEnd += OnSkillEnd;
+            if (skillState != null)
+            {
+                isUsingSkill = true;
+                skillState.onSkillEnd += OnSkillEnd;
+            }  
         }
 
         public void OnSkillEnd()
         {
-            skillState.onSkillEnd -= OnSkillEnd;
+            if (skillState != null)
+            {
+                skillState.onSkillEnd -= OnSkillEnd;
+            }
+                
             skillState = null;
             isUsingSkill = false;
         }

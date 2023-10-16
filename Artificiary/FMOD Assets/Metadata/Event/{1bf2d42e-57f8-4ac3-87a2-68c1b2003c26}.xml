@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{1bf2d42e-57f8-4ac3-87a2-68c1b2003c26}">
 		<property name="name">
-			<value>player_walljump_sfx</value>
+			<value>player_walljump</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

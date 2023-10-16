@@ -23,13 +23,13 @@ public class GlobalTagHolder : ScriptableObject {
 	}
 
 	#region Load,Save,Check if Exists
-	protected const string DataPath = "Assets/Plugins/MultiTags/";
+	protected const string DataPath = "Assets/Resources/";
 
 
 
 	public static string Name { 
 		get{
-			return "GlobalMultiTagHolder.asset";
+			return "GlobalTagsList.asset";
 
 		}
 	}

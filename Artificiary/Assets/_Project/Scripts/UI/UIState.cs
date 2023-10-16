@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using Mystie.UI;
+using Mystie.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -103,7 +104,8 @@ namespace Mystie.UI
 
         public virtual void Escape()
         {
-            
+            if (pauseState != null) Pause();
+            else Cancel();
         }
 
         public virtual void Submit() { }

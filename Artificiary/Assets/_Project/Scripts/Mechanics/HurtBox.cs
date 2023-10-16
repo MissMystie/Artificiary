@@ -1,4 +1,5 @@
 using MoreMountains.Feedbacks;
+using Mystie.Physics;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,10 +49,15 @@ namespace Mystie.Core
         {
             if (!active) return;
 
+            Debug.Log("Damage taken!");
+
             dmg.value = vulnerabilities.ApplyDamageRate(dmg);
 
             foreach (IDamageable damageable in damageables)
+            {
+                Debug.Log("Take damage");
                 damageable.TakeDamage(dmg);
+            }
         }
 
         protected void CheckGismosColor()

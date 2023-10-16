@@ -121,7 +121,7 @@ namespace Mystie.Gameplay
             dmg.value = (int)(attack.dmg.value * SkillManager.AtkMult);
 
             HurtBox hurtbox = target.GetComponent<HurtBox>();
-            hurtbox.TakeHit(dmg, attack.knocback.GetVelocity(ctx.entity.Collider, hurtbox.Col));
+            hurtbox?.TakeHit(dmg, attack.knocback.GetVelocity(ctx.entity.Collider, hurtbox.Col));
 
             return hurtbox != null;
         }

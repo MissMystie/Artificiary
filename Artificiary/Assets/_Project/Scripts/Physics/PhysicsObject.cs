@@ -4,6 +4,8 @@ using UnityEngine;
 using MoreMountains.Feedbacks;
 using Mystie.Core;
 using System;
+using Mystie.Utils;
+using NaughtyAttributes;
 
 namespace Mystie.Physics
 {
@@ -30,22 +32,17 @@ namespace Mystie.Physics
 
         [Header("State")]
 
-        public int faceDir = 1;
-        public Collider2D groundCol;
-        public Collider2D wallCol;
+        protected Collider2D _groundCol;
+        protected Collider2D _wallCol;
+
+        public Collider2D GroundCol { get => _groundCol; }
+        public Collider2D WallCol { get => _wallCol; }
 
         [Header("Physics")]
 
         public bool applyGravity = true;
         [SerializeField] private Stat mass = new Stat(1f);
         [SerializeField] private Vector2 gravity = new Vector2(0f, -10f);
-
-        [Space]
-
-        public Stat acc = new Stat(0.2f);
-        public Stat accAir = new Stat(0.1f);
-        public Stat friction = new Stat(0.4f);
-        public Stat drag = new Stat(0.0051f);
 
         public Vector2 weight
         {
@@ -72,14 +69,12 @@ namespace Mystie.Physics
         public Transform wallCheck;
         public float wallCheckDist = 0.1f;
 
-        [Header("Feedbacks")]
-
-        [SerializeField] private MMFeedbacks impactFX;
-        [SerializeField] private string groundedAnimParam = "Grounded";
-        [SerializeField] private string speedXAnimParam = "SpeedX";
-        [SerializeField] private string speedYAnimParam = "SpeedY";
-        [SerializeField] private MMFeedbacks landFX;
-
+        [Foldout("Feedbacks")][SerializeField] private MMFeedbacks impactFX;
+        [Foldout("Feedbacks")][SerializeField] private MMFeedbacks landFX;
+        [Foldout("Feedbacks")][SerializeField] private string groundedAnimParam = "Grounded";
+        [Foldout("Feedbacks")][SerializeField] private string speedXAnimParam = "SpeedX";
+        [Foldout("Feedbacks")][SerializeField] private string speedYAnimParam = "SpeedY";
+        
         [Header("Debug")]
 
         public bool showDebug = true;
@@ -128,17 +123,17 @@ namespace Mystie.Physics
                 if (hitLeft)
                 {
                     state.wallDir = -1;
-                    wallCol = hitLeft.collider;
+                    _wallCol = hitLeft.collider;
                 }
                 else if (hitRight)
                 {
                     state.wallDir = 1;
-                    wallCol = hitRight.collider;
+                    _wallCol = hitRight.collider;
                 }
             }
             else
             {
-                groundCol = null;
+                _groundCol = null;
             }
 
             if (state.atWall && !wasAtWall)
@@ -181,13 +176,13 @@ namespace Mystie.Physics
 
             if (state.grounded)
             {
-                groundCol = hitDown.collider;
+                _groundCol = hitDown.collider;
                 groundAngle = hitDown.normal.Angle();
                 return true;
             }
             else
             {
-                groundCol = null;
+                _groundCol = null;
                 groundAngle = 0f;
                 return false;
             }
@@ -218,6 +213,11 @@ namespace Mystie.Physics
             }
         }
 
+        public void TakeHit(Vector2 kb)
+        {
+            SetVelocity(kb);
+        }
+
         #endregion
 
         #region Effectors
@@ -235,13 +235,6 @@ namespace Mystie.Physics
 
         private void Animate()
         {
-            if (sprite != null)
-            {
-                Vector2 scale = sprite.transform.localScale;
-                scale.x = faceDir * Mathf.Abs(scale.x);
-                sprite.transform.localScale = scale;
-            }
-
             if (anim != null)
             {
                 anim.logWarnings = false;
@@ -249,6 +242,14 @@ namespace Mystie.Physics
                 anim.SetFloat(speedXAnimParam, Math.Abs(rb.velocity.x));
                 anim.SetFloat(speedYAnimParam, rb.velocity.y);
                 anim.logWarnings = true;
+            }
+        }
+
+        protected void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.IsInLayerMask(groundMask))
+            {
+                impactFX?.PlayFeedbacks();
             }
         }
 
@@ -265,11 +266,6 @@ namespace Mystie.Physics
         {
             state.inWater = false;
             waterCol = null;
-        }
-
-        public void TakeHit(Vector2 kb)
-        {
-            SetVelocity(kb);
         }
 
         [System.Serializable]

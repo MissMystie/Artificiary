@@ -39,7 +39,7 @@ namespace Mystie.Gameplay
         public override void OnStart(Entity entity)
         {
             ColInfo colInfo = new ColInfo(hitbox);
-            colInfo.offset.x *= Math.Sign(entity.Phys.faceDir);
+            colInfo.offset.x *= Math.Sign(entity.faceDir);
             entity.HitBox?.SetColInfo(colInfo);
         }
 

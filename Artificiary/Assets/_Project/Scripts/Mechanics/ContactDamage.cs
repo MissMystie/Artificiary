@@ -1,4 +1,5 @@
 using Mystie.Core;
+using Mystie.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,6 @@ namespace Mystie
         [Header("Properties")]
 
         [SerializeField] protected LayerMask targetMask = -1;
-
         [SerializeField] protected bool trigger = true;
 
         protected virtual void OnCollision(Collider2D targetCollider, float magnitude)

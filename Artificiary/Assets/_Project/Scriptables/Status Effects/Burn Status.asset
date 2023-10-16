@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     dmgPerTick:
-      value: 0
-      type: 0
+      value: 1
+      type: 10
     tickTime: 2
     duration: 12
     steamCloud: {fileID: 0}
     spreadRadius: 2
     spreadChance: 1
-    burnPFX: {fileID: 3171325173175010647, guid: a7f32798754ecd14983c096ab1980a1a, type: 3}
+    burnPFX: {fileID: 366695169004246644, guid: a7f32798754ecd14983c096ab1980a1a, type: 3}
     burnProcPFX: {fileID: 0}
     igniteSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1093577610
+        Data2: 1330857082
+        Data3: -1891573841
+        Data4: -1199108555
+      Path: event:/SFX/Status Effects/burn_start
     burnSFX:
       Guid:
         Data1: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
       Path: 
     extinguishSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -446574727
+        Data2: 1100553039
+        Data3: -782180162
+        Data4: -1952235114
+      Path: event:/SFX/Status Effects/burn_end

@@ -9,6 +9,8 @@ namespace Mystie.Core
 {
     public class Entity : MonoBehaviour
     {
+        #region components
+
         public static Entity Get(GameObject target)
         {
             Entity entity = target.GetComponent<Entity>();
@@ -16,88 +18,130 @@ namespace Mystie.Core
             return entity;
         }
 
-        [SerializeField] private PhysicsObject _phys;
+        private PhysicsObject _phys;
         public PhysicsObject Phys
         {
             get { return _phys ? _phys : (_phys = GetComponent<PhysicsObject>()); }
-            set { _phys = value; }
+            set => _phys = value; 
+        }
+
+        private Actor _actor;
+        public Actor Actor
+        {
+            get { return _actor ? _actor : (_actor = GetComponent<Actor>()); }
+            set => _actor = value; 
         }
 
         [SerializeField] private Collider2D _collider;
         public Collider2D Collider
         {
             get { return _collider ? _collider : (_collider = GetComponent<Collider2D>()); }
-            set { _collider = value; }
+            set => _collider = value; 
         }
 
-        [SerializeField] private InputController _controller;
-        public InputController Controller
-        {
-            get { return _controller ? _controller : (_controller = GetComponent<InputController>()); }
-            set { _controller = value; }
-        }
-
-        [SerializeField] private HealthManager _health;
+        private HealthManager _health;
         public HealthManager Health
         {
             get { return _health ? _health : (_health = GetComponent<HealthManager>()); }
-            set { _health = value; }
+            set => _health = value; 
         }
 
-        [SerializeField] private ChemObject _chem;
-        public ChemObject Chem
-        {
-            get { return _chem ? _chem : (_chem = GetComponent<ChemObject>()); }
-            set { _chem = value; }
-        }
-
-        [SerializeField] private StatusManager _status;
-        public StatusManager Status
-        {
-            get { return _status ? _status : (_status = GetComponent<StatusManager>()); }
-            set { _status = value; }
-        }
-
-        [SerializeField] private HurtBox _hurtBox;
+        private HurtBox _hurtBox;
         public HurtBox HurtBox
         {
             get { return _hurtBox ? _hurtBox : (_hurtBox = GetComponent<HurtBox>()); }
-            set { _hurtBox = value; }
+            set => _hurtBox = value;
         }
 
-        [SerializeField] private HitBox _hitBox;
+        private ChemObject _chem;
+        public ChemObject Chem
+        {
+            get { return _chem ? _chem : (_chem = GetComponent<ChemObject>()); }
+            set => _chem = value; 
+        }
+
+        private StatusManager _status;
+        public StatusManager Status
+        {
+            get { return _status ? _status : (_status = GetComponent<StatusManager>()); }
+            set => _status = value; 
+        }
+
+        private HitBox _hitBox;
         public HitBox HitBox
         {
             get { return _hitBox ? _hitBox : (_hitBox = GetComponent<HitBox>()); }
-            set { _hitBox = value; }
+            set => _hitBox = value; 
         }
 
-        [SerializeField] private SpriteManager _sprite;
-        public SpriteManager Sprite
+        private SpriteManager _spriteManager;
+        public SpriteManager SpriteManager
         {
-            get { return _sprite ? _sprite : (_sprite = GetComponentInChildren<SpriteManager>()); }
-            set { _sprite = value; }
+            get { return _spriteManager ? _spriteManager : (_spriteManager = GetComponentInChildren<SpriteManager>()); }
+            set => _spriteManager = value;
         }
 
-        [SerializeField] private Animator _anim;
+        private SpriteRenderer _sprite;
+        public SpriteRenderer Sprite
+        {
+            get => _sprite ? _sprite : 
+                    _spriteManager? (_sprite = _spriteManager) : 
+                    _sprite = GetComponentInChildren<SpriteRenderer>();
+            set => _sprite = value;
+        }
+
+        private Animator _anim;
         public Animator Anim
         {
             get { return _anim ? _anim : (_anim = GetComponentInChildren<Animator>()); }
-            set { _anim = value; }
+            set => _anim = value; 
         }
 
-        [SerializeField] private StateManager _stateManager;
+        private EmitterBehavior _emitter;
+        public EmitterBehavior Emitter
+        {
+            get { return _emitter ? _emitter : (_emitter = GetComponent<EmitterBehavior>()); }
+            set => _emitter = value;
+        }
+
+        private InputController _controller;
+        public InputController Controller
+        {
+            get { return _controller ? _controller : (_controller = GetComponent<InputController>()); }
+            set => _controller = value;
+        }
+
+        private StateManager _stateManager;
         public StateManager StateManager
         {
             get { return _stateManager ? _stateManager : (_stateManager = GetComponent<StateManager>()); }
-            set { _stateManager = value; }
+            set => _stateManager = value;
         }
 
-        [SerializeField] private SkillManager _skillManager;
+        private SkillManager _skillManager;
         public SkillManager SkillManager
         {
             get { return _skillManager ? _skillManager : (_skillManager = GetComponent<SkillManager>()); }
-            set { _skillManager = value; }
+            set => _skillManager = value;
+        }
+
+        #endregion
+
+        public int faceDir = 1;
+
+        private void Update()
+        {
+            Animate();
+        }
+
+        private void Animate()
+        {
+            if (Sprite != null)
+            {
+                Vector2 scale = Sprite.transform.localScale;
+                scale.x = faceDir * Mathf.Abs(scale.x);
+                Sprite.transform.localScale = scale;
+            }
         }
     }
 }
