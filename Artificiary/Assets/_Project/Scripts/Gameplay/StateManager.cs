@@ -26,6 +26,10 @@ namespace Mystie.Gameplay
         [SerializeField] private MoveController startState;
         public BaseState _currentState { get; protected set; }
 
+        [Header("Physcs")]
+
+        public Stat accMod = new Stat(1); 
+
         [Header("Debug")]
 
         public bool showDebug = true;

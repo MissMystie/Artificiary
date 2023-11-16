@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 561
+--- !u!114 &-5894648428537198220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_fireball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_fireball_impact
+  Guid:
+    Data1: -230338447
+    Data2: 1185234128
+    Data3: -2092702038
+    Data4: 1289817202
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5762825623002088148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,11 +231,38 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638326912103955678
+  lastModified: 638354101721023739
   FileSizes:
   - Name: Desktop
-    Value: 5062944
+    Value: 5069632
   Exists: 1
+--- !u!114 &-3333996231085647112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_frostball
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_frostball
+  Guid:
+    Data1: 755849821
+    Data2: 1175045320
+    Data3: 1754499214
+    Data4: 1313099303
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-841810877428332819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,12 +361,19 @@ MonoBehaviour:
   - {fileID: 8360069818309354304}
   - {fileID: 3843070655124665700}
   - {fileID: -841810877428332819}
+  - {fileID: 2558289486273804755}
+  - {fileID: 1667634420139021122}
+  - {fileID: -5894648428537198220}
+  - {fileID: 4994450001864727976}
+  - {fileID: 8848165025013978024}
+  - {fileID: -3333996231085647112}
+  - {fileID: 2138595128053532778}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3831187590252052720}
   StringsBanks:
   - {fileID: 2791742554342978610}
-  cacheTime: 638326912103980700
+  cacheTime: 638354101721058770
   cacheVersion: 131605
 --- !u!114 &284964753893905164
 MonoBehaviour:
@@ -449,6 +510,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1667634420139021122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_waterball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_waterball_impact
+  Guid:
+    Data1: -763793619
+    Data2: 1246986382
+    Data3: 2066555012
+    Data4: -1692786189
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2138595128053532778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/blast
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/blast
+  Guid:
+    Data1: -1154253367
+    Data2: 1076445738
+    Data3: -1383050830
+    Data4: -23673090
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1149
+--- !u!114 &2558289486273804755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_waterball
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_waterball
+  Guid:
+    Data1: 1655769122
+    Data2: 1230617819
+    Data3: -1603541594
+    Data4: 1362353725
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2791742554342978610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,10 +606,10 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638326912103980700
+  lastModified: 638354101721058770
   FileSizes:
   - Name: Desktop
-    Value: 2304
+    Value: 2626
   Exists: 1
 --- !u!114 &2807101910158141322
 MonoBehaviour:
@@ -658,6 +800,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 174
+--- !u!114 &4994450001864727976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_spark_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_spark_impact
+  Guid:
+    Data1: -1807931485
+    Data2: 1212561203
+    Data3: 1360064396
+    Data4: 1294115840
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5765697812437408968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,6 +1007,33 @@ MonoBehaviour:
     Data2: 1233645642
     Data3: -1336725614
     Data4: 1945669812
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8848165025013978024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/player_frostball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/player_frostball_impact
+  Guid:
+    Data1: -350300415
+    Data2: 1177881379
+    Data3: -621239146
+    Data4: 1739913135
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0

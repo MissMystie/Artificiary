@@ -16,6 +16,7 @@ namespace Mystie.ChemEngine
         public float duration = 12f;
 
         public GameObject steamCloud;
+        public GameObject electroBlast;
 
         [Header("Fire spread")]
 
@@ -99,17 +100,28 @@ namespace Mystie.ChemEngine
             if (target.HasStatus(StatusType.Shock))
             {
                 Debug.Log("Overcharged!");
-                //foreach (IHittable h in obj.hittables) { //h.TakeHit(dmg, obj.transform, kb); }
+                if (data.electroBlast != null)
+                {
+                    GameObject blast = GameObject.Instantiate(data.electroBlast, target.transform.position, Quaternion.identity);
+                }
+                    
+                target.RemoveStatus(StatusType.Shock);
+                blocked = true;
             }
 
             if (target.HasStatus(StatusType.Cold))
             {
                 Debug.Log("Melt!");
+                target.RemoveStatus(StatusType.Cold);
+                blocked = true;
             }
 
             if (target.HasStatus(StatusType.Frozen))
             {
                 Debug.Log("Melt!");
+                target.RemoveStatus(StatusType.Frozen);
+                target.ApplyStatus(StatusType.Wet);
+                blocked = true;
             }
 
             if (target.HasStatus(StatusType.Wet))
@@ -123,6 +135,9 @@ namespace Mystie.ChemEngine
             if (target.HasStatus(StatusType.Oily))
             {
                 Debug.Log("Blast!");
+                target.RemoveStatus(StatusType.Oily);
+                target.ApplyStatus(StatusType.Blaze);
+                blocked = true;
             }
 
             return !blocked;

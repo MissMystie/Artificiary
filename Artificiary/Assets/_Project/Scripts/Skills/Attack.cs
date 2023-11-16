@@ -20,6 +20,7 @@ namespace Mystie.Gameplay
 
         [Header("Recoil")]
         public Vector2 recoil;
+        public LayerMask recoilMask = -1;
         public string[] recoilIgnoreTags;
         public bool recoilOverrideX = true, recoilOverrideY = true;
 

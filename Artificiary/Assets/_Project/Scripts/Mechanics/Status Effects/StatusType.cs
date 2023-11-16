@@ -12,6 +12,7 @@ namespace Mystie.ChemEngine
         Cold,
         Frozen,
         Oily,
+        Blaze,
         Blind
     }
 }

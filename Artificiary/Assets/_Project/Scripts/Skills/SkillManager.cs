@@ -10,6 +10,12 @@ namespace Mystie.Gameplay
 {
     public class SkillManager : MonoBehaviour
     {
+        #region Events
+
+        public event Action<Gear, int> onEquip;
+
+        #endregion
+
         #region Components
 
         public Entity entity { get; private set; }
@@ -19,7 +25,7 @@ namespace Mystie.Gameplay
         #endregion
 
         public Gear weapon;
-        public Gear[] artifacts = new Gear[2];
+        public Gear[] abilities = new Gear[2];
 
         private bool isUsingSkill;
         private SkillState skillState;
@@ -93,6 +99,16 @@ namespace Mystie.Gameplay
             }
         }
 
+        #region Abilities
+
+        public void Equip(Gear ability, int index = 0)
+        {
+            abilities[index] = ability;
+            onEquip?.Invoke(ability, index);
+        }
+
+        #endregion
+
         #region Skills
 
         public void OnAttack()
@@ -113,20 +129,20 @@ namespace Mystie.Gameplay
         {
             //Debug.Log("On skill (" + index + ") used.");
 
-            if (index < 0 || index >= artifacts.Length 
-                || artifacts[index] == null) return;
+            if (index < 0 || index >= abilities.Length 
+                || abilities[index] == null) return;
 
-            artifacts[index].Use(entity);
+            abilities[index].Use(entity);
         }
 
         public void OnSkillRelease(int index)
         {
             //Debug.Log("On skill (" + index + ") released.");
 
-            if (index < 0 || index >= artifacts.Length
-                || artifacts[index] == null) return;
+            if (index < 0 || index >= abilities.Length
+                || abilities[index] == null) return;
 
-            artifacts[index].Release(entity);
+            abilities[index].Release(entity);
         }
 
         #endregion

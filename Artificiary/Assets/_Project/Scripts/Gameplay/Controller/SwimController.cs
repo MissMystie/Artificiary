@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mystie.Gameplay
 {
@@ -43,7 +44,8 @@ namespace Mystie.Gameplay
 
         [Header("Feedback")]
 
-        [SerializeField] private ParticleSystem walkingPFX;
+        [SerializeField] private string swimmingAnim = "Swimming";
+        //[SerializeField] private ParticleSystem walkingPFX;
 
         [Header("Debug")]
 
@@ -57,11 +59,13 @@ namespace Mystie.Gameplay
         {
             input = GetInput();
             direction = 0;
+            anim?.SetBool(swimmingAnim, true);
         }
 
         public override void ExitState()
         {
             direction = 0;
+            anim?.SetBool(swimmingAnim, false);
         }
 
         public override void UpdateState(float deltaTime)
@@ -74,7 +78,7 @@ namespace Mystie.Gameplay
 
         public override void UpdatePhysics(float deltaTime)
         {
-            Vector2 v = ctx.phys.rb.velocity;
+            Vector2 v = ctx.phys.velocity;
 
             // move
             if (input.x != 0)
@@ -98,7 +102,7 @@ namespace Mystie.Gameplay
                 v.y *= (1 - friction.y);
             }
 
-            ctx.phys.rb.velocity = v;
+            ctx.phys.velocity = v;
         }
 
         public override bool CheckStateTransitions()
@@ -121,9 +125,9 @@ namespace Mystie.Gameplay
 
         public override void Jump()
         {
-            Vector2 v = ctx.phys.rb.velocity;
+            Vector2 v = ctx.phys.velocity;
             v.y = jumpVelocity;
-            ctx.phys.rb.velocity = v;
+            ctx.phys.velocity = v;
 
             RuntimeManager.PlayOneShot(jumpSFX, ctx.transform.position);
         }

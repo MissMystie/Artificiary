@@ -1,5 +1,6 @@
 using FMODUnity;
 using Mystie.Core;
+using Mystie.Utils;
 using NodeCanvas.BehaviourTrees;
 using System;
 using System.Collections;
@@ -95,12 +96,13 @@ namespace Mystie.Gameplay
                 targetsHit.Add(collider);
                 DealDamage(collider.gameObject);
 
-                triggerRecoil = true;
+                if (collider.gameObject.IsInLayerMask(attack.recoilMask))
+                    triggerRecoil = true;
             }
 
             if (triggerRecoil)
             {
-                Vector2 recoilV = ctx.phys.rb.velocity;
+                Vector2 recoilV = ctx.phys.velocity;
                 if (attack.recoilOverrideX 
                     && (Mathf.Sign(recoilV.x) != Mathf.Sign(attack.recoil.x)
                     || Mathf.Abs(attack.recoil.x) > Mathf.Abs(recoilV.x)))
@@ -121,7 +123,13 @@ namespace Mystie.Gameplay
             dmg.value = (int)(attack.dmg.value * SkillManager.AtkMult);
 
             HurtBox hurtbox = target.GetComponent<HurtBox>();
-            hurtbox?.TakeHit(dmg, attack.knocback.GetVelocity(ctx.entity.Collider, hurtbox.Col));
+            if (hurtbox != null)
+            {
+                Vector2 kbVelocity = attack.knocback.GetVelocity(ctx.entity.Collider, hurtbox.Col);
+                kbVelocity.x *= inputX;
+                hurtbox.TakeHit(dmg, kbVelocity);  
+            }
+            
 
             return hurtbox != null;
         }

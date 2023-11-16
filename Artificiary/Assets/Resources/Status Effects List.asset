@@ -31,3 +31,6 @@ MonoBehaviour:
   - name: Oily
     type: 5
     factory: {fileID: 11400000, guid: 62f2ebdbf4781c243b30efd7a9aa50ae, type: 2}
+  - name: Blaze
+    type: 6
+    factory: {fileID: 11400000, guid: b50de76f045dee8458258c4b324eb26e, type: 2}

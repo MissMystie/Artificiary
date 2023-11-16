@@ -1,4 +1,5 @@
 using FMODUnity;
+using LDtkUnity;
 using MoreMountains.Feedbacks;
 using Mystie.Utils;
 using NaughtyAttributes;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 namespace Mystie.Logic
 {
-    public class LogicBehavior : MonoBehaviour
+    public class LogicBehavior : MonoBehaviour, ILDtkImportedFields
     {
         #region events
 
@@ -31,6 +32,8 @@ namespace Mystie.Logic
 
         [SerializeField]
         protected bool _on = false;
+        [SerializeField]
+        protected bool _locked = false;
         [SerializeField]
         protected bool _invertOutput = false;
         public bool On { get => _on ^ _invertOutput; } 
@@ -113,6 +116,12 @@ namespace Mystie.Logic
             offFX?.PlayFeedbacks();
 
             OnSwitchEvent();
+        }
+
+        public virtual void OnLDtkImportFields(LDtkFields fields)
+        {
+            fields.TryGetBool("on", out _on);
+            fields.TryGetBool("invert_output", out _invertOutput);
         }
     }
 }

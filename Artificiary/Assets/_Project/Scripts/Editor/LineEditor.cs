@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Mystie.ETM.MurkEditor
+namespace Mystie.MystEditor
 {
     [CustomEditor(typeof(LineController))]
     public class LineEditor : Editor

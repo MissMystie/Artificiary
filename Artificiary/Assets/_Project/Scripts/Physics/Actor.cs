@@ -33,8 +33,8 @@ namespace Mystie.Physics
 
         [Header("Physics")]
 
-        public Stat acc = new Stat(0.2f);
-        public Stat accAir = new Stat(0.1f);
+        //public Stat acc = new Stat(0.2f);
+        //public Stat accAir = new Stat(0.1f);
         public Stat friction = new Stat(0.4f);
         public Stat drag = new Stat(0.0051f);
 

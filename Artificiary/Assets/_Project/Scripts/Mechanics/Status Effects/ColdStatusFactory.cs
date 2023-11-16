@@ -58,8 +58,15 @@ namespace Mystie.ChemEngine
 
             if (coldPFX != null) coldPFX.Play();
 
-            target.entity.Actor.acc.AddMod(data.accMod);
-            target.entity.Actor.friction.AddMod(data.frictionMod);
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.AddMod(data.accMod);
+            }
+
+            if (target.phys)
+            {
+                target.phys.friction.AddMod(data.frictionMod);
+            }
 
             return true;
         }
@@ -68,8 +75,15 @@ namespace Mystie.ChemEngine
         {
             Debug.Log(target.gameObject.name + " has <color=cyan>thawed</color>");
 
-            target.entity.Actor.acc.RemoveMod(data.accMod);
-            target.entity.Actor.friction.RemoveMod(data.frictionMod);
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.RemoveMod(data.accMod);
+            }
+
+            if (target.phys)
+            {
+                target.phys.friction.RemoveMod(data.frictionMod);
+            }
 
             if (coldPFX != null)
             {

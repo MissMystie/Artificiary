@@ -9,11 +9,13 @@ using NaughtyAttributes;
 
 namespace Mystie.Physics
 {
+    [RequireComponent(typeof(PhysicsBody))]
     public class PhysicsObject : MonoBehaviour, IHittable
     {
         #region Events
 
         public event Action onGrounded;
+        public event Action onWall;
         public event Action onWallLeft;
 
         #endregion
@@ -26,7 +28,7 @@ namespace Mystie.Physics
 
         #endregion
 
-        public Rigidbody2D rb { get; private set; }
+        public PhysicsBody body { get; private set; }
         [SerializeField] private GameObject sprite;
         public Animator anim { get; protected set; }
 
@@ -40,34 +42,35 @@ namespace Mystie.Physics
 
         [Header("Physics")]
 
+        [SerializeField] public PhysicsData data;
+        public bool simulatePhysics = true;
         public bool applyGravity = true;
+        public bool applyDrag = true;
         [SerializeField] private Stat mass = new Stat(1f);
+        public float volume = 1f;
         [SerializeField] private Vector2 gravity = new Vector2(0f, -10f);
+        public Vector2 Gravity { get => gravity; }
+        public Vector2 velocity;
+        public Vector2 addedVelocity;
+        public Stat friction = new Stat(0.4f);
+        public StatV2 drag = new StatV2(.005f, 0);
 
-        public Vector2 weight
+        public Vector2 Weight
         {
             get { return mass * gravity; }
         }
 
         [Space]
 
-        [SerializeField] private float maxVelocity = 40f;
-        [SerializeField] private bool applyVelocityCap = true;
+        public const float minVelocity = 0.001f;
+        public const float maxVelocity = 40f;
 
-        [Header("Ground Check")]
-
-        public Transform groundCheck;
-        public float groundCheckDist = 0.1f;
-        public LayerMask groundMask;
-        public float groundAngle { get; private set; }
+        private HashSet<IEffector> effectors = new HashSet<IEffector>();
 
         public Collider2D waterCol;
         public LayerMask waterLayer;
 
         [Header("Wall Check")]
-
-        public Transform wallCheck;
-        public float wallCheckDist = 0.1f;
 
         [Foldout("Feedbacks")][SerializeField] private MMFeedbacks impactFX;
         [Foldout("Feedbacks")][SerializeField] private MMFeedbacks landFX;
@@ -84,133 +87,120 @@ namespace Mystie.Physics
             // cache components
 
             if (col == null) col = GetComponent<Collider2D>();
-            if (rb == null) rb = GetComponent<Rigidbody2D>();
+            if (body == null) body = GetComponent<PhysicsBody>();
             if (anim == null) anim = GetComponentInChildren<Animator>();
 
-            rb.gravityScale = 0f;
-
-            Physics2D.queriesStartInColliders = false;              // Raycast will not start within the ant's collider
-            Physics2D.queriesHitTriggers = false;                   // Raycast will not collide with triggers
+            //Physics2D.queriesStartInColliders = false;              // Raycast will not start within the ant's collider
+            //Physics2D.queriesHitTriggers = false;                   // Raycast will not collide with triggers
 
             if (anim != null) anim.logWarnings = false;
         }
 
         private void Update()
         {
-            // ground check
-
-            bool wasGrounded = state.grounded;
-            state.grounded = IsGrounded();
-            if (!wasGrounded && state.grounded) OnGrounded();
-
-            // wall check
-
-            bool wasAtWall = state.atWall;
-            
-            RaycastHit2D hitLeft = Physics2D.Raycast(wallCheck.position, -transform.right, wallCheckDist, groundMask);
-            RaycastHit2D hitRight = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDist, groundMask);
-
-            if (showDebug)
-            {
-                Debug.DrawRay(wallCheck.position, -transform.right * groundCheckDist, hitLeft ? Color.green : Color.red);
-                Debug.DrawRay(wallCheck.position, transform.right * groundCheckDist, hitRight ? Color.green : Color.red);
-            }
-
-            state.atWall = hitLeft || hitRight;
-
-            if (state.atWall)
-            {
-                if (hitLeft)
-                {
-                    state.wallDir = -1;
-                    _wallCol = hitLeft.collider;
-                }
-                else if (hitRight)
-                {
-                    state.wallDir = 1;
-                    _wallCol = hitRight.collider;
-                }
-            }
-            else
-            {
-                _groundCol = null;
-            }
-
-            if (state.atWall && !wasAtWall)
-            {
-
-            }
-            else if (!state.atWall && wasAtWall)
-            {
-                onWallLeft?.Invoke();
-            }
-
-            // water check
-
-            bool wasImmersed = state.immersed;
-            bool isImmersed = state.inWater;
-
-            state.immersed = isImmersed;
-
             Animate();
         }
 
-        private void FixedUpdate()
+        protected void FixedUpdate()
         {
-            ApplyForces(Time.fixedDeltaTime);
-            if (applyVelocityCap) ApplyVelocityCap();
+            UpdateState();
+
+            if (simulatePhysics)
+            {
+                ApplyForces(Time.fixedDeltaTime);
+
+                //If colliding upward or downward, reset vertical velocity to avoid accumulation
+                //If bouncing, reset vertical velocity upon reaching minimum threshold
+                if ((body.collisions.below && velocity.y < 0) 
+                    || (body.collisions.above && velocity.y > 0))
+                {
+                    velocity.y *= (1 - data.impactDamp);
+                }
+
+                if (applyDrag) ApplyDrag(Time.fixedDeltaTime);
+                ApplyVelocityBounds();
+
+                body.Move((velocity + addedVelocity) * Time.fixedDeltaTime);
+            }
         }
 
-        public bool IsGrounded()
+        protected void UpdateState()
         {
-            if (groundCheck == null) return false;
+            CheckGrounded();
+            CheckAtWall();
+            CheckImmersed();
+        }
 
-            RaycastHit2D hitDown = Physics2D.Raycast(groundCheck.position, -transform.up, groundCheckDist, groundMask);
-
-            if (showDebug)
+        public bool CheckGrounded()
+        {
+            bool wasGrounded = state.grounded;
+            bool isGrounded = body.collisions.below;
+            
+            if (isGrounded && !wasGrounded)
             {
-                Debug.DrawRay(groundCheck.position, -transform.up * groundCheckDist, hitDown ? Color.green : Color.red);
+                OnGrounded();
+                onGrounded?.Invoke();
             }
 
-            state.grounded = hitDown;
+            state.grounded = isGrounded;
+            return state.grounded;
+        }
 
-            if (state.grounded)
+        public bool CheckAtWall()
+        {
+            bool wasAtWall = state.atWall;
+            bool isAtWall = (body.collisions.left || body.collisions.right);
+
+            state.atWall = isAtWall;
+            state.wallDir = body.collisions.left ? -1 : 1;
+
+            if (isAtWall && !wasAtWall)
             {
-                _groundCol = hitDown.collider;
-                groundAngle = hitDown.normal.Angle();
-                return true;
+                OnWall();
+                onWall?.Invoke();
             }
-            else
-            {
-                _groundCol = null;
-                groundAngle = 0f;
-                return false;
-            }
+            else if (!isAtWall && wasAtWall) onWallLeft?.Invoke();
+            return state.atWall;
+        }
+
+        public bool CheckImmersed()
+        {
+            bool wasImmersed = state.immersed;
+            bool isImmersed = state.inWater && col.bounds.center.y <= waterCol.bounds.max.y;
+
+            state.immersed = isImmersed;
+
+            return state.immersed;
         }
 
         public void OnGrounded()
         {
+            landFX?.PlayFeedbacks();
             onGrounded?.Invoke();
         }
 
+        public void OnWall() { }
+
         #region Velocity
 
-        public void SetVelocity(Vector2 velocity)
+        public void SetVelocity(Vector2 newVelocity)
         {
-            rb.velocity = velocity;
+            velocity = newVelocity;
         }
 
-        public void AddVelocity(Vector2 velocity)
+        public void AddVelocity(Vector2 newVelocity)
         {
-            rb.velocity += velocity;
+            velocity += newVelocity;
         }
 
-        public void ApplyVelocityCap()
+        public void ApplyVelocityBounds()
         {
-            if (rb.velocity.magnitude > maxVelocity)
-            {
-                rb.velocity = rb.velocity.normalized * maxVelocity;
-            }
+            if (velocity.magnitude <= minVelocity)
+                velocity.x = 0f;
+            if (velocity.magnitude <= minVelocity)
+                velocity.x = 0f;
+            if (velocity.magnitude > maxVelocity)
+                velocity = velocity.normalized * maxVelocity;
         }
 
         public void TakeHit(Vector2 kb)
@@ -226,9 +216,42 @@ namespace Mystie.Physics
         {
             Vector2 forceApplied = Vector2.zero;
 
-            if (applyGravity) forceApplied += weight;
+            if (applyGravity)
+            {
+                forceApplied += Weight;
+            }
 
-            rb.velocity += forceApplied * deltaTime;
+            foreach (IEffector effector in effectors)
+            {
+                forceApplied += effector.GetForce(this);
+            }
+
+            velocity += forceApplied * deltaTime;
+        }
+
+        protected void ApplyDrag(float deltaTime)
+        {
+            Vector2 v = velocity;
+
+            if (state.grounded) v.x *= (1 - friction);
+            else
+            {
+                v.x *= 1 - drag.x;
+                v.y *= 1 - drag.y;
+            }
+
+            velocity = v;
+        }
+
+        public void AddEffector(IEffector effector)
+        {
+            effectors.Add(effector);
+        }
+
+        public void RemoveEffector(IEffector effector)
+        {
+            if (effectors.Contains(effector))
+                effectors.Remove(effector);
         }
 
         #endregion
@@ -239,15 +262,15 @@ namespace Mystie.Physics
             {
                 anim.logWarnings = false;
                 anim.SetBool(groundedAnimParam, state.grounded);
-                anim.SetFloat(speedXAnimParam, Math.Abs(rb.velocity.x));
-                anim.SetFloat(speedYAnimParam, rb.velocity.y);
+                anim.SetFloat(speedXAnimParam, Math.Abs(velocity.x));
+                anim.SetFloat(speedYAnimParam, velocity.y);
                 anim.logWarnings = true;
             }
         }
 
         protected void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.IsInLayerMask(groundMask))
+            if (collision.gameObject.IsInLayerMask(body.colMask))
             {
                 impactFX?.PlayFeedbacks();
             }
@@ -264,13 +287,24 @@ namespace Mystie.Physics
 
         protected void OnTriggerExit2D(Collider2D collider)
         {
-            state.inWater = false;
-            waterCol = null;
+            if (collider == waterCol)
+            {
+                state.inWater = false;
+                waterCol = null;
+            }
+        }
+
+        [Serializable]
+        public class PhysicsData
+        {
+            [Range(0, 1)] public float impactDamp = 0.8f;
         }
 
         [System.Serializable]
         public class PhysicsState
         {
+            public Vector2 velocity = Vector2.zero;
+
             public bool grounded;
             public bool falling;
             public bool atWall;

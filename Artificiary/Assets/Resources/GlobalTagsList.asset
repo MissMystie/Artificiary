@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: GlobalTagsList
   m_EditorClassIdentifier: 
   GlobalTagList:
-  - Name: player
+  - Name: Player
     ID: 0
-  - Name: interactible
+  - Name: Enemy
     ID: 0
-  - Name: grabbable
+  - Name: PassThrough
+    ID: 0
+  - Name: Carryable
+    ID: 0
+  - Name: Interactible
+    ID: 0
+  - Name: OneWay
     ID: 0

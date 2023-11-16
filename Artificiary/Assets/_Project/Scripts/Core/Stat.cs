@@ -13,7 +13,6 @@ namespace Mystie.Core
         protected float baseValue = 1; //add the ability to base this value off a formula that scales with level (?)
 
         protected float initalValue = 1;
-        protected List<float> mods = new List<float>(); //flat modifiers applied to the base value, usually comes from equipment
         protected List<float> rates = new List<float>(); // % mod calculated by the multiplicative product of rate modifiers on this stat
 
         public Stat(float _baseValue = 1)
@@ -29,14 +28,11 @@ namespace Mystie.Core
 
         public float value()
         {
-            float mod = 0;
             float rate = 1f;
-            float flat = 0;
 
-            if (!mods.IsNullOrEmpty()) mods.ForEach(x => mod += x);
             if (!rates.IsNullOrEmpty()) rates.ForEach(x => rate *= x);
 
-            float finalValue = ((baseValue + mod) * rate) + flat;
+            float finalValue = baseValue * rate;
 
             return finalValue;
         }
@@ -46,16 +42,14 @@ namespace Mystie.Core
             baseValue = initalValue;
         }
 
-        public virtual void AddMod(Mod stat)
+        public virtual void AddMod(Mod mod)
         {
-            if (stat.mod != 0) mods.Add(stat.mod);
-            if (stat.rate != 1) rates.Add(stat.rate);
+            if (mod._rate != 1) rates.Add(mod._rate);
         }
 
-        public virtual void RemoveMod(Mod stat)
+        public virtual void RemoveMod(Mod mod)
         {
-            if (stat.mod != 0) mods.Remove(stat.mod);
-            if (stat.rate != 1) rates.Remove(stat.rate);
+            if (mod._rate != 1) rates.Remove(mod._rate);
         }
 
         public static implicit operator float(Stat stat)
@@ -66,16 +60,12 @@ namespace Mystie.Core
         [System.Serializable]
         public class Mod
         {
-            public Mod(float _rate = 1, float _mod = 0, float _flat = 0)
-            {
-                rate = _rate;
-                mod = _mod;
-                flat = _flat;
-            }
+            public float _rate = 1;
 
-            public float rate = 1;
-            public float mod = 0;
-            public float flat = 0;
+            public Mod(float rate = 1)
+            {
+                _rate = rate;
+            }
         }
     }
 
@@ -86,9 +76,7 @@ namespace Mystie.Core
         protected int baseValue = 1; //Add the ability to base this value off a formula that scales with level (?)
 
         protected int initalValue = 1;
-        protected List<int> mods = new List<int>(); //Flat modifiers applied to the base value, usually comes from equipment
         protected List<float> rates = new List<float>(); // % mod calculated by the multiplicative product of rate modifiers on this stat
-        protected List<int> flats = new List<int>(); //Final additive mod to the final value (doesn't scale with rate and buffs)
 
         protected Round round = Round.Floor;
 
@@ -106,20 +94,14 @@ namespace Mystie.Core
 
         public int value()
         {
-            int mod = 0;
             float rate = 1f;
-            int flat = 0;
 
-            if (!mods.IsNullOrEmpty()) mods.ForEach(x => mod += x);
             if (!rates.IsNullOrEmpty()) rates.ForEach(x => rate *= x);
-            if (!flats.IsNullOrEmpty()) flats.ForEach(x => flat += x);
 
-            float v = (baseValue + mod) * rate;
+            float v = baseValue * rate;
             int finalValue = (int)(round == Round.Floor ? Math.Floor(v) :
                                     round == Round.Ceil ? Math.Ceiling(v) :
                                     Math.Round(v, 0));
-
-            finalValue += flat;
 
             return finalValue;
         }
@@ -129,38 +111,19 @@ namespace Mystie.Core
             baseValue = initalValue;
         }
 
-        public void AddMod(Mod stat)
+        public void AddMod(Stat.Mod mod)
         {
-            if (stat.mod != 0) mods.Add(stat.mod);
-            if (stat.rate != 1) rates.Add(stat.rate);
-            if (stat.flat != 0) flats.Add(stat.flat);
+            if (mod._rate != 1) rates.Add(mod._rate);
         }
 
-        public void RemoveMod(Mod stat)
+        public void RemoveMod(Stat.Mod mod)
         {
-            if (stat.mod != 0) mods.Remove(stat.mod);
-            if (stat.rate != 1) rates.Remove(stat.rate);
-            if (stat.flat != 0) flats.Remove(stat.flat);
+            if (mod._rate != 1) rates.Remove(mod._rate);
         }
 
         public static implicit operator int(StatInt stat)
         {
             return stat.value();
-        }
-
-        [System.Serializable]
-        public class Mod
-        {
-            public Mod(float _rate = 1, int _mod = 0, int _flat = 0)
-            {
-                rate = _rate;
-                mod = _mod;
-                flat = _flat;
-            }
-
-            public float rate = 1;
-            public int mod = 0;
-            public int flat = 0;
         }
 
         public enum Round
@@ -218,40 +181,40 @@ namespace Mystie.Core
             y.Reset();
         }
 
-        public void AddMod(Stat.Mod stat)
+        public void AddMod(Stat.Mod mod)
         {
-            x.AddMod(stat);
-            y.AddMod(stat);
+            x.AddMod(mod);
+            y.AddMod(mod);
         }
 
-        public void AddMod(Stat.Mod statX, Stat.Mod statY)
+        public void AddMod(Stat.Mod modX, Stat.Mod modY)
         {
-            x.AddMod(statX);
-            y.AddMod(statY);
+            x.AddMod(modX);
+            y.AddMod(modY);
         }
 
-        public void AddMod(Mod stat)
+        public void AddMod(Mod mod)
         {
-            x.AddMod(stat.x);
-            y.AddMod(stat.y);
+            x.AddMod(mod.x);
+            y.AddMod(mod.y);
         }
 
-        public void RemoveMod(Stat.Mod stat)
+        public void RemoveMod(Stat.Mod mod)
         {
-            x.RemoveMod(stat);
-            y.RemoveMod(stat);
+            x.RemoveMod(mod);
+            y.RemoveMod(mod);
         }
 
-        public void RemoveMod(Stat.Mod statX, Stat.Mod statY)
+        public void RemoveMod(Stat.Mod modX, Stat.Mod modY)
         {
-            x.RemoveMod(statX);
-            y.RemoveMod(statY);
+            x.RemoveMod(modX);
+            y.RemoveMod(modY);
         }
 
-        public void RemoveMod(Mod stat)
+        public void RemoveMod(Mod mod)
         {
-            x.RemoveMod(stat.x);
-            y.RemoveMod(stat.y);
+            x.RemoveMod(mod.x);
+            y.RemoveMod(mod.y);
         }
 
         [System.Serializable]
@@ -260,34 +223,22 @@ namespace Mystie.Core
             public Stat.Mod x;
             public Stat.Mod y;
 
-            public Mod(float rate = 1, float modX = 0, float modY = 0, float flatX = 0, float flatY = 0)
-            {
-                x = new Stat.Mod(rate, modX, flatX);
-                y = new Stat.Mod(rate, modY, flatY);
-            }
-
-            public Mod(float rate, Vector2 mod)
-            {
-                x = new Stat.Mod(rate, mod.x);
-                y = new Stat.Mod(rate, mod.y);
-            }
-
-            public Mod(float rate, Vector2 mod, Vector2 flat)
-            {
-                x = new Stat.Mod(rate, mod.x, flat.x);
-                y = new Stat.Mod(rate, mod.y, flat.y);
-            }
-
             public Mod(Vector2 mod)
             {
-                x = new Stat.Mod(1, mod.x);
-                y = new Stat.Mod(1, mod.y);
+                x = new Stat.Mod(mod.x);
+                y = new Stat.Mod(mod.y);
             }
 
-            public Mod(Vector2 mod, Vector2 flat)
+            public Mod(float mod = 1)
             {
-                x = new Stat.Mod(1, mod.x, flat.x);
-                y = new Stat.Mod(1, mod.y, flat.y);
+                x = new Stat.Mod(mod);
+                y = new Stat.Mod(mod);
+            }
+
+            public Mod(float modX = 1, float modY = 1)
+            {
+                x = new Stat.Mod(modX);
+                y = new Stat.Mod(modY);
             }
         }
     }

@@ -19,10 +19,10 @@ ScriptedImporter:
   _createBackgroundColor: 0
   _createLevelBoundsTrigger: 0
   _intGridValues:
-  - _key: IntGrid_1
+  - _key: Collisions_1
     _asset: {fileID: 11400000, guid: 0ead509c528d81f4fa41b8b4091f1c7d, type: 2}
-  - _key: IntGrid_2
-    _asset: {instanceID: 0}
+  - _key: Collisions_2
+    _asset: {fileID: 11400000, guid: 76e1eeb020975734c9f329262e11a188, type: 2}
   - _key: BG_1
     _asset: {instanceID: 0}
   - _key: BG_2
@@ -30,6 +30,28 @@ ScriptedImporter:
   _entities:
   - _key: Streetlight
     _asset: {fileID: 5611808076400679663, guid: a7e72c0d51a9bc547aa8b4d4aeb8cb38, type: 3}
+  - _key: Gate
+    _asset: {fileID: 6340604398962121215, guid: 31f614cc6be57914fb28ec74545efea4, type: 3}
+  - _key: Pressure_plate
+    _asset: {fileID: 1510538705851186570, guid: 28b13255b9d723c4599e362dafa3ff66, type: 3}
+  - _key: Crate
+    _asset: {fileID: 5865249188017934294, guid: 238164ec543acb5409ce9d8b0e84f8c3, type: 3}
+  - _key: Metal_Crate
+    _asset: {fileID: 7632513516598369120, guid: 16c89df37c374e54390ea2d890f380db, type: 3}
+  - _key: Battery_station
+    _asset: {fileID: 6747025917730086576, guid: 5d8bce00d59a88d4d86f9bfc86d4f64f, type: 3}
+  - _key: Inverter
+    _asset: {fileID: 8547251944936008763, guid: 3b4abb09c81771845835637d6eb193eb, type: 3}
+  - _key: Bench
+    _asset: {fileID: 7072894046233664120, guid: 256ce64e5e479854a9f4df68e327bf2f, type: 3}
+  - _key: Lift
+    _asset: {fileID: 419666080107785807, guid: c11aa746560f48a498e6126aae539cd8, type: 3}
+  - _key: Furnace
+    _asset: {fileID: 5989627731290050275, guid: 5a5de0227f1d6324da3222f5ad33d154, type: 3}
+  - _key: Bounce_pad
+    _asset: {fileID: 1783493426702574042, guid: aadbb35643678404b97233be58248f15, type: 3}
+  - _key: Fan
+    _asset: {fileID: 4582332384971515442, guid: d313fbd711764684faa6e536e2475e7b, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

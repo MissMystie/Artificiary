@@ -42,8 +42,15 @@ namespace Mystie.ChemEngine
 
             if (oilPFX != null) oilPFX.Play();
 
-            target.entity.Actor.acc.AddMod(data.accMod);
-            target.entity.Actor.friction.AddMod(data.frictionMod);
+            if (target.phys)
+            {
+                target.phys.friction.AddMod(data.frictionMod);
+            }
+
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.AddMod(data.accMod);
+            }
 
             return true;
         }
@@ -52,8 +59,15 @@ namespace Mystie.ChemEngine
         {
             Debug.Log(target.gameObject.name + " is no longer <color=yellow>oily</color>");
 
-            target.entity.Actor.acc.RemoveMod(data.accMod);
-            target.entity.Actor.friction.RemoveMod(data.frictionMod);
+            if (target.phys)
+            {
+                target.phys.friction.RemoveMod(data.frictionMod);
+            }
+
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.RemoveMod(data.accMod);
+            }
 
             if (oilPFX != null)
             {

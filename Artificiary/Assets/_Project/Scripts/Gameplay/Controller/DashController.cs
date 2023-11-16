@@ -75,13 +75,13 @@ namespace Mystie.Gameplay
 
         public override void UpdatePhysics(float deltaTime)
         {
-            ctx.phys.rb.velocity = dashV * (length / duration);
+            ctx.phys.velocity = dashV * (length / duration);
         }
 
         public void EndDash()
         {
             ctx.SetState(groundState.GetState());
-            phys.rb.velocity *= (1 - damp);
+            phys.velocity *= (1 - damp);
             if (anim) anim.SetBool(dashAnim, false);
         }
 
@@ -97,15 +97,15 @@ namespace Mystie.Gameplay
 
         public override void Jump()
         {
-            Vector2 v = phys.rb.velocity;
+            Vector2 v = phys.velocity;
 
             if (phys.state.grounded)
             {
-                phys.rb.velocity = new Vector2(v.x * (1 - longJumpDamp), longJump);
+                phys.velocity = new Vector2(v.x * (1 - longJumpDamp), longJump);
             }
             else
             {
-                phys.rb.velocity = new Vector2(v.x * (1 - damp), neutralJump);
+                phys.velocity = new Vector2(v.x * (1 - damp), neutralJump);
             }
 
             ctx.SetState(groundState.GetState());

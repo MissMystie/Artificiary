@@ -51,18 +51,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "066b77bd-d9ef-4edd-a7b3-0c699e076dab",
+                    "id": "6fb5596a-be2f-49f8-8383-4b90f779edb8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interact",
+                    "name": "Transmute",
                     "type": "Button",
-                    "id": "6fb5596a-be2f-49f8-8383-4b90f779edb8",
+                    "id": "f8148a91-4921-466d-829e-7bc7e76e9ff1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -90,6 +90,15 @@
                     "name": "Gear",
                     "type": "Button",
                     "id": "8dc8c5ef-026b-4752-9e54-9e9d99a82232",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "066b77bd-d9ef-4edd-a7b3-0c699e076dab",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -264,28 +273,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7cbf8d73-ceea-4684-959c-901837819c13",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2e2a60b4-a3e3-4943-bde3-804ee59a3f5b",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7f99e72b-0ad8-4006-ba36-ccde3553cbd3",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -330,6 +317,17 @@
                 },
                 {
                     "name": "",
+                    "id": "cd76680d-e321-442b-b2b5-35377160e386",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Skill1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dfac36d6-7fd8-47c9-ba5c-2eaae5373ddf",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
@@ -341,22 +339,11 @@
                 },
                 {
                     "name": "",
-                    "id": "cd76680d-e321-442b-b2b5-35377160e386",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Skill1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "acb60344-faa5-40c0-b797-6f5754bbcd3a",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Skill2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -391,6 +378,50 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Gear",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cbf8d73-ceea-4684-959c-901837819c13",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e2a60b4-a3e3-4943-bde3-804ee59a3f5b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86cef6bd-8840-4486-a90b-97910b5262d9",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Transmute",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "973b8a4e-0d39-45fe-a9e3-3736521146fc",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Transmute",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -12,6 +12,6 @@ namespace Mystie.Gameplay
 
     public interface IEmittable
     {
-        public void Emit(Vector2 velocity, Entity emitter);
+        public void Emit(Entity emitter, Vector2 velocity);
     }
 }

@@ -32,8 +32,10 @@ namespace Mystie.Gameplay
         [SerializeField] private float moveSpeed = 8f;
         [SerializeField] private float acc = 0.1f;
         [SerializeField] private float accAir = 0.08f;
-        [SerializeField] private float friction = 0.175f;
-        [SerializeField] private Vector2 drag = new Vector2(.005f, 0);
+        //[SerializeField] private float friction = 0.175f;
+        //[SerializeField] private Vector2 drag = new Vector2(.005f, 0);
+
+        private bool applyDrag;
 
         [Header("Jump")]
 
@@ -41,8 +43,8 @@ namespace Mystie.Gameplay
         
         [SerializeField] private float jumpTime = 0.2f;
 
-        private int jumpCount;
-        [SerializeField] private int jumpCountMax = 2;
+        private int airJumpCount;
+        [SerializeField] private int airJumpCountMax = 2;
         [SerializeField] private float maxJumpVelocity = 12f;
         [SerializeField] private float minJumpVelocity = 8f;
 
@@ -84,10 +86,12 @@ namespace Mystie.Gameplay
             if (dashCDTimer == null) dashCDTimer = new Timer();
 
             input = GetInput();
+            applyDrag = phys.applyDrag;
         }
 
         public override void ExitState()
         {
+            phys.applyDrag = applyDrag;
         }
 
         public override void UpdateState(float deltaTime)
@@ -107,7 +111,7 @@ namespace Mystie.Gameplay
 
         public override void UpdatePhysics(float deltaTime)
         {
-            Vector2 v = phys.rb.velocity;
+            Vector2 v = phys.velocity;
             
             // move
             if (input.x != 0)
@@ -116,17 +120,20 @@ namespace Mystie.Gameplay
                 if (((Math.Sign(input.x) == Math.Sign(v.x)) && (Mathf.Abs(v.x) < moveSpeed))
                     || (Math.Sign(input.x) != Math.Sign(v.x)))
                 {
-                    v.x += input.x * moveSpeed * (phys.state.grounded ? acc : accAir);
+                    v.x += input.x * moveSpeed * (phys.state.grounded ? acc : accAir) * ctx.accMod;
                     v.x = Mathf.Clamp(v.x, -moveSpeed, moveSpeed);
                 }
+
+                phys.applyDrag = false;
             }
             // apply friction
             else
             {
-                v.x *= (1 - (phys.state.grounded ? friction : drag.x));
+                //v.x *= (1 - (phys.state.grounded ? friction : drag.x));
+                phys.applyDrag = true;
             }
 
-            phys.rb.velocity = v;
+            phys.velocity = v;
         }
 
         public override bool CheckStateTransitions()
@@ -170,9 +177,9 @@ namespace Mystie.Gameplay
                 }*/
             }
 
-            if (canJump && (phys.state.grounded || jumpCount > 0))
+            if (canJump && (phys.state.grounded || airJumpCount > 0))
             {
-                Vector2 v = phys.rb.velocity;
+                Vector2 v = phys.velocity;
                 v.y = maxJumpVelocity;
 
                 // If midair
@@ -185,11 +192,11 @@ namespace Mystie.Gameplay
                     // Override horizontal velocity when jumping for more accuracy if the current velocity is
                     // slower than the move speed or inputting in the opposite direction
                     v.x = input.x * moveSpeed;
-                    jumpCount--;
+                    airJumpCount--;
                     anim?.SetTrigger(doubleJumpAnim);
                 }
 
-                phys.rb.velocity = v;
+                phys.velocity = v;
 
                 coyoteTimer.SetTime(0f);
 
@@ -199,11 +206,11 @@ namespace Mystie.Gameplay
 
         public override void JumpRelease()
         {
-            if ((phys.rb.velocity.y > minJumpVelocity)) 
+            if ((phys.velocity.y > minJumpVelocity)) 
             {
-                Vector2 v = phys.rb.velocity;
+                Vector2 v = phys.velocity;
                 v.y = minJumpVelocity;
-                phys.rb.velocity = v;
+                phys.velocity = v;
             }
         }
 
@@ -241,7 +248,7 @@ namespace Mystie.Gameplay
 
         public void ResetMoveCounts()
         {
-            jumpCount = jumpCountMax;
+            airJumpCount = airJumpCountMax;
             dashCount = dashCountMax;
         }
 

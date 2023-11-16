@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1d8f48586484f46bb189bc302b721d, type: 3}
+  m_Name: SparkProjectile
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  animStateName: 
+  layerNumber: 0
+  hitFrameStart: 0
+  hitFrameEnd: 1
+  sfx:
+    Guid:
+      Data1: -61346143
+      Data2: 1141267688
+      Data3: -2064699734
+      Data4: 865760579
+    Path: event:/sfx/player/abilities/player_fireball
+  projectile: {fileID: 4608664112111611831, guid: 2747d44f60ee74549b943824fa8968ad, type: 3}
+  strength: 20
+  aimType: 0
+  fixedAngle: 0
+  recoilStrength: 0
+  recoilOverridesVelocity: 0

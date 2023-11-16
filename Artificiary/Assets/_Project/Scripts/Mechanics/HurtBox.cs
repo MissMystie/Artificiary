@@ -49,13 +49,13 @@ namespace Mystie.Core
         {
             if (!active) return;
 
-            Debug.Log("Damage taken!");
+            Debug.Log("Damage taken! " + transform.name);
 
             dmg.value = vulnerabilities.ApplyDamageRate(dmg);
 
             foreach (IDamageable damageable in damageables)
             {
-                Debug.Log("Take damage");
+                //Debug.Log("Take damage");
                 damageable.TakeDamage(dmg);
             }
         }

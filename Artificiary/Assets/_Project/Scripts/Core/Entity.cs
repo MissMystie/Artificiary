@@ -18,6 +18,13 @@ namespace Mystie.Core
             return entity;
         }
 
+        private PhysicsBody _body;
+        public PhysicsBody Body
+        {
+            get { return _body ? _body : (_body = GetComponent<PhysicsBody>()); }
+            set => _body = value;
+        }
+
         private PhysicsObject _phys;
         public PhysicsObject Phys
         {

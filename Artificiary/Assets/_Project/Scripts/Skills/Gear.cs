@@ -9,6 +9,7 @@ namespace Mystie.Gameplay
     {
         public new string name = "New Item";
         public Sprite icon = null;
+        public RuntimeAnimatorController animController = null;
 
         public abstract void Use(Entity entity);
 

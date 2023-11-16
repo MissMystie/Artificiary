@@ -44,11 +44,15 @@ namespace Mystie.ChemEngine
 
             if (target.phys)
             {
-                target.entity.Actor.acc.AddMod(data.accMod);
-                target.entity.Actor.friction.AddMod(data.frictionMod);
+                target.phys.friction.AddMod(data.frictionMod);
             }
 
-            if (data.frozenMat && target.entity.Sprite)
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.AddMod(data.accMod);
+            }
+                
+            if (data.frozenMat && target.entity.SpriteManager)
                 target.entity.SpriteManager.SetMaterial(data.frozenMat);
 
             return true;
@@ -58,8 +62,15 @@ namespace Mystie.ChemEngine
         {
             Debug.Log(target.gameObject.name + " is no longer <color=cyan>frozen</color>");
 
-            target.entity.Actor.acc.RemoveMod(data.accMod);
-            target.entity.Actor.friction.RemoveMod(data.frictionMod);
+            if (target.phys)
+            {
+                target.phys.friction.RemoveMod(data.frictionMod);
+            }
+
+            if (target.entity.StateManager)
+            {
+                target.entity.StateManager.accMod.RemoveMod(data.accMod);
+            }
 
             if (frozenPFX != null)
             {
@@ -67,7 +78,7 @@ namespace Mystie.ChemEngine
                 frozenPFX.gameObject.SetActive(false);
             }
 
-            if (data.frozenMat && target.entity.Sprite)
+            if (data.frozenMat && target.entity.SpriteManager)
                 target.entity.SpriteManager.ResetMaterial();
 
             target.entity.Status.ApplyStatus(StatusType.Wet);

@@ -72,7 +72,7 @@ namespace Mystie.Gameplay
             {
                 IEmittable[] emittables = instance.GetComponents<IEmittable>();
                 foreach (IEmittable emittable in emittables)
-                    emittable.Emit(velocity, emitter);
+                    emittable.Emit(emitter, velocity);
             }
 
             Recoil(emitter, velocity);
@@ -98,7 +98,7 @@ namespace Mystie.Gameplay
         public void Recoil(Entity entity, Vector2 aim)
         {
             Vector2 recoilVelocity = -aim.normalized * recoilStrength;
-            Vector2 velocity = entity.Phys.rb.velocity;
+            Vector2 velocity = entity.Phys.velocity;
 
             if (recoilOverridesVelocity)
             {

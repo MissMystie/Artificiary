@@ -19,6 +19,8 @@ namespace Mystie.ChemEngine
         [ShowIf("expires")]
         public float duration = 12f;
 
+        public GameObject electroBlast;
+
         [Header("Shock spread")]
 
         public float spreadRadius = 2f;
@@ -107,6 +109,9 @@ namespace Mystie.ChemEngine
 
             if (target.HasStatus(StatusType.Burn)) {
                 Debug.Log("Overcharged!");
+                if (data.electroBlast != null)
+                    GameObject.Instantiate(data.electroBlast, target.transform.position, Quaternion.identity);
+                target.RemoveStatus(StatusType.Burn);
                 blocked = true;
             }
 

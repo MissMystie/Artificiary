@@ -13,7 +13,7 @@ namespace Mystie.Physics
         public enum Type { FIXED, RADIAL, VELOCITY, NORMAL, REFLECT }
         public Type type = Type.FIXED;
 
-        [SerializeField] float strength = 10f;
+        public float strength = 10f;
 
         [AllowNesting]
         [EnableIf("type", Type.RADIAL)]
@@ -44,7 +44,7 @@ namespace Mystie.Physics
                     break;
                 case Type.VELOCITY:
                     PhysicsObject phys = sourceCol.GetComponent<PhysicsObject>();
-                    if (phys != null) velocity = phys.rb.velocity.normalized * strength;
+                    if (phys != null) velocity = phys.velocity.normalized * strength;
                     break;
                 case Type.NORMAL:
                     velocity = (targetCol.bounds.center.xy() - sourceCol.ClosestPoint(targetCol.bounds.center)).normalized * strength;
