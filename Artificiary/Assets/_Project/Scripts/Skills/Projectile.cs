@@ -29,7 +29,7 @@ namespace Mystie.Gameplay
         {
             if (entity == null) return null;
 
-            Debug.Log("Used skill " + name);
+            //Debug.Log("Used skill " + name);
 
             OnHitFrameStart(entity);
             return null;
@@ -85,7 +85,8 @@ namespace Mystie.Gameplay
             if (projectile != null)
             {
                 PhysicsObject physObj = Instantiate(projectile.gameObject, pos, Quaternion.identity).GetComponent<PhysicsObject>();
-                physObj.transform.eulerAngles = new Vector3(0f, 0f, Vector2.SignedAngle(Vector2.right, shootV.normalized));
+                //TODO figure out rotations?
+                //physObj.transform.eulerAngles = new Vector3(0f, 0f, Vector2.SignedAngle(Vector2.right, shootV.normalized));
                 foreach(Collider2D col in physObj.gameObject.GetComponentsInChildren<Collider2D>())
                     Physics2D.IgnoreCollision(emitter.Collider, col);
                 physObj.SetVelocity(shootV);

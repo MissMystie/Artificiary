@@ -6,6 +6,7 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Mystie.Gameplay
 {
@@ -22,6 +23,10 @@ namespace Mystie.Gameplay
         [SerializeField] protected float _grabTime = 0f;
         [SerializeField] protected float _dropTime = 0f;
         [SerializeField] protected string _carryableTag = "Carryable";
+
+        [Space]
+
+        [SerializeField] protected float _throwStrength = 20;
 
         protected List<Collider2D> _interactibles;
         protected Collider2D _carriedObj;
@@ -50,11 +55,13 @@ namespace Mystie.Gameplay
 
         protected void OnEnable()
         {
+            _controller.shoot.performed += OnShoot;
             _controller.interact.performed += OnInteract;
         }
 
         protected void OnDisable()
         {
+            _controller.shoot.performed -= OnShoot;
             _controller.interact.performed -= OnInteract;
         }
 
@@ -71,13 +78,20 @@ namespace Mystie.Gameplay
             }
         }
 
+        private void OnShoot() 
+        {
+            if (_carriedObj == null) return;
+
+            StartCoroutine(ThrowCoroutine());
+        }
+
         private void OnInteract()
         {
             //if (currentState != PlayerState.WALKING) return;
 
             if (_carriedObj != null)
             {
-                StartCoroutine(Drop());
+                StartCoroutine(DropCoroutine());
                 return;
             }
 
@@ -119,24 +133,16 @@ namespace Mystie.Gameplay
             yield return null;
         }
 
-        private IEnumerator Drop()
+        private PhysicsObject Drop()
         {
-            if (_carriedObj == null) yield break;
-
-            //currentState = PlayerState.INTERACTING;
-
-            _anim?.SetBool(_carryingAnimParam, false);
+            if (_carriedObj == null) return null;
 
             _carriedObj.enabled = true;
-
-            yield return new WaitForSeconds(_dropTime);
-
-            RuntimeManager.PlayOneShot(_dropSFX);
 
             PhysicsObject phys = _carriedObj.GetComponent<PhysicsObject>();
             if (phys != null)
             {
-                if (_entity.Phys != null) 
+                if (_entity.Phys != null)
                     phys.velocity = _entity.Phys.velocity;
                 phys.simulatePhysics = true;
             }
@@ -144,13 +150,42 @@ namespace Mystie.Gameplay
             _carriedObj.transform.SetParent(null);
 
             SpriteRenderer renderer = _carriedObj.GetComponent<SpriteRenderer>();
-            //if (renderer != null) renderer.sortingLayerName = objectsSortingLayer;
-
-            //TimeObject timeObj = carriedObj.GetComponent<TimeObject>();
 
             _carriedObj = null;
 
-            //currentState = PlayerState.WALKING;
+            return phys;
+        }
+
+        private IEnumerator ThrowCoroutine()
+        {
+            if (_carriedObj == null) yield break;
+
+            yield return new WaitForSeconds(_dropTime);
+
+            PhysicsObject physObj = Drop();
+
+            if (physObj != null)
+            {
+                Vector2 shootV = _entity.Controller.aim.normalized * _throwStrength;
+                physObj.SetVelocity(shootV);
+            }
+
+            yield return null;
+        }
+
+        private IEnumerator DropCoroutine()
+        {
+            if (_carriedObj == null) yield break;
+
+            //currentState = PlayerState.INTERACTING;
+
+            _anim?.SetBool(_carryingAnimParam, false);
+
+            RuntimeManager.PlayOneShot(_dropSFX);
+
+            yield return new WaitForSeconds(_dropTime);
+
+            Drop();
 
             yield return null;
         }

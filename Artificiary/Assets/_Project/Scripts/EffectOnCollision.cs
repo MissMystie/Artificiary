@@ -21,8 +21,7 @@ namespace Mystie.Physics
 
         public bool affectEmitter = false;
 
-        public bool hasMinVelocity = false;
-        [ShowIf("hasMinVelocity")] float minVelocity = 20;
+        public float minVelocity = 0;
 
         [Space]
 
@@ -64,7 +63,7 @@ namespace Mystie.Physics
             
             if (c.gameObject.IsInLayerMask(mask) && c.gameObject.FilterTags(neededTags, ignoreTags, requiredTags))
             {
-                if (phys && hasMinVelocity && phys.velocity.magnitude < minVelocity) return;
+                if (phys && phys.velocity.magnitude < minVelocity) return;
 
                 OnImpact(c.gameObject);
             }

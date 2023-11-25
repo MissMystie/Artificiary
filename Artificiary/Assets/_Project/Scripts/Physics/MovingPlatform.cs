@@ -172,11 +172,9 @@ namespace Mystie.Physics
 
         protected virtual void OnDrawGizmos()
         {
-            if (body != null && !colliders.IsNullOrEmpty() && 
+            if (body != null && col != null && 
                 !_waypoints.IsNullOrEmpty() && _waypoints.Length >= 2)
             {
-                Collider2D col = colliders[0];
-
                 Vector2 offset = col.bounds.center - body.transform.position;
 
                 for (int i = 0; i < _waypoints.Length; i++)

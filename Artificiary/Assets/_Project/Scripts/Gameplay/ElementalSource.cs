@@ -10,6 +10,7 @@ namespace Mystie.Logic
 {
     public class ElementalSource : LogicBehavior, IDamageable, IAbsorbable, ILDtkImportedFields
     {
+        public bool canBeCharged = true;
         public DamageType damageType;
         public ElementalCharge charge = new ElementalCharge();
 
@@ -50,6 +51,8 @@ namespace Mystie.Logic
 
         public void TakeDamage(Damage dmg)
         {
+            if (!canBeCharged) return;
+
             if (damageType == dmg.type)
             {
                 Feed();

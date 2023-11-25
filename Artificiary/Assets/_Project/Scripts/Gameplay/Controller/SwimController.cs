@@ -72,6 +72,7 @@ namespace Mystie.Gameplay
         {
             if (CheckStateTransitions()) return;
             input = GetInput();
+
             if (input.x != 0)
                 ctx.entity.faceDir = Math.Sign(input.x);
         }
@@ -102,6 +103,9 @@ namespace Mystie.Gameplay
                 v.y *= (1 - friction.y);
             }
 
+            if (v.y > 0 && ctx.phys.state.atSurface)
+                v.y = 0f;
+
             ctx.phys.velocity = v;
         }
 
@@ -125,11 +129,17 @@ namespace Mystie.Gameplay
 
         public override void Jump()
         {
-            Vector2 v = ctx.phys.velocity;
-            v.y = jumpVelocity;
-            ctx.phys.velocity = v;
+            if (ctx.phys.state.atSurface)
+            {
+                ctx.phys.state.immersed = false;
+                ctx.SetState(groundState.GetState());
 
-            RuntimeManager.PlayOneShot(jumpSFX, ctx.transform.position);
+                Vector2 v = ctx.phys.velocity;
+                v.y = jumpVelocity;
+                ctx.phys.velocity = v;
+
+                RuntimeManager.PlayOneShot(jumpSFX, ctx.transform.position);
+            }
         }
 
         public override void Animate(float deltaTime)

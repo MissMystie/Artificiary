@@ -1,5 +1,6 @@
 using Mystie.Core;
 using Mystie.Physics;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,15 @@ namespace Mystie.ChemEngine
     public class ChemObject : MonoBehaviour, IDamageable
     {
         public Entity entity { get; private set; }
-        public StatusManager status { get; private set; }
+        public StatusManager statusMngr { get; private set; }
+
+        public Properties properties;
 
         void Awake()
         {
             entity = Entity.Get(gameObject);
-            status = entity.Status;
+            statusMngr = entity.StatusMngr;
+            properties.ctx = this;
         }
 
         public virtual void TakeDamage(Damage dmg)
@@ -22,17 +26,42 @@ namespace Mystie.ChemEngine
             switch (dmg.type)
             {
                 case DamageType.HEAT:
-                    if (status) status.ApplyStatus(StatusType.Burn);
+                    if (statusMngr && properties.Flammable) statusMngr.ApplyStatus(StatusType.Burn);
                     break;
                 case DamageType.SHOCK:
-                    if (status) status.ApplyStatus(StatusType.Shock);
+                    if (statusMngr && properties.Conductive) statusMngr.ApplyStatus(StatusType.Shock);
                     break;
                 case DamageType.WATER:
-                    if (status) status.ApplyStatus(StatusType.Wet);
+                    if (statusMngr) statusMngr.ApplyStatus(StatusType.Wet);
                     break;
                 case DamageType.COLD:
-                    if (status) status.ApplyStatus(StatusType.Frozen);
+                    if (statusMngr) statusMngr.ApplyStatus(StatusType.Frozen);
                     break;
+            }
+        }
+
+        [Serializable]
+        public class Properties
+        {
+            [HideInInspector] public ChemObject ctx;
+
+            [SerializeField] private bool flammable;
+            [SerializeField] private bool conductive;
+            
+            public bool Flammable
+            {
+                get
+                {
+                    return flammable && !ctx.statusMngr.HasStatus(StatusType.Wet);
+                }
+            }
+
+            public bool Conductive
+            {
+                get
+                {
+                    return conductive || ctx.statusMngr.HasStatus(StatusType.Wet);
+                }
             }
         }
     }

@@ -9,18 +9,17 @@ namespace Mystie.Physics
     public abstract class PlatformController : MonoBehaviour
     {
         [SerializeField] protected PhysicsBody body;
-        [SerializeField] protected List<Collider2D> colliders;
+        [SerializeField] protected Collider2D col;
 
         protected void Awake()
         {
             body = GetComponentInChildren<PhysicsBody>();
-            colliders = GetComponentsInChildren<Collider2D>().ToList();
+            col = GetComponentInChildren<Collider2D>();
         }
 
         protected void FixedUpdate()
         {
             Vector2 moveAmount = GetMoveAmount(Time.deltaTime);
-            //transform.Translate(moveAmount, Space.World); //Move the object
             body.Move(moveAmount);
         }
 
@@ -29,8 +28,8 @@ namespace Mystie.Physics
         protected void Reset()
         {
             body = GetComponent<PhysicsBody>();
-            if (body != null) colliders = body.GetComponents<Collider2D>().ToList();
-            else colliders = GetComponents<Collider2D>().ToList();
+            if (body != null) col = body.GetComponentInChildren<Collider2D>();
+            else col = GetComponentInChildren<Collider2D>();
         }
     }
 }

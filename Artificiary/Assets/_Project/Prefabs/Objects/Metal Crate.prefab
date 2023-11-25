@@ -5214,7 +5214,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5261,12 +5261,15 @@ GameObject:
   - component: {fileID: 291455104966018852}
   - component: {fileID: 927838358451810028}
   - component: {fileID: 3246567505948031803}
+  - component: {fileID: 2265217486966896087}
   - component: {fileID: 8799983660585814960}
+  - component: {fileID: 5856513142855975063}
   - component: {fileID: 7742331175856202498}
   - component: {fileID: 34210283030934527}
   - component: {fileID: 5655253491631872680}
   - component: {fileID: 3991428214567132488}
   - component: {fileID: 6784840953032990097}
+  - component: {fileID: 4451756260795398460}
   - component: {fileID: 4308656516516459242}
   m_Layer: 8
   m_Name: Metal Crate
@@ -5429,6 +5432,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterSprite: {fileID: 5259492882907137805}
   sprites: []
+--- !u!114 &2265217486966896087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632513516598369120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5d83e3442170b4b98f02feeb1fa2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 927838358451810028}
 --- !u!114 &8799983660585814960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5441,7 +5457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e973d960439de0458bf20a51a5d582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
+  colliders:
+  - {fileID: 2265217486966896087}
   colMask:
     serializedVersion: 2
     m_Bits: 264
@@ -5451,6 +5468,26 @@ MonoBehaviour:
   fallThroughTime: 0.5
   debug: 0
   debugLines: 0
+--- !u!114 &5856513142855975063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632513516598369120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c39a5cdee40c34dab97090596edae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 8799983660585814960}
+  colliders:
+  - {fileID: 2265217486966896087}
+  passengerMask:
+    serializedVersion: 2
+    m_Bits: 960
+  detectRange: 0
+  showDebug: 0
 --- !u!114 &7742331175856202498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5566,6 +5603,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eecd1ca9b9c0d4d82ef49f5133d5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  properties:
+    ctx: {fileID: 0}
+    flammable: 0
+    conductive: 1
 --- !u!114 &6784840953032990097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5579,6 +5620,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusList: {fileID: 11400000, guid: af5cad1ad3172204999f025410c1d29b, type: 2}
+--- !u!114 &4451756260795398460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632513516598369120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1daa136834f308542a212a15c75101d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  dealsDmg: 1
+  dmg:
+    value: 1
+    type: 2
+    triggersIFrames: 1
+    triggersStun: 1
+  dealsKB: 1
+  knockback:
+    type: 0
+    strength: 10
+    anchor: {x: 0, y: 0}
+    angle: 90
+  disableOnDmgDealt: 0
+  damageFX: {fileID: 0}
+  showDebug: 1
+  hurtbox: {fileID: 0}
+  minVelocity: 15
+  disableOnContact: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 904
+  dmgSelf: 0
 --- !u!114 &4308656516516459242
 MonoBehaviour:
   m_ObjectHideFlags: 0

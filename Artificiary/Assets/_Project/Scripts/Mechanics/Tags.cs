@@ -10,5 +10,8 @@ namespace Mystie.Core
         public const string LEDGE_TAG = "Ledge";
         public const string THROUGH_TAG = "Through";
         public const string HANGABLE_TAG = "Hangable";
+
+        public const string FLAMMABLE_TAG = "Conductive";
+        public const string CONDUCTIVE_TAG = "Conductive";
     }
 }

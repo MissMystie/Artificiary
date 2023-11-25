@@ -81,7 +81,7 @@ namespace Mystie.ChemEngine
             if (data.frozenMat && target.entity.SpriteManager)
                 target.entity.SpriteManager.ResetMaterial();
 
-            target.entity.Status.ApplyStatus(StatusType.Wet);
+            target.entity.StatusMngr.ApplyStatus(StatusType.Wet);
         }
 
         public override bool React()
@@ -91,7 +91,7 @@ namespace Mystie.ChemEngine
             if (target.HasStatus(StatusType.Burn))
             {
                 Debug.Log("Melt!");
-                target.entity.Status.ApplyStatus(StatusType.Wet);
+                target.entity.StatusMngr.ApplyStatus(StatusType.Wet);
                 blocked = true;
             }
 

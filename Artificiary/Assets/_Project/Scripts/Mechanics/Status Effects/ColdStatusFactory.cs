@@ -91,7 +91,7 @@ namespace Mystie.ChemEngine
                 coldPFX.gameObject.SetActive(false);
             }
 
-            target.entity.Status.ApplyStatus(StatusType.Wet);
+            target.entity.StatusMngr.ApplyStatus(StatusType.Wet);
         }
 
         public override bool React()

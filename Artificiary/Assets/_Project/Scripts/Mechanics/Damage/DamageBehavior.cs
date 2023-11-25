@@ -51,8 +51,10 @@ namespace Mystie
         {
             if (target == null) return false;
 
-            if (dealsDmg) target.TakeDamage(new Damage(dmg));
-            if (dealsKB) target.TakeHit(dmg, knockback.GetVelocity(col, target.Col));
+            if (dealsDmg && dealsKB)
+                target.TakeHit(new Damage(dmg), knockback.GetVelocity(col, target.Col));
+            else if (dealsDmg) target.TakeDamage(new Damage(dmg));
+            else if (dealsKB) target.TakeHit(null, knockback.GetVelocity(col, target.Col));
 
             OnDmgDealtEvent(target);
 

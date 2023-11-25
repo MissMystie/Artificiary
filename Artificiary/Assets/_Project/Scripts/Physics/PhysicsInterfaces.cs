@@ -14,8 +14,19 @@ namespace Mystie.Physics
         Vector2 GetForce(PhysicsObject target);
     }
 
+    public interface IEffectable
+    {
+        void AddEffector(IEffector effector);
+        void RemoveEffector(IEffector effector);
+    }
+
     public interface IConstrainer
     {
-        void ApplyConstraint(ref Vector2 moveAmount);
+        void ApplyConstraint(Transform target, ref Vector2 moveAmount);
+    }
+
+    public interface ICarryable
+    {
+        void Carry();
     }
 }

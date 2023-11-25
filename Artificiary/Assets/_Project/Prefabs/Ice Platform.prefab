@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3294697132259423837}
   - component: {fileID: 2036924201222059840}
   - component: {fileID: 7222289266253097860}
+  - component: {fileID: 3002528783805573015}
   - component: {fileID: -487924435715876046}
   - component: {fileID: -3214860629662848294}
   - component: {fileID: 3262888055409252098}
@@ -163,6 +164,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.125, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &3002528783805573015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801113611627639525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5d83e3442170b4b98f02feeb1fa2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 7222289266253097860}
 --- !u!114 &-487924435715876046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e973d960439de0458bf20a51a5d582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 7222289266253097860}
+  colliders:
+  - {fileID: 3002528783805573015}
   colMask:
     serializedVersion: 2
     m_Bits: 264
@@ -251,11 +266,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: -487924435715876046}
   colliders:
-  - {fileID: 7222289266253097860}
+  - {fileID: 3002528783805573015}
   passengerMask:
     serializedVersion: 2
     m_Bits: 448
   detectRange: 0.0625
+  showDebug: 0
 --- !u!114 &409040400055594979
 MonoBehaviour:
   m_ObjectHideFlags: 0

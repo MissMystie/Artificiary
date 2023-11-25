@@ -158,7 +158,8 @@ namespace Mystie.ChemEngine
             if (!data.burnSFX.IsNull)
                 FMODUnity.RuntimeManager.PlayOneShot(data.burnSFX.Path, target.transform.position);
 
-            target.entity.Health.TakeDamage(data.dmgPerTick);
+            if (target.entity.Health)
+                target.entity.Health.TakeDamage(data.dmgPerTick);
             Spread();
         }
 

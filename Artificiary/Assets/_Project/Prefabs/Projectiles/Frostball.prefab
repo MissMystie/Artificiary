@@ -4803,7 +4803,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9738,7 +9738,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14710,7 +14710,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14755,9 +14755,10 @@ GameObject:
   - component: {fileID: 6956232040359972117}
   - component: {fileID: 7436227766129557146}
   - component: {fileID: -2926530420662754685}
+  - component: {fileID: -8262566708610365378}
   - component: {fileID: 7194982970039884151}
   - component: {fileID: 4608664112111611831}
-  - component: {fileID: 875142494783522174}
+  - component: {fileID: -442929055923604647}
   - component: {fileID: 8742233099267050801}
   - component: {fileID: 2463048907410027841}
   m_Layer: 10
@@ -14857,6 +14858,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4375, y: 0.4375}
   m_EdgeRadius: 0
+--- !u!114 &-8262566708610365378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882619725943080938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5d83e3442170b4b98f02feeb1fa2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: -2926530420662754685}
 --- !u!114 &7194982970039884151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14869,7 +14883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e973d960439de0458bf20a51a5d582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: -2926530420662754685}
+  colliders:
+  - {fileID: -8262566708610365378}
   colMask:
     serializedVersion: 2
     m_Bits: 264
@@ -14931,7 +14946,7 @@ MonoBehaviour:
   speedXAnimParam: SpeedX
   speedYAnimParam: SpeedY
   showDebug: 1
---- !u!114 &875142494783522174
+--- !u!114 &-442929055923604647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14940,7 +14955,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3882619725943080938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 795c922673d94354c8cd24c45571efe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 1daa136834f308542a212a15c75101d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: -2926530420662754685}
@@ -14953,17 +14968,20 @@ MonoBehaviour:
   dealsKB: 0
   knockback:
     type: 0
-    strength: 15
+    strength: 10
     anchor: {x: 0, y: 0}
     angle: 90
   disableOnDmgDealt: 1
   damageFX: {fileID: 3233997203617828965, guid: dfd4af33112f78e4b9b752da1a65ad4f, type: 3}
   showDebug: 1
+  minVelocity: 0
   disableOnContact: 1
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
   targetMask:
     serializedVersion: 2
-    m_Bits: 896
-  trigger: 1
+    m_Bits: 912
 --- !u!114 &8742233099267050801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14998,7 +15016,7 @@ MonoBehaviour:
   phys: {fileID: 4608664112111611831}
   health: {fileID: 0}
   affectEmitter: 0
-  hasMinVelocity: 0
+  minVelocity: 0
   mask:
     serializedVersion: 2
     m_Bits: 16
@@ -19949,7 +19967,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -25211,7 +25229,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -30139,7 +30157,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0

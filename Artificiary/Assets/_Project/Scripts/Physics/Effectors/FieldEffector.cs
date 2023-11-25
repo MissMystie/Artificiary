@@ -4,18 +4,17 @@ using Mystie.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 namespace Mystie
 {
     public abstract class FieldEffector : MonoBehaviour, IEffector
     {
-        [SerializeField] protected BoxCollider2D col;
+        [SerializeField] protected BoxCollider2D collider;
         [SerializeField] protected LayerMask mask = -1;
 
         [Space]
 
-        protected HashSet<PhysicsObject> affectedObjects;
+        protected HashSet<IEffectable> affectedObjects;
 
         public abstract Vector2 GetForce(PhysicsObject target);
 
@@ -26,8 +25,8 @@ namespace Mystie
 
         protected virtual void Awake()
         {
-            if (col == null) col = GetComponent<BoxCollider2D>();
-            affectedObjects = new HashSet<PhysicsObject>();
+            if (collider == null) collider = GetComponent<BoxCollider2D>();
+            affectedObjects = new HashSet<IEffectable>();
         }
 
         protected virtual bool EnterEffector(PhysicsObject physObj)

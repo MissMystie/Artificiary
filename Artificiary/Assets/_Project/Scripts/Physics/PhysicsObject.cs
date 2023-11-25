@@ -10,7 +10,7 @@ using NaughtyAttributes;
 namespace Mystie.Physics
 {
     [RequireComponent(typeof(PhysicsBody))]
-    public class PhysicsObject : MonoBehaviour, IHittable
+    public class PhysicsObject : MonoBehaviour, IEffectable, IHittable
     {
         #region Events
 
@@ -66,6 +66,7 @@ namespace Mystie.Physics
         public const float maxVelocity = 40f;
 
         private HashSet<IEffector> effectors = new HashSet<IEffector>();
+        private List<IConstrainer> constraints = new List<IConstrainer>();
 
         public Collider2D waterCol;
         public LayerMask waterLayer;
@@ -120,9 +121,14 @@ namespace Mystie.Physics
                 if (applyDrag) ApplyDrag(Time.fixedDeltaTime);
                 ApplyVelocityBounds();
 
-                body.Move((velocity + addedVelocity) * Time.fixedDeltaTime);
+                Vector2 moveAmount = (velocity + addedVelocity) * Time.fixedDeltaTime;
+                ApplyConstraints(ref moveAmount);
+
+                body.Move(moveAmount);
             }
         }
+
+        #region Status
 
         protected void UpdateState()
         {
@@ -180,6 +186,8 @@ namespace Mystie.Physics
         }
 
         public void OnWall() { }
+
+        #endregion
 
         #region Velocity
 
@@ -256,6 +264,26 @@ namespace Mystie.Physics
 
         #endregion
 
+        #region Constraints
+
+        public void AddConstraint(IConstrainer constraint)
+        {
+            constraints.Add(constraint);
+        }
+
+        public void RemoveConstraint(IConstrainer constraint)
+        {
+            if (constraints.Contains(constraint))
+                constraints.Remove(constraint);
+        }
+
+        void ApplyConstraints(ref Vector2 moveAmount)
+        {
+            foreach (IConstrainer constraint in constraints)
+                constraint.ApplyConstraint(transform, ref moveAmount);
+        }
+
+        #endregion
         private void Animate()
         {
             if (anim != null)

@@ -67,11 +67,11 @@ namespace Mystie.Core
             set => _chem = value; 
         }
 
-        private StatusManager _status;
-        public StatusManager Status
+        private StatusManager _statusMngr;
+        public StatusManager StatusMngr
         {
-            get { return _status ? _status : (_status = GetComponent<StatusManager>()); }
-            set => _status = value; 
+            get { return _statusMngr ? _statusMngr : (_statusMngr = GetComponent<StatusManager>()); }
+            set => _statusMngr = value; 
         }
 
         private HitBox _hitBox;

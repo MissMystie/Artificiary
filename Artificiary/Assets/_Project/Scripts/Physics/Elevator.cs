@@ -107,10 +107,8 @@ namespace Mystie.Physics
 
         protected void OnDrawGizmos()
         {
-            if (body != null && !colliders.IsNullOrEmpty())
+            if (body != null && col != null)
             {
-                Collider2D col = colliders[0];
-
                 Vector2 offset = col.bounds.center - body.transform.position;
 
                 Handles.Label(anchorA + offset, "A");
@@ -122,7 +120,7 @@ namespace Mystie.Physics
                 GizmosExtensions.DrawCross(anchorA + offset, .3f);
                 GizmosExtensions.DrawCross(anchorB + offset, .3f);
 
-                if (showPlatforms && body && col)
+                if (showPlatforms)
                 {
                     Gizmos.DrawWireCube(anchorA + offset, col.bounds.size);
                     Gizmos.DrawWireCube(anchorB + offset, col.bounds.size);

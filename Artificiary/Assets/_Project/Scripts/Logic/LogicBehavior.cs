@@ -41,12 +41,12 @@ namespace Mystie.Logic
         [Space]
 
         [Foldout("Feedback")]
-        [SerializeField] protected string onAnimParam = "on";
+        [SerializeField] protected string onAnimParam = "On";
 
         [Space]
 
         [Foldout("Feedback")]
-        [SerializeField] protected string onAnimState = "on";
+        [SerializeField] protected string onAnimState = "On";
         [Foldout("Feedback")]
         [SerializeField] protected EventReference onSFX;
         [Foldout("Feedback")]
@@ -55,7 +55,7 @@ namespace Mystie.Logic
         [Space]
 
         [Foldout("Feedback")]
-        [SerializeField] protected string offAnimState = "off";
+        [SerializeField] protected string offAnimState = "Off";
         [Foldout("Feedback")]
         [SerializeField] protected EventReference offSFX;
         [Foldout("Feedback")]
@@ -116,6 +116,11 @@ namespace Mystie.Logic
             offFX?.PlayFeedbacks();
 
             OnSwitchEvent();
+        }
+
+        public virtual void SetLocked(bool locked)
+        {
+            _locked = locked;
         }
 
         public virtual void OnLDtkImportFields(LDtkFields fields)

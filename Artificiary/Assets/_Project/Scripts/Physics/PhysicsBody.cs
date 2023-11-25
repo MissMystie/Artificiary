@@ -5,14 +5,15 @@ using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace Mystie.Physics
 {
-    public class PhysicsBody : RaycastController
+    public class PhysicsBody : MonoBehaviour
     {
-        #region Variables
+        #region Events
 
         public Action<Vector2> onMoveBefore;
         public Action<Vector2> onMove;
@@ -22,6 +23,7 @@ namespace Mystie.Physics
         public static string oneWayTag = "OneWay";
         public static string throughTag = "PassThrough";
 
+        public List<RaycastController> colliders;
         public LayerMask colMask;
         public float wallAngle = 80f;
 
@@ -33,33 +35,36 @@ namespace Mystie.Physics
 
         public CollisionInfo collisions;
         protected List<Collider2D> ignoredColliders = new List<Collider2D>();
-        public List<IConstrainer> constraints = new List<IConstrainer>();
-
+        
         [Header("Debug")]
 
         public bool debug = false;
         [ShowIf("debug")] public bool debugLines = false;
 
-        public Vector2 Move(Vector2 moveAmount)
+        public Vector2 Move(Vector2 moveAmount, PassengerInfo passengerInfo = null)
         {
-            UpdateRaycastOrigins();
-
             collisions.Reset(); //Reset collision information every frame
             collisions.moveAmountOld = moveAmount;
 
             ignoredColliders.RemoveAll(item => item == null);
 
-            //If the collision mask is not empty, apply collisions
-            if (colMask.value != 0)
+            if (moveAmount.x != 0) faceDir = Math.Sign(moveAmount.x);
+
+            foreach (RaycastController c in colliders)
             {
-                if (moveAmount.y < 0) DescendSlope(ref moveAmount);
-                if (moveAmount.x != 0) faceDir = Math.Sign(moveAmount.x);
+                c.UpdateRaycastOrigins();
 
-                HCollisions(ref moveAmount);
-                VCollisions(ref moveAmount);
+                //If the collision mask is not empty, apply collisions
+                if (colMask.value != 0)
+                {
+                    if (moveAmount.y < 0) DescendSlope(c, ref moveAmount);
 
-                ApplyConstraints(ref moveAmount);
+                    HCollisions(c, ref moveAmount);
+                    VCollisions(c, ref moveAmount);
+                }
             }
+
+            if (passengerInfo != null) collisions.SetInfo(passengerInfo);
 
             onMoveBefore?.Invoke(moveAmount);
             transform.Translate(moveAmount, Space.World); //Move the object
@@ -71,27 +76,27 @@ namespace Mystie.Physics
 
         #region Collisions
 
-        private void HCollisions(ref Vector2 moveAmount)
+        private void HCollisions(RaycastController c, ref Vector2 moveAmount)
         {
             //Get the direction in which the ray is being casted
             int dirX = faceDir;
             //Get the length of the ray to cast based on the velocity
-            float rayLength = Mathf.Abs(moveAmount.x) + SKIN_WIDTH; 
+            float rayLength = Mathf.Abs(moveAmount.x) + RaycastController.SKIN_WIDTH; 
 
             //If the move amount is lower than skin width (since we can check horziontal collisions without movement in x)
-            if (Mathf.Abs(moveAmount.x) < SKIN_WIDTH)
-                rayLength = 2 * SKIN_WIDTH;
+            if (Mathf.Abs(moveAmount.x) < RaycastController.SKIN_WIDTH)
+                rayLength = 2 * RaycastController.SKIN_WIDTH;
 
-            for (int i = 0; i < hRayCount; i++)
+            for (int i = 0; i < c.hRayCount; i++)
             {
                 //If moving left, start raycasting from the bottom left, if going right from the bottom right
-                Vector2 rayOrigin = (dirX == -1) ? rcOrigins.botL : rcOrigins.botR; 
-                rayOrigin += transform.up.xy() * (hRaySpacing * i); //Add offset for the current ray
+                Vector2 rayOrigin = (dirX == -1) ? c.RcOrigins.botL : c.RcOrigins.botR;
+                rayOrigin += transform.up.xy() * (c.hRaySpacing * i); //Add offset for the current ray
 
-                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, transform.right * dirX, rayLength, colMask).GetHit(rayLength, col);
+                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, transform.right * dirX, rayLength, colMask).GetHit(rayLength, c.col);
 
                 if (debug)
-                    Debug.DrawRay(rayOrigin, transform.right * dirX * (debugLines ? 1 : SKIN_WIDTH), hit ? Color.green : Color.red); //rayLength
+                    Debug.DrawRay(rayOrigin, transform.right * dirX * (debugLines ? 1 : RaycastController.SKIN_WIDTH), hit ? Color.green : Color.red); //rayLength
 
                 if (hit)
                 {
@@ -113,11 +118,11 @@ namespace Mystie.Physics
                     //Handle horizontal collisions if not climbing a slope
                     if (!collisions.climbingSlope || groundAngle >= wallAngle)
                     {
-                        moveAmount.x = (hit.distance - SKIN_WIDTH) * dirX;
+                        moveAmount.x = (hit.distance - RaycastController.SKIN_WIDTH) * dirX;
                         rayLength = hit.distance; //The ray length is shortened in order to check for closer collisions than the current one
 
                         //Prevent keeping the y velocity on a slope when colliding with an obstacle
-                        if (collisions.climbingSlope)   
+                        if (collisions.climbingSlope)
                             moveAmount.y = Mathf.Tan(collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x);
 
                         collisions.slopeNormal = hit.normal;
@@ -132,47 +137,48 @@ namespace Mystie.Physics
                 }
             }
 
-            for (int i = 0; i < hRayCount; i++)
+            for (int i = 0; i < c.hRayCount; i++)
             {
                 //If moving left, start raycasting from the bottom left, if going right from the bottom right
-                Vector2 rayOrigin = (-dirX == -1) ? rcOrigins.botL : rcOrigins.botR; 
-                rayOrigin += transform.up.xy() * (hRaySpacing * i); //Add offset for the current ray
+                Vector2 rayOrigin = (-dirX == -1) ? c.RcOrigins.botL : c.RcOrigins.botR;
+                rayOrigin += transform.up.xy() * (c.hRaySpacing * i); //Add offset for the current ray
 
-                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, transform.right * -dirX, 2 * SKIN_WIDTH, colMask).GetHit(2 * SKIN_WIDTH, col);
+                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, transform.right * -dirX, 2 * RaycastController.SKIN_WIDTH, colMask).GetHit(2 * RaycastController.SKIN_WIDTH, c.col);
 
                 if (debug)
-                    Debug.DrawRay(rayOrigin, transform.right * -dirX * (debugLines ? 1 : SKIN_WIDTH), hit ? Color.green : Color.yellow); //rayLength
+                    Debug.DrawRay(rayOrigin, transform.right * -dirX * (debugLines ? 1 : RaycastController.SKIN_WIDTH), hit ? Color.green : Color.yellow); //rayLength
             }
+
         }
 
-        private void VCollisions(ref Vector2 moveAmount)
+        private void VCollisions(RaycastController c, ref Vector2 moveAmount)
         {
             float dirY = moveAmount.y > 0? 1 : -1; //Get the direction in which the ray is being casted
-            float rayLength = Mathf.Abs(moveAmount.y) + SKIN_WIDTH; //Get the length of the ray to cast based on the velocity
+            float rayLength = Mathf.Abs(moveAmount.y) + RaycastController.SKIN_WIDTH; //Get the length of the ray to cast based on the velocity
 
             //If the move amount is lower than skin width (since we can check vertical collisions without movement in y)
-            if (Mathf.Abs(moveAmount.y) < SKIN_WIDTH)
-                rayLength = 2 * SKIN_WIDTH;
+            if (Mathf.Abs(moveAmount.y) < RaycastController.SKIN_WIDTH)
+                rayLength = 2 * RaycastController.SKIN_WIDTH;
 
-            for (int i = 0; i < vRayCount; i++)
+            for (int i = 0; i < c.vRayCount; i++)
             {
                 //If moving down, start raycasting from the bottom left, if going up from the top left
-                Vector2 rayOrigin = (dirY == -1) ? rcOrigins.botL : rcOrigins.topL; 
-                rayOrigin += transform.right.xy() * (vRaySpacing * i + moveAmount.x); //Add offset for the current ray
+                Vector2 rayOrigin = (dirY == -1) ? c.RcOrigins.botL : c.RcOrigins.topL;
+                rayOrigin += transform.right.xy() * (c.vRaySpacing * i + moveAmount.x); //Add offset for the current ray
 
                 //transform.up * directionY
-                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, Vector2.up * dirY, rayLength, colMask).GetHit(rayLength, col);
+                RaycastHit2D hit = Physics2D.RaycastAll(rayOrigin, Vector2.up * dirY, rayLength, colMask).GetHit(rayLength, c.col);
 
                 if (debug)
-                    Debug.DrawRay(rayOrigin, Vector2.up * dirY * (debugLines ? 1 : SKIN_WIDTH), hit ? Color.green : Color.red);
-                
+                    Debug.DrawRay(rayOrigin, Vector2.up * dirY * (debugLines ? 1 : RaycastController.SKIN_WIDTH), hit ? Color.green : Color.red);
+
                 if (hit)
                 {
                     //Check for one-way platforms
                     if (hit.collider.gameObject.HasTag(oneWayTag))
                     {
                         //If going in the opposite direction to gravity or inside collider
-                        if (Mathf.Sign(dirY) > 0 || hit.distance == 0) 
+                        if (Mathf.Sign(dirY) > 0 || hit.distance == 0)
                         {
                             continue; //Ignore the current collider
                         }
@@ -195,7 +201,7 @@ namespace Mystie.Physics
 
                     if (ignoredColliders.Contains(hit.collider)) continue; //Ignore the current collider
 
-                    moveAmount.y = (hit.distance - SKIN_WIDTH) * dirY;
+                    moveAmount.y = (hit.distance - RaycastController.SKIN_WIDTH) * dirY;
                     rayLength = hit.distance; //The ray length is shortened in order to check for closer collisions than the current one
 
                     //URGENT
@@ -206,7 +212,7 @@ namespace Mystie.Physics
 
                     collisions.below = dirY == -1; //If hitting something while going down
                     collisions.above = dirY == 1; //If hitting something while going up
-                    
+
                     //Debug.Log("VCollision hit " + dirY);
 
                     //Register current collider
@@ -220,8 +226,8 @@ namespace Mystie.Physics
             {
                 //Fire a horizontal ray on the y axis at the expected position after moving to check for a slope at that height
                 float directionX = Mathf.Sign(moveAmount.x);
-                rayLength = Mathf.Abs(moveAmount.x) + SKIN_WIDTH;
-                Vector2 rayOrigin = ((directionX == -1) ? rcOrigins.botL : rcOrigins.botR) + Vector2.up * moveAmount.y;
+                rayLength = Mathf.Abs(moveAmount.x) + RaycastController.SKIN_WIDTH;
+                Vector2 rayOrigin = ((directionX == -1) ? c.RcOrigins.botL : c.RcOrigins.botR) + Vector2.up * moveAmount.y;
                 RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, colMask);
 
                 if (hit)
@@ -231,7 +237,7 @@ namespace Mystie.Physics
                     //If the angle is different at the next position, it means it's a new slope
                     if (groundSlopeAngle != collisions.slopeAngle)
                     {
-                        moveAmount.x = (hit.distance - SKIN_WIDTH) * directionX;
+                        moveAmount.x = (hit.distance - RaycastController.SKIN_WIDTH) * directionX;
                         collisions.slopeAngle = groundSlopeAngle;
                     }
                 }
@@ -239,12 +245,6 @@ namespace Mystie.Physics
         }
 
         #endregion
-
-        void ApplyConstraints(ref Vector2 moveAmount)
-        {
-            foreach (IConstrainer constraint in constraints)
-                constraint.ApplyConstraint(ref moveAmount);
-        }
 
         #region Slopes
 
@@ -260,7 +260,7 @@ namespace Mystie.Physics
             float distanceToSlopeStart = 0;
             if (slopeAngle != collisions.slopeAngleOld) //If we're starting to climb a new slope
             {
-                distanceToSlopeStart = hit.distance - SKIN_WIDTH;
+                distanceToSlopeStart = hit.distance - RaycastController.SKIN_WIDTH;
                 //We substract the distance to the slope so that when we call the ClimbSlope it only uses the velocity x once it reaches the slope
                 moveAmount.x -= distanceToSlopeStart * directionX; 
             }
@@ -285,13 +285,13 @@ namespace Mystie.Physics
             }
         }
 
-        void DescendSlope(ref Vector2 moveAmount)
+        void DescendSlope(RaycastController c, ref Vector2 moveAmount)
         {
             //if (!collisions.slidingDownMaxSlope) {
             float directionX = Mathf.Sign(moveAmount.x);
 
             //If moving to the left, contact point is bottom right and vice versa
-            Vector2 rayOrigin = (directionX == -1) ? rcOrigins.botR : rcOrigins.botL;
+            Vector2 rayOrigin = (directionX == -1) ? c.RcOrigins.botR : c.RcOrigins.botL;
 
             //Cast a ray down to check for slopes
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, -transform.up, Mathf.Infinity, colMask);
@@ -306,7 +306,7 @@ namespace Mystie.Physics
                     if (Mathf.Sign(hit.normal.x) == directionX)
                     { //If moving down the slope
                       //Check if the distance to slope is shorter to the necessary move amount on the y axis to descend it based on its angle
-                        if (hit.distance - SKIN_WIDTH <= Mathf.Tan(slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x))
+                        if (hit.distance - RaycastController.SKIN_WIDTH <= Mathf.Tan(slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x))
                         {
                             float moveDistance = Mathf.Abs(moveAmount.x);
                             float descendMoveAmountY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
@@ -379,11 +379,35 @@ namespace Mystie.Physics
                 colAbove = colBelow = null;
                 colLeft = colRight = null;
             }
+
+            public void SetInfo(PassengerInfo info)
+            {
+                if (info.below)
+                {
+                    below = true;
+                    colBelow = info.col;
+                }
+                if (info.above)
+                {
+                    above = true;
+                    colAbove = info.col;
+                }
+                if (info.left)
+                {
+                    left = true;
+                    colLeft = info.col;
+                }
+                if (info.right)
+                {
+                    right = true;
+                    colRight = info.col;
+                }
+            }
         }
 
         private void Reset()
         {
-            col = GetComponent<Collider2D>();
+            colliders = GetComponentsInChildren<RaycastController>().ToList();
         }
 
 #if UNITY_EDITOR

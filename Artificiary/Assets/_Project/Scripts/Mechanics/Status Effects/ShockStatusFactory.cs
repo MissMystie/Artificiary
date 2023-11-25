@@ -147,16 +147,16 @@ namespace Mystie.ChemEngine
 
         protected void Proc()
         {
-            if (target.HasStatus(StatusType.Wet))
-            {
-                if (shockProcPFX != null) shockProcPFX.Play();
+            if (shockProcPFX != null) shockProcPFX.Play();
 
-                if (!data.shockProcSFX.IsNull)
-                    FMODUnity.RuntimeManager.PlayOneShot(data.shockProcSFX.Path, target.transform.position);
+            if (!data.shockProcSFX.IsNull)
+                FMODUnity.RuntimeManager.PlayOneShot(data.shockProcSFX.Path, target.transform.position);
 
+            if (target.entity.Health)
                 target.entity.Health.TakeDamage(data.dmgPerTick);
-                Spread();
-            }
+            Spread();
+
+            //if (target.HasStatus(StatusType.Wet))
         }
 
         bool Spread()
@@ -166,12 +166,16 @@ namespace Mystie.ChemEngine
             Collider2D[] colliders = Physics2D.OverlapCircleAll(target.transform.position, data.spreadRadius);
             foreach (Collider2D col in colliders)
             {
-                StatusManager entity;
-                if (col.gameObject != target.gameObject && (entity = col.GetComponent<StatusManager>()) != null)
+                if (col.gameObject == target.gameObject)
+                    continue;
+
+                ChemObject chem = col.GetComponent<ChemObject>();
+
+                if (chem != null && chem.properties.Conductive)
                 {
-                    if (UnityEngine.Random.Range(0, 1) <= data.spreadChance)
+                    if (Random.Range(0, 1) <= data.spreadChance)
                     {
-                        spread = entity.ApplyStatus(GetStatusType()) || spread;
+                        spread = chem.statusMngr.ApplyStatus(GetStatusType()) || spread;
                         //Debug.Log(obj.gameObject.name + " spread <color=magenta>shock</color> to " + target.gameObject.name);
                     }
                 }

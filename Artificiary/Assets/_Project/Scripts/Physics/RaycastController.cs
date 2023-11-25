@@ -10,13 +10,14 @@ namespace Mystie.Physics
         public Collider2D col;
 
         //Calculated in the CalculateRaySpacing method
-        protected int hRayCount;
-        protected int vRayCount;
-        protected float hRaySpacing;
-        protected float vRaySpacing;
+        public int hRayCount { get; protected set; }
+        public int vRayCount { get; protected set; }
+        public float hRaySpacing { get; protected set; }
+        public float vRaySpacing { get; protected set; }
         protected RaycastOrigins rcOrigins;
+        public RaycastOrigins RcOrigins { get => rcOrigins; }
 
-        public const float SKIN_WIDTH = 1/16f;
+        public const float SKIN_WIDTH = .025f;
         public const float RAY_DST = 1/4f;
 
         protected virtual void Awake()
@@ -42,7 +43,7 @@ namespace Mystie.Physics
             hRaySpacing = height / (hRayCount - 1);
         }
 
-        protected void UpdateRaycastOrigins()
+        public void UpdateRaycastOrigins()
         {
             Bounds bounds = col.bounds;
             bounds.Expand(SKIN_WIDTH * -2);
@@ -51,6 +52,11 @@ namespace Mystie.Physics
             rcOrigins.botR = new Vector2(bounds.max.x, bounds.min.y); 
             rcOrigins.topL = new Vector2(bounds.min.x, bounds.max.y);
             rcOrigins.topR = new Vector2(bounds.max.x, bounds.max.y);
+        }
+
+        protected void Reset()
+        {
+            col = GetComponent<Collider2D>();
         }
 
         //Contains the coordinates of the corners of the collider

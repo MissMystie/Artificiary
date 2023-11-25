@@ -76,6 +76,9 @@ TagManager:
   - name: Player
     uniqueID: 87436935
     locked: 0
+  - name: Interactible FG
+    uniqueID: 2329346543
+    locked: 0
   - name: FX
     uniqueID: 381627133
     locked: 0

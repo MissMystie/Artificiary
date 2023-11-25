@@ -26,7 +26,7 @@ namespace Mystie.Core
 
         [SerializeField] private MMFeedbacks hitFX;
 
-        protected void Start()
+        protected virtual void Awake()
         {
             if (col == null) col = GetComponent<Collider2D>();
             hittables = GetComponentsInChildren<IHittable>().ToList();
@@ -47,9 +47,9 @@ namespace Mystie.Core
 
         public void TakeDamage(Damage dmg)
         {
-            if (!active) return;
+            if (dmg == null || !active) return;
 
-            Debug.Log("Damage taken! " + transform.name);
+            //Debug.Log("Damage taken! " + transform.name);
 
             dmg.value = vulnerabilities.ApplyDamageRate(dmg);
 

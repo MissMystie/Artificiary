@@ -64,7 +64,9 @@ namespace Mystie.ChemEngine
 
         public StatusEffect GetStatus(StatusType type)
         {
-            return statusEffectFactories[type].GetStatus(this);
+            if (statusEffectFactories.ContainsKey(type)) 
+                return statusEffectFactories[type].GetStatus(this);
+            else return null;
         }
 
         public virtual bool HasStatus(StatusType status)
@@ -77,7 +79,7 @@ namespace Mystie.ChemEngine
             if (!statusEffects.ContainsKey(statusToApply))
             {
                 StatusEffect newStatus = GetStatus(statusToApply);
-                if (!newStatus.Apply()) return false;
+                if (newStatus == null || !newStatus.Apply()) return false;
 
                 statusEffects.Add(statusToApply, newStatus);
                 onStatusInflicted?.Invoke(this, statusToApply);
