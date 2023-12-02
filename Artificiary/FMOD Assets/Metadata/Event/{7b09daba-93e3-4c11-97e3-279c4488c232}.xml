@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{7b09daba-93e3-4c11-97e3-279c4488c232}">
 		<property name="name">
-			<value>fire_water</value>
+			<value>player_fireball_water</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{c418d5d2-bc2d-4372-843a-e9aa9af11d17}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{7a0fc85f-2d12-4501-8146-48687872b0c4}">
@@ -87,7 +90,7 @@
 	<object class="MixerBusPanner" id="{1f632bf0-0b69-45f5-8793-7257932efa7e}" />
 	<object class="SingleSound" id="{9e9154c9-5311-4b3f-af3b-19fb57fe6e0e}">
 		<property name="length">
-			<value>1.7761609904661015</value>
+			<value>1.25</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>2</value>
@@ -148,7 +151,7 @@
 	</object>
 	<object class="AutomationPoint" id="{1df9670e-addb-492f-b84f-c04ac5692e5c}">
 		<property name="position">
-			<value>1.7761609904661015</value>
+			<value>1.25</value>
 		</property>
 		<property name="value">
 			<value>0</value>

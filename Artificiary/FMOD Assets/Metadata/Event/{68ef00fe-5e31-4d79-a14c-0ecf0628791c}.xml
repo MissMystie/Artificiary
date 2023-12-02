@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{68ef00fe-5e31-4d79-a14c-0ecf0628791c}">
 		<property name="name">
-			<value>fire_impact_wall</value>
+			<value>player_fireball_impact_wall</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{b81e5690-4dd4-4c3a-a563-4e0b1412b9a1}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{a06cecb7-05e9-43a4-8db7-903768034e52}">
