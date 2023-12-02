@@ -110,7 +110,7 @@
 	<object class="MixerBusPanner" id="{6ff70d38-3548-4e10-b779-40edc73ee9b4}" />
 	<object class="MultiSound" id="{fd72bb94-42ed-4557-9fe9-6c3d3892d7ae}">
 		<property name="length">
-			<value>0.5</value>
+			<value>0.375</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{1878f866-1d5a-414f-b594-f2c3fb606c23}</destination>
@@ -138,7 +138,7 @@
 	</object>
 	<object class="MultiSound" id="{8a559576-41da-421f-b2e5-2f4fc43cff9c}">
 		<property name="length">
-			<value>0.61576354679802958</value>
+			<value>0.375</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{0f8bffce-ba26-4ec7-841b-0f9d4b5e0bcd}</destination>
@@ -166,7 +166,7 @@
 	</object>
 	<object class="MultiSound" id="{432e0799-d0ab-40e7-89be-05bc3b3e581d}">
 		<property name="length">
-			<value>0.61576354679802958</value>
+			<value>0.375</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{cac7881a-56e4-49e5-bed6-7310a661158b}</destination>
