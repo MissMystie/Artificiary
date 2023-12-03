@@ -5,7 +5,7 @@
 			<value>player_fireball_impact_wall</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e593a9b7-392e-43e4-b392-e3525a6c5e69}</destination>
@@ -113,6 +113,7 @@
 	<object class="MixerBusEffectChain" id="{ea91ec86-3b97-47d1-91f3-d8ba22707bef}">
 		<relationship name="effects">
 			<destination>{89427f22-3b27-4d1d-bdfe-4b52d5ccc874}</destination>
+			<destination>{7414bec1-c146-4db5-a604-ad524f48c761}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{18906a18-fa86-4e5f-86eb-778345dfe889}" />
@@ -124,5 +125,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{be4ed0a4-8343-48f1-91a4-7cb0f4ee3161}" />
 	<object class="MixerBusFader" id="{89427f22-3b27-4d1d-bdfe-4b52d5ccc874}" />
+	<object class="SpatialiserEffect" id="{7414bec1-c146-4db5-a604-ad524f48c761}" />
 	<object class="MixerBusFader" id="{bea233af-2344-4c95-a5c7-1c623caf8e58}" />
 </objects>

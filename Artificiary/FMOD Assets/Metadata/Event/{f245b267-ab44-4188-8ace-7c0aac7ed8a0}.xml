@@ -5,7 +5,7 @@
 			<value>player_frostball</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{1dc97fe0-8341-4cf2-bbde-e8340b64ea34}</destination>
@@ -100,6 +100,7 @@
 	<object class="MixerBusEffectChain" id="{876df319-f501-4258-8845-39bb88dc0f0e}">
 		<relationship name="effects">
 			<destination>{a369ea0b-d69e-450f-b66f-b8891ed0e39b}</destination>
+			<destination>{6657fd1e-ad96-4ee8-9da1-80788b71a32b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fb98f984-a990-41a3-97da-a329bdee929a}" />
@@ -121,6 +122,7 @@
 	</object>
 	<object class="MixerBusFader" id="{bc997df7-9e38-4278-9575-9f72c5d041f6}" />
 	<object class="MixerBusFader" id="{a369ea0b-d69e-450f-b66f-b8891ed0e39b}" />
+	<object class="SpatialiserEffect" id="{6657fd1e-ad96-4ee8-9da1-80788b71a32b}" />
 	<object class="AutomationPoint" id="{e883cb19-d7b2-4243-9092-b750b495042c}">
 		<property name="position">
 			<value>0.09375</value>

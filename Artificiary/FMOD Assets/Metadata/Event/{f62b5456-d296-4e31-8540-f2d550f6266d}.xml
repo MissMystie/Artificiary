@@ -5,7 +5,7 @@
 			<value>player_superseed_cast</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{23323404-effd-4fc9-8218-201ad1429521}</destination>
@@ -152,6 +152,7 @@
 	<object class="MixerBusEffectChain" id="{231134eb-dae7-46ab-9638-309d8d404a22}">
 		<relationship name="effects">
 			<destination>{ebac159e-ee93-4a38-a7f0-efbb943a29c1}</destination>
+			<destination>{558c25dd-61e0-43f5-8e5b-9caf8770ccbb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7b0e42e6-1f2b-42dc-98ff-8f431371c0d4}" />
@@ -195,6 +196,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{569791cc-48cc-4d0f-89c2-5bafd1f49164}" />
 	<object class="MixerBusFader" id="{ebac159e-ee93-4a38-a7f0-efbb943a29c1}" />
+	<object class="SpatialiserEffect" id="{558c25dd-61e0-43f5-8e5b-9caf8770ccbb}" />
 	<object class="MixerBusFader" id="{9d9eb381-70f0-4d1f-b712-5156cbda31d8}" />
 	<object class="AutomationPoint" id="{04b087e7-70b7-4db0-bb7a-1a5cfd29a434}">
 		<property name="position">

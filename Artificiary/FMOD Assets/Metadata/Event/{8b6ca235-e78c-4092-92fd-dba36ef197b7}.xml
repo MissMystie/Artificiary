@@ -5,7 +5,7 @@
 			<value>player_waterball_vaporize</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{12d7f50b-bea9-4984-a095-d48de154787e}</destination>
@@ -94,6 +94,7 @@
 	<object class="MixerBusEffectChain" id="{54a54a93-4e48-420c-a657-95f800ae20d7}">
 		<relationship name="effects">
 			<destination>{ba2f8621-cfa3-47a4-9f1e-93d8ac2ef38c}</destination>
+			<destination>{b78d82de-719a-4a51-83fd-e527615e2e65}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b07e89cd-e687-4581-8d57-cae813c7022c}" />
@@ -107,6 +108,7 @@
 	</object>
 	<object class="MixerBusFader" id="{88f33067-83f3-467c-8754-3018ab25aa2c}" />
 	<object class="MixerBusFader" id="{ba2f8621-cfa3-47a4-9f1e-93d8ac2ef38c}" />
+	<object class="SpatialiserEffect" id="{b78d82de-719a-4a51-83fd-e527615e2e65}" />
 	<object class="AutomationPoint" id="{502b0ea7-c2d5-4275-9086-5d9ad2203c18}">
 		<property name="position">
 			<value>0</value>

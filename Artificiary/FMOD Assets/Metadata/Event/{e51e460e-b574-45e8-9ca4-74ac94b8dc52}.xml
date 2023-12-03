@@ -5,7 +5,7 @@
 			<value>player_frostball_expire</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{1dc97fe0-8341-4cf2-bbde-e8340b64ea34}</destination>
@@ -94,9 +94,11 @@
 	<object class="MixerBusEffectChain" id="{3cdf53e7-a1b9-47a7-93bf-20fc38aff777}">
 		<relationship name="effects">
 			<destination>{d40c439c-9ce5-467d-8ddf-954b17d784ac}</destination>
+			<destination>{439fecde-4025-49d6-b662-07d70dcb6256}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1d88b9f8-ec38-4742-b13f-0e48d69ea93a}" />
 	<object class="MixerBusFader" id="{ae7e367d-c4f1-4595-905b-e01b412e9aa2}" />
 	<object class="MixerBusFader" id="{d40c439c-9ce5-467d-8ddf-954b17d784ac}" />
+	<object class="SpatialiserEffect" id="{439fecde-4025-49d6-b662-07d70dcb6256}" />
 </objects>

@@ -5,7 +5,7 @@
 			<value>player_superseed_cancel</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{23323404-effd-4fc9-8218-201ad1429521}</destination>
@@ -91,9 +91,11 @@
 	<object class="MixerBusEffectChain" id="{b955cc18-27db-472a-a20f-e69e17899fbd}">
 		<relationship name="effects">
 			<destination>{3ea56e67-051d-4cee-b12a-8e43106f3341}</destination>
+			<destination>{b8dcf407-d475-4893-9ebf-13ba6f69dae3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e26c0196-d78d-47d7-af58-18bf0ee65f92}" />
 	<object class="MixerBusFader" id="{7b0f01bf-b881-4c89-ba83-f64aef1a310b}" />
 	<object class="MixerBusFader" id="{3ea56e67-051d-4cee-b12a-8e43106f3341}" />
+	<object class="SpatialiserEffect" id="{b8dcf407-d475-4893-9ebf-13ba6f69dae3}" />
 </objects>

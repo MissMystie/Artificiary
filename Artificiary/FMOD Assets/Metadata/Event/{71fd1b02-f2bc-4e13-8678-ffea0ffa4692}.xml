@@ -5,7 +5,7 @@
 			<value>player_fireball_expire</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e593a9b7-392e-43e4-b392-e3525a6c5e69}</destination>
@@ -119,6 +119,7 @@
 	<object class="MixerBusEffectChain" id="{a83436e5-2445-4915-b08e-c6161390e15a}">
 		<relationship name="effects">
 			<destination>{42ecf881-3645-4f16-9ba9-3fb855a2fde1}</destination>
+			<destination>{77336fef-0a3b-4cee-8560-75d75e881a3c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{251a9925-faff-435a-a86f-d60dbcf4b20d}" />
@@ -138,6 +139,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{e329de9f-1ea3-4b44-97d6-f5a79241ffd3}" />
 	<object class="MixerBusFader" id="{42ecf881-3645-4f16-9ba9-3fb855a2fde1}" />
+	<object class="SpatialiserEffect" id="{77336fef-0a3b-4cee-8560-75d75e881a3c}" />
 	<object class="AutomationPoint" id="{cc287548-bdc4-4527-be2e-2f4bf75f5747}">
 		<property name="position">
 			<value>0.16959745762711823</value>

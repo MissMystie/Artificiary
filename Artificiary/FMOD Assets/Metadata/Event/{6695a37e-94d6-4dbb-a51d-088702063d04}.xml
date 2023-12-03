@@ -5,7 +5,7 @@
 			<value>player_spark_impact</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{04ec84da-204c-4e05-9dac-8fa8da36c73c}</destination>
@@ -97,6 +97,7 @@
 	<object class="MixerBusEffectChain" id="{8beaa32a-a15c-4ec2-b185-b60c77f1203d}">
 		<relationship name="effects">
 			<destination>{3fc80a75-7abf-4882-87f9-e57d016c3e6d}</destination>
+			<destination>{5df49d6f-1fc5-49ae-9753-8552f9034dc5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1e375ffd-1341-455e-8f1f-c8a50a8618a8}" />
@@ -110,6 +111,7 @@
 	</object>
 	<object class="MixerBusFader" id="{bc86a5e6-5764-4b85-a14b-efdf7b23ec31}" />
 	<object class="MixerBusFader" id="{3fc80a75-7abf-4882-87f9-e57d016c3e6d}" />
+	<object class="SpatialiserEffect" id="{5df49d6f-1fc5-49ae-9753-8552f9034dc5}" />
 	<object class="AutomationPoint" id="{5b56db40-d03d-4ff0-a193-c6fa2d2639e0}">
 		<property name="position">
 			<value>0.2135364213489489</value>

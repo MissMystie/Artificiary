@@ -5,7 +5,7 @@
 			<value>player_fireball</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e593a9b7-392e-43e4-b392-e3525a6c5e69}</destination>
@@ -97,6 +97,7 @@
 	<object class="MixerBusEffectChain" id="{c4328a8d-a820-4800-959c-1ac3fecb1e7b}">
 		<relationship name="effects">
 			<destination>{e60170a6-8dbd-4bbf-80b1-59593bf7536d}</destination>
+			<destination>{48941675-e332-4838-892d-bb518d7736f9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{67cadf88-1da3-4cb7-9e44-67d6fbb51f82}" />
@@ -110,4 +111,5 @@
 	</object>
 	<object class="MixerBusFader" id="{124a0a51-b81d-4724-b1b8-e35c755858d2}" />
 	<object class="MixerBusFader" id="{e60170a6-8dbd-4bbf-80b1-59593bf7536d}" />
+	<object class="SpatialiserEffect" id="{48941675-e332-4838-892d-bb518d7736f9}" />
 </objects>

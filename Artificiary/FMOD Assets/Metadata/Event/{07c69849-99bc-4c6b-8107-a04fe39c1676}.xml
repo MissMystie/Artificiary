@@ -5,7 +5,7 @@
 			<value>player_waterball_impact</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{12d7f50b-bea9-4984-a095-d48de154787e}</destination>
@@ -91,9 +91,11 @@
 	<object class="MixerBusEffectChain" id="{367c6615-3c9f-4b09-a317-7aa190026272}">
 		<relationship name="effects">
 			<destination>{eca3c472-6a09-4547-ba4f-1741065f41a7}</destination>
+			<destination>{abe8ca5d-645e-4a44-970f-e023129e6fa9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ed39227e-b697-4944-9874-758c57c3455d}" />
 	<object class="MixerBusFader" id="{499a055a-e0e8-4984-9e5f-b27a5e1e4045}" />
 	<object class="MixerBusFader" id="{eca3c472-6a09-4547-ba4f-1741065f41a7}" />
+	<object class="SpatialiserEffect" id="{abe8ca5d-645e-4a44-970f-e023129e6fa9}" />
 </objects>
