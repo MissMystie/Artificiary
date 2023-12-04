@@ -60,7 +60,6 @@
 	<object class="MarkerTrack" id="{e484a112-bd1e-45eb-8a01-1286211d8795}" />
 	<object class="GroupTrack" id="{64ff555f-db30-4375-99c0-63452a15ec5b}">
 		<relationship name="modules">
-			<destination>{53b2d99a-b81f-4781-b052-db8549b5529e}</destination>
 			<destination>{37268ac4-a2d5-4a45-9753-ead82e8986d4}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
@@ -69,7 +68,6 @@
 	</object>
 	<object class="Timeline" id="{14317b41-d40b-4d47-a7c3-db3011ca6c0a}">
 		<relationship name="modules">
-			<destination>{53b2d99a-b81f-4781-b052-db8549b5529e}</destination>
 			<destination>{37268ac4-a2d5-4a45-9753-ead82e8986d4}</destination>
 		</relationship>
 	</object>
@@ -90,17 +88,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7c9737d4-4eea-48f9-b1c2-25b352853e98}" />
-	<object class="SingleSound" id="{53b2d99a-b81f-4781-b052-db8549b5529e}">
-		<property name="start">
-			<value>54.857142857142854</value>
-		</property>
-		<property name="length">
-			<value>1.1493877551020408</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{400e8c26-1702-4364-a860-e668ef41358f}</destination>
-		</relationship>
-	</object>
 	<object class="MultiSound" id="{37268ac4-a2d5-4a45-9753-ead82e8986d4}">
 		<relationship name="sounds">
 			<destination>{c88b6378-881f-43e7-86a7-5efb161a9f84}</destination>
