@@ -5,10 +5,10 @@
 			<value>waterfall</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{6b16952d-5c0c-4008-9ef2-01a21a02ccfc}</destination>
+			<destination>{116fa6e8-2630-47af-afd2-6889ebe49cc2}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{483acc44-589e-401d-8443-d2ef3b2bc495}</destination>
@@ -30,9 +30,6 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{9b9c1356-8acc-4c93-a0d7-80e824704027}</destination>
-		</relationship>
-		<relationship name="parameters">
-			<destination>{6751af7e-7506-4daf-9b9d-b6cc6a33dd75}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
@@ -75,11 +72,6 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{0c4115d3-15e0-4252-9daf-57f2b908be67}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{6751af7e-7506-4daf-9b9d-b6cc6a33dd75}">
-		<relationship name="preset">
-			<destination>{d9e1e8e5-59b5-4b97-9e6b-c32e028e4e8b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{494756a2-627f-4860-923c-cdbf4503ee92}">
@@ -147,6 +139,7 @@
 	<object class="MixerBusEffectChain" id="{3e56e32a-ae01-4b87-9554-4bddd45741f0}">
 		<relationship name="effects">
 			<destination>{0ed7ff43-d9fe-439e-8260-505cf2f51484}</destination>
+			<destination>{a5584625-12e4-4336-82b8-90cbf7c761c9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ef86b629-113b-414d-a011-08c246aa29e9}" />
@@ -166,6 +159,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{71ee8757-ea49-4b51-9567-e328226e86c9}" />
 	<object class="MixerBusFader" id="{0ed7ff43-d9fe-439e-8260-505cf2f51484}" />
+	<object class="SpatialiserEffect" id="{a5584625-12e4-4336-82b8-90cbf7c761c9}" />
 	<object class="AutomationPoint" id="{41f1ca89-35a3-4890-b2d1-6bfbcb561fda}">
 		<property name="position">
 			<value>0</value>

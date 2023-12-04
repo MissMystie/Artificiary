@@ -5,7 +5,7 @@
 			<value>shock_loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3471c7d3-b556-4e42-ba47-7ce30cb90460}</destination>
@@ -136,6 +136,7 @@
 	<object class="MixerBusEffectChain" id="{0d5e3555-d79a-445a-a90f-052735d6d2f3}">
 		<relationship name="effects">
 			<destination>{63a50164-c6db-4c59-9698-c5cf625fea60}</destination>
+			<destination>{92aac68f-63cb-41b9-ad39-e56f106b2352}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d74c0944-8759-46cd-892a-5ee56a503847}" />
@@ -147,5 +148,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{28380048-d6e5-49c2-bcb7-9e80b2341918}" />
 	<object class="MixerBusFader" id="{63a50164-c6db-4c59-9698-c5cf625fea60}" />
+	<object class="SpatialiserEffect" id="{92aac68f-63cb-41b9-ad39-e56f106b2352}" />
 	<object class="MixerBusFader" id="{9fe8308c-3344-4866-97f7-5af27333dc11}" />
 </objects>

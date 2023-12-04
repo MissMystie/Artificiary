@@ -5,7 +5,7 @@
 			<value>overgrown_burn</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ba923b15-ded0-4df7-b9e5-3e079fb80929}</destination>
@@ -154,6 +154,7 @@
 	<object class="MixerBusEffectChain" id="{2822c338-142b-4beb-ba07-a00957eb76d0}">
 		<relationship name="effects">
 			<destination>{630411e9-3d9b-4e72-ad0a-f8c911b335e8}</destination>
+			<destination>{578a5fad-18fb-4ac3-a7f3-0378557e90d4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b3018ecc-d02c-41d9-8d0c-84bec9af7af7}" />
@@ -179,6 +180,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{798d1671-9f6b-4f65-950c-bb8f202451fe}" />
 	<object class="MixerBusFader" id="{630411e9-3d9b-4e72-ad0a-f8c911b335e8}" />
+	<object class="SpatialiserEffect" id="{578a5fad-18fb-4ac3-a7f3-0378557e90d4}" />
 	<object class="MixerBusFader" id="{d86b2c65-306c-4542-82e3-59d7b76b2cba}" />
 	<object class="AutomationPoint" id="{d4577e6e-1a1c-4639-b36a-5be56f891991}">
 		<property name="position">

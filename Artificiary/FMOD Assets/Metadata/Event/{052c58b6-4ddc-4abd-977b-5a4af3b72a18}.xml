@@ -5,7 +5,7 @@
 			<value>overgrown_active</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ba923b15-ded0-4df7-b9e5-3e079fb80929}</destination>
@@ -113,6 +113,7 @@
 	<object class="MixerBusEffectChain" id="{e6819c76-ef42-45a7-acd5-9ab6b740af0a}">
 		<relationship name="effects">
 			<destination>{d56983c5-8a58-4fe2-b830-8c66a6f3da73}</destination>
+			<destination>{b991183b-f372-4d42-89aa-ff510b44d115}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{192738a9-cbe0-4059-9dd5-56a8a96a092b}" />
@@ -124,5 +125,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{be2589d5-145c-4c8e-ac59-429ce01248ad}" />
 	<object class="MixerBusFader" id="{d56983c5-8a58-4fe2-b830-8c66a6f3da73}" />
+	<object class="SpatialiserEffect" id="{b991183b-f372-4d42-89aa-ff510b44d115}" />
 	<object class="MixerBusFader" id="{72fb3f10-f4be-40f5-bec2-0d858cfc860f}" />
 </objects>

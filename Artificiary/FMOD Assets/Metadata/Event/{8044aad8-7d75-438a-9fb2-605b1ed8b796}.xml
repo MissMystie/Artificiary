@@ -5,7 +5,7 @@
 			<value>wet_loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{38e6293c-a530-47d3-a63c-c21497b0948b}</destination>
@@ -136,6 +136,7 @@
 	<object class="MixerBusEffectChain" id="{6db3b307-8fee-4e13-921d-d1796842d260}">
 		<relationship name="effects">
 			<destination>{538abca1-d7a0-4b5b-9ca1-da0522027a2d}</destination>
+			<destination>{2619b2c3-d5c4-4b9a-a434-5c3245cf6f92}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{12445c3e-5cb9-49fe-b648-0c037a620435}" />
@@ -155,6 +156,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{5bc77496-b8a2-417c-87dc-ce2195c6b036}" />
 	<object class="MixerBusFader" id="{538abca1-d7a0-4b5b-9ca1-da0522027a2d}" />
+	<object class="SpatialiserEffect" id="{2619b2c3-d5c4-4b9a-a434-5c3245cf6f92}" />
 	<object class="AutomationPoint" id="{0231697e-f3f6-462d-bc35-d2531944b871}">
 		<property name="position">
 			<value>0</value>
