@@ -5,7 +5,7 @@
 			<value>bush_burn</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{d64231aa-f21a-4a1f-a9fa-6af75a017b26}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{42bc5d3e-ad49-4b03-8e07-61292b96e3b0}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{7a4b997c-9bb3-4fa6-a3e7-a5dac21914d2}">
@@ -113,6 +116,7 @@
 	<object class="MixerBusEffectChain" id="{68c63c09-3016-48a3-bd96-c84d41eb363f}">
 		<relationship name="effects">
 			<destination>{b321ab82-e542-4f47-9f00-9cdb59f24890}</destination>
+			<destination>{16e8b99d-c523-4fe1-a11f-58495da66a06}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b5c64195-7a63-45e0-9aaf-0e6eda8073af}" />
@@ -132,6 +136,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{bf18be43-008c-4a29-a385-ecd7e4d4e6d0}" />
 	<object class="MixerBusFader" id="{b321ab82-e542-4f47-9f00-9cdb59f24890}" />
+	<object class="SpatialiserEffect" id="{16e8b99d-c523-4fe1-a11f-58495da66a06}" />
 	<object class="AutomationPoint" id="{e0a77a63-d44a-4ea0-abfb-daa16525faf7}">
 		<property name="position">
 			<value>0</value>
