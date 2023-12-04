@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2e63598f-f59f-4e2b-9bc5-99bab95e684f}">
+		<property name="assetPath">
+			<value>Fireball_By_PSEM.114.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.792</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>
+		</relationship>
+	</object>
+</objects>

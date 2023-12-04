@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9eed45f7-5cb7-4bbb-a627-7a267934f045}">
+		<property name="assetPath">
+			<value>frtouch_water.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>10.989333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>
+		</relationship>
+	</object>
+</objects>
