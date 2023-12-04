@@ -5,7 +5,7 @@
 			<value>furnace_stop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{89ac9699-c404-490a-a1a6-e5113c0ff936}</destination>
@@ -122,6 +122,7 @@
 	<object class="MixerBusEffectChain" id="{371bd2e7-33c5-4ba3-84f0-4dfae3cdf90a}">
 		<relationship name="effects">
 			<destination>{e6ede785-5b8d-44d5-9bfe-a97d23b62f64}</destination>
+			<destination>{1181eccc-052b-4f1e-a4bd-c49666793628}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2c3c4a10-e165-44a5-ac91-7d6325c93f05}" />
@@ -141,6 +142,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{ab5248c6-1857-42da-8bc1-c018fd5beac4}" />
 	<object class="MixerBusFader" id="{e6ede785-5b8d-44d5-9bfe-a97d23b62f64}" />
+	<object class="SpatialiserEffect" id="{1181eccc-052b-4f1e-a4bd-c49666793628}" />
 	<object class="AutomationPoint" id="{e7e3415a-5dd8-4219-9bc2-e7e61475f1fc}">
 		<property name="position">
 			<value>0.5</value>

@@ -5,7 +5,7 @@
 			<value>furnace_loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{89ac9699-c404-490a-a1a6-e5113c0ff936}</destination>
@@ -27,6 +27,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{7b79beeb-be0d-475d-8215-86012a0ca855}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{8fe01864-a628-4a70-b0d5-e5ec4b709930}">
@@ -105,9 +108,11 @@
 	<object class="MixerBusEffectChain" id="{7adfea1e-1b6f-43e1-8e9f-db91d27180e0}">
 		<relationship name="effects">
 			<destination>{5c3ef578-12bb-4d4c-a6c5-2cd6640fca8c}</destination>
+			<destination>{f4567796-257b-4008-83b5-d5425cddbc73}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{628e8f76-b244-4d40-a106-9abd3be321be}" />
 	<object class="MixerBusFader" id="{9ad60989-33fe-495b-aff7-7a17b377ad6a}" />
 	<object class="MixerBusFader" id="{5c3ef578-12bb-4d4c-a6c5-2cd6640fca8c}" />
+	<object class="SpatialiserEffect" id="{f4567796-257b-4008-83b5-d5425cddbc73}" />
 </objects>
