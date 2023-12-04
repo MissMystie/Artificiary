@@ -5,7 +5,7 @@
 			<value>moving_platform_loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8f7c4b86-09fd-4d2d-854b-7dcff987be63}</destination>
@@ -27,6 +27,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{c52b387b-86fc-4c76-a26a-dc2212d125b0}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{4b02258d-ed81-4b03-81d6-4109a8da084d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{d2f70930-889d-4a5c-b197-8513b8db994e}">
@@ -107,10 +110,21 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{bd4b80e7-5729-40dc-ba42-718324e0243a}">
 		<relationship name="effects">
+			<destination>{481cecb0-ca42-4eae-a7c8-cd187dfac2eb}</destination>
+			<destination>{feb68f68-56f6-44cb-b9a2-5e579eed4015}</destination>
 			<destination>{8570c1e5-e5b1-4397-98ce-1ac76ae072a4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{30484cab-379a-411a-9348-b0a4f1a5fad3}" />
 	<object class="MixerBusFader" id="{9198aef7-ef69-4fc1-8c72-e02f697915aa}" />
+	<object class="ThreeEQEffect" id="{481cecb0-ca42-4eae-a7c8-cd187dfac2eb}">
+		<property name="midGain">
+			<value>-8.5</value>
+		</property>
+		<property name="highGain">
+			<value>-12.5</value>
+		</property>
+	</object>
+	<object class="SpatialiserEffect" id="{feb68f68-56f6-44cb-b9a2-5e579eed4015}" />
 	<object class="MixerBusFader" id="{8570c1e5-e5b1-4397-98ce-1ac76ae072a4}" />
 </objects>
