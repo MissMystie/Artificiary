@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{ba923b15-ded0-4df7-b9e5-3e079fb80929}">
+		<property name="name">
+			<value>overgrown</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fed21535-e6d5-4345-9e03-fe47d09d90f1}</destination>
+		</relationship>
+	</object>
+</objects>
