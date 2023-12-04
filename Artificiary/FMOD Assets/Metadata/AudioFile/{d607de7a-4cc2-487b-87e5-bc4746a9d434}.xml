@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{d534616c-5536-4e49-930e-8324e054aeab}">
+	<object class="AudioFile" id="{d607de7a-4cc2-487b-87e5-bc4746a9d434}">
 		<property name="assetPath">
-			<value>10_Rain_on_tent_.mp3</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>MenuCollapses04_365.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>96</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>313.2342857142857</value>
+			<value>0.050916666666666666</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>

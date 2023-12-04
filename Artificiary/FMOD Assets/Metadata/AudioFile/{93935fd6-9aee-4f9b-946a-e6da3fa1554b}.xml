@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{96a7a54c-58b4-439d-a706-1e95efbfed9f}">
+	<object class="AudioFile" id="{93935fd6-9aee-4f9b-946a-e6da3fa1554b}">
 		<property name="assetPath">
-			<value>HOT SAND - Water - Drip, Double, Steam, Burst, Hiss, KM184.wav</value>
+			<value>Ancient_Game_Tribal_Pitched_Chirp_UI_Button.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>192</value>
+			<value>96</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.5702343750000001</value>
+			<value>1.2916666666666667</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>

@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{fc3a7489-75c7-43c2-a3d9-62da7b817f51}">
 		<property name="name">
-			<value>shock</value>
+			<value>shock_start</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{fed21535-e6d5-4345-9e03-fe47d09d90f1}</destination>
+			<destination>{3471c7d3-b556-4e42-ba47-7ce30cb90460}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ebb97f70-735d-4235-8e40-c98234a6620b}</destination>
@@ -97,6 +97,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{73120563-eaee-4bb9-8fef-c69141364274}">
+		<property name="volume">
+			<value>-9</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
