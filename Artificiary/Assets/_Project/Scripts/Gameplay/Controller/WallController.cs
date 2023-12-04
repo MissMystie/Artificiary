@@ -75,7 +75,7 @@ namespace Mystie.Gameplay
             if (wallStickTimer == null) wallStickTimer = new Timer();
             wallStickTimer.SetTime(wallStickTime);
 
-            runningUpWall = phys.velocity.y >= minRunUpWallSpeed;
+            runningUpWall = phys.localVelocity.y >= minRunUpWallSpeed;
             phys.applyGravity = runningUpWall;
 
             anim?.SetBool(atWallAnim, true);
@@ -102,7 +102,7 @@ namespace Mystie.Gameplay
         {
             if (CheckStateTransitions()) return;
 
-            if (runningUpWall && Math.Sign(phys.velocity.y) == -1)
+            if (runningUpWall && Math.Sign(phys.localVelocity.y) == -1)
                 runningUpWall = false;
 
             climbing = canClimb && ctx.controller.move.y >= 0 && !runningUpWall;
@@ -128,7 +128,7 @@ namespace Mystie.Gameplay
             }
             else if (runningUpWall)
             {
-                velocity = phys.velocity;
+                velocity = phys.localVelocity;
             }
             else
             {
@@ -140,7 +140,7 @@ namespace Mystie.Gameplay
                 velocity.x = ctx.controller.move.x;
             }
 
-            phys.velocity = velocity;
+            phys.SetVelocity(velocity);
         }
 
         public override void Jump()
@@ -148,14 +148,14 @@ namespace Mystie.Gameplay
             phys.state.leavingWall = true;
             ctx.SetState(groundState.GetState());
 
-            Vector2 velocity = phys.velocity;
+            Vector2 velocity = phys.localVelocity;
             int wallDir = phys.state.wallDir;
 
             // jump off
             if (ctx.controller.move.x == 0)
             {
                 velocity.x = -wallDir * wallJumpOff.x;
-                if (phys.velocity.y < wallJumpOff.y)
+                if (phys.localVelocity.y < wallJumpOff.y)
                     velocity.y = wallJumpOff.y;
 
                 RuntimeManager.PlayOneShot(wallJumpOffSFX, ctx.transform.position);
@@ -164,7 +164,7 @@ namespace Mystie.Gameplay
             else if (wallDir == Math.Sign(ctx.controller.move.x))
             {
                 velocity.x = -wallDir * wallJumpUp.x;
-                if (phys.velocity.y < wallJumpUp.y)
+                if (phys.localVelocity.y < wallJumpUp.y)
                     velocity.y = wallJumpUp.y;
 
                 RuntimeManager.PlayOneShot(wallJumpUpSFX, ctx.transform.position);
@@ -173,13 +173,13 @@ namespace Mystie.Gameplay
             else
             {
                 velocity.x = -wallDir * wallJump.x;
-                if (phys.velocity.y < wallJump.y)
+                if (phys.localVelocity.y < wallJump.y)
                     velocity.y = wallJump.y;
 
                 RuntimeManager.PlayOneShot(wallJumpSFX, ctx.transform.position);
             }
 
-            phys.velocity = velocity;
+            phys.SetVelocity(velocity);
         }
 
         public override void Dash()

@@ -111,7 +111,7 @@ namespace Mystie.Gameplay
 
         public override void UpdatePhysics(float deltaTime)
         {
-            Vector2 v = phys.velocity;
+            Vector2 v = phys.localVelocity;
             
             // move
             if (input.x != 0)
@@ -133,7 +133,7 @@ namespace Mystie.Gameplay
                 phys.applyDrag = true;
             }
 
-            phys.velocity = v;
+            phys.localVelocity = v;
         }
 
         public override bool CheckStateTransitions()
@@ -179,7 +179,7 @@ namespace Mystie.Gameplay
 
             if (canJump && (phys.state.grounded || airJumpCount > 0))
             {
-                Vector2 v = phys.velocity;
+                Vector2 v = phys.localVelocity;
                 v.y = maxJumpVelocity;
 
                 // If midair
@@ -196,7 +196,7 @@ namespace Mystie.Gameplay
                     anim?.SetTrigger(doubleJumpAnim);
                 }
 
-                phys.velocity = v;
+                phys.SetVelocity(v);
 
                 coyoteTimer.SetTime(0f);
 
@@ -206,11 +206,11 @@ namespace Mystie.Gameplay
 
         public override void JumpRelease()
         {
-            if ((phys.velocity.y > minJumpVelocity)) 
+            if ((phys.localVelocity.y > minJumpVelocity)) 
             {
-                Vector2 v = phys.velocity;
+                Vector2 v = phys.localVelocity;
                 v.y = minJumpVelocity;
-                phys.velocity = v;
+                phys.SetVelocity(v);
             }
         }
 

@@ -29,6 +29,56 @@
 	"fieldInstances": [],
 	"layerInstances": [
 		{
+			"__identifier": "Effectors",
+			"__type": "Entities",
+			"__cWid": 40,
+			"__cHei": 24,
+			"__gridSize": 16,
+			"__opacity": 1,
+			"__pxTotalOffsetX": 0,
+			"__pxTotalOffsetY": 0,
+			"__tilesetDefUid": null,
+			"__tilesetRelPath": null,
+			"iid": "7aaacc40-8990-11ee-83cb-b3700d23d848",
+			"levelId": 372,
+			"layerDefUid": 400,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"visible": true,
+			"optionalRules": [],
+			"intGridCsv": [],
+			"autoLayerTiles": [],
+			"seed": 5223411,
+			"overrideTilesetUid": null,
+			"gridTiles": [],
+			"entityInstances": []
+		},
+		{
+			"__identifier": "Logic",
+			"__type": "Entities",
+			"__cWid": 40,
+			"__cHei": 24,
+			"__gridSize": 16,
+			"__opacity": 1,
+			"__pxTotalOffsetX": 0,
+			"__pxTotalOffsetY": 0,
+			"__tilesetDefUid": null,
+			"__tilesetRelPath": null,
+			"iid": "75b74010-8990-11ee-83cb-a162733602a6",
+			"levelId": 372,
+			"layerDefUid": 399,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"visible": true,
+			"optionalRules": [],
+			"intGridCsv": [],
+			"autoLayerTiles": [],
+			"seed": 9249598,
+			"overrideTilesetUid": null,
+			"gridTiles": [],
+			"entityInstances": []
+		},
+		{
 			"__identifier": "Actors",
 			"__type": "Entities",
 			"__cWid": 40,
@@ -172,7 +222,7 @@
 					"__identifier": "Furnace",
 					"__grid": [9,18],
 					"__pivot": [0.5,1],
-					"__tags": [],
+					"__tags": ["device"],
 					"__tile": { "tilesetUid": 71, "x": 0, "y": 144, "w": 16, "h": 16 },
 					"__smartColor": "#FEAE34",
 					"__worldX": 984,
@@ -188,6 +238,25 @@
 							"id": "V_Bool",
 							"params": [ true ]
 						}] }
+					]
+				},
+				{
+					"__identifier": "Camera_Zone",
+					"__grid": [20,11],
+					"__pivot": [0.5,0.5],
+					"__tags": [],
+					"__tile": null,
+					"__smartColor": "#FFFFFF",
+					"__worldX": 1152,
+					"__worldY": 184,
+					"iid": "df32b9b0-8990-11ee-83cb-7b4800179227",
+					"width": 640,
+					"height": 368,
+					"defUid": 394,
+					"px": [320,184],
+					"fieldInstances": [
+						{ "__identifier": "follow_player", "__type": "Bool", "__value": false, "__tile": null, "defUid": 397, "realEditorValues": [] },
+						{ "__identifier": "use_confiner", "__type": "Bool", "__value": false, "__tile": null, "defUid": 398, "realEditorValues": [] }
 					]
 				}
 			]

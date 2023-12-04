@@ -46,7 +46,8 @@ namespace Mystie.Gameplay
             frameChecker = new FrameChecker(this, animClip);
             anim.Play(animClip.info.animStateName);
 
-            RuntimeManager.PlayOneShotAttached(skill.sfx, ctx.gameObject);
+            if (!skill.sfx.IsNull)
+                RuntimeManager.PlayOneShotAttached(skill.sfx, ctx.gameObject);
         }
 
         public override void ExitState()

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92fbcc684acb76c409a1737d2d83b222, type: 3}
+  m_Name: Status Effects List
+  m_EditorClassIdentifier: 
+  statusEffects:
+  - name: Burn
+    type: 0
+    factory: {fileID: 11400000, guid: 305b1612a6ad96e48bf5429d6b89af9f, type: 2}
+  - name: Shock
+    type: 1
+    factory: {fileID: 11400000, guid: 67b17237ac56e7f4994f5b8b6c870218, type: 2}
+  - name: Wet
+    type: 2
+    factory: {fileID: 11400000, guid: f7f589276b005f14eac52890ee2f9e23, type: 2}
+  - name: Overgrown
+    type: 3
+    factory: {fileID: 11400000, guid: 6700ebfa1a5a01c4b855603aa42f3d45, type: 2}
+  - name: Cold
+    type: 4
+    factory: {fileID: 11400000, guid: 2a1e7200f37e5cf469bb44f6477ea4ff, type: 2}
+  - name: Frozen
+    type: 5
+    factory: {fileID: 11400000, guid: 88a9a8c7c911c104a9a45846ea644525, type: 2}
+  - name: Oily
+    type: 6
+    factory: {fileID: 11400000, guid: 62f2ebdbf4781c243b30efd7a9aa50ae, type: 2}
+  - name: Blaze
+    type: 7
+    factory: {fileID: 11400000, guid: b50de76f045dee8458258c4b324eb26e, type: 2}

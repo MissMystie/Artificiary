@@ -24,7 +24,7 @@ namespace Mystie.Physics
         {
             Vector2 v = Vector2.up * buoyancy;
             
-            phys.velocity = v;
+            phys.SetVelocity(v);
         }
 
         public void ApplyConstraint(Transform target, ref Vector2 moveAmount)

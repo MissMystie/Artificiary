@@ -54,23 +54,19 @@ namespace Mystie.ChemEngine
             //obj.gameObject.AddTag(type.ToString());
             Debug.Log(target.gameObject.name + " is <color=magenta>shocked</color>");
 
-            try {
+            if(data.shockPFX != null)
+            {
                 shockPFX = GameObject.Instantiate(data.shockPFX.gameObject, target.transform).GetComponent<ParticleSystemController>();
-                shockProcPFX = GameObject.Instantiate(data.shockProcPFX.gameObject, target.transform).GetComponent<ParticleSystemController>();
-
                 shockPFX.SetShape(target.entity.Sprite);
+                shockPFX.Play();
+            }
+
+            if (data.shockProcPFX != null)
+            {
+                shockProcPFX = GameObject.Instantiate(data.shockProcPFX.gameObject, target.transform).GetComponent<ParticleSystemController>();
                 shockProcPFX.SetShape(target.entity.Sprite);
             }
-            catch (System.ArgumentException)
-            {
-                Debug.LogWarning("ChemEngine: Shock status pfx unassigned.");
-            }
-            catch (System.NullReferenceException)
-            {
-                Debug.LogWarning("ChemEngine: No entity or sprite renderer assigned to " + target.gameObject.name + ".");
-            }
 
-            if (shockPFX != null) shockPFX.Play();
             if (!data.shockSFX.IsNull)
                 FMODUnity.RuntimeManager.PlayOneShot(data.shockSFX.Path, target.transform.position);
 

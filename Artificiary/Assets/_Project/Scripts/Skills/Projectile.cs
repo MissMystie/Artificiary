@@ -99,7 +99,7 @@ namespace Mystie.Gameplay
         public void Recoil(Entity entity, Vector2 aim)
         {
             Vector2 recoilVelocity = -aim.normalized * recoilStrength;
-            Vector2 velocity = entity.Phys.velocity;
+            Vector2 velocity = entity.Phys.localVelocity;
 
             if (recoilOverridesVelocity)
             {

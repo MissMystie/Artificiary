@@ -132,6 +132,13 @@ namespace Mystie.Core
             set => _skillManager = value;
         }
 
+        private InteractBehavior _interactor;
+        public InteractBehavior Interactor
+        {
+            get { return _interactor ? _interactor : (_interactor = GetComponent<InteractBehavior>()); }
+            set => _interactor = value;
+        }
+
         #endregion
 
         public int faceDir = 1;

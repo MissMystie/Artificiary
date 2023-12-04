@@ -35,7 +35,8 @@ namespace Mystie.Physics
 
         public CollisionInfo collisions;
         protected List<Collider2D> ignoredColliders = new List<Collider2D>();
-        
+        protected List<Transform> carriers = new List<Transform>();
+
         [Header("Debug")]
 
         public bool debug = false;
@@ -43,6 +44,9 @@ namespace Mystie.Physics
 
         public Vector2 Move(Vector2 moveAmount, PassengerInfo passengerInfo = null)
         {
+            if (passengerInfo != null && carriers.Contains(passengerInfo._carrier))
+                return Vector2.zero;
+
             collisions.Reset(); //Reset collision information every frame
             collisions.moveAmountOld = moveAmount;
 
@@ -64,12 +68,27 @@ namespace Mystie.Physics
                 }
             }
 
-            if (passengerInfo != null) collisions.SetInfo(passengerInfo);
+            if (passengerInfo != null) {
+                collisions.SetInfo(passengerInfo);
+            }
+
+            if (passengerInfo != null && passengerInfo._carrier != null)
+            {
+                carriers.Add(passengerInfo._carrier);
+            }
 
             onMoveBefore?.Invoke(moveAmount);
+
+            
+
             transform.Translate(moveAmount, Space.World); //Move the object
 
             onMove?.Invoke(moveAmount);
+
+            if (passengerInfo != null && passengerInfo._carrier != null)
+            {
+                carriers.Remove(passengerInfo._carrier);
+            }
 
             return moveAmount;
         }
@@ -382,25 +401,25 @@ namespace Mystie.Physics
 
             public void SetInfo(PassengerInfo info)
             {
-                if (info.below)
+                if (info._below)
                 {
                     below = true;
-                    colBelow = info.col;
+                    colBelow = info._col;
                 }
-                if (info.above)
+                if (info._above)
                 {
                     above = true;
-                    colAbove = info.col;
+                    colAbove = info._col;
                 }
-                if (info.left)
+                if (info._left)
                 {
                     left = true;
-                    colLeft = info.col;
+                    colLeft = info._col;
                 }
-                if (info.right)
+                if (info._right)
                 {
                     right = true;
-                    colRight = info.col;
+                    colRight = info._col;
                 }
             }
         }

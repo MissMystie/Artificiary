@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,14 +21,14 @@ namespace Mystie.Physics
         [SerializeField] private float detectRange = 1 / 16;
 
         private List<Passenger> passengers;
-        Dictionary<Transform, PhysicsBody> passengerDictionary;
+        Dictionary<Transform, PhysicsObject> passengerDictionary;
 
         public bool showDebug = false;
 
         protected virtual void Awake()
         {
             if (body == null) body = GetComponent<PhysicsBody>();
-            passengerDictionary = new Dictionary<Transform, PhysicsBody>();
+            passengerDictionary = new Dictionary<Transform, PhysicsObject>();
         }
 
         private void OnEnable()
@@ -56,7 +57,7 @@ namespace Mystie.Physics
             {
                 if (!passengerDictionary.ContainsKey(passenger._transform))
                 {
-                    PhysicsBody body = passenger._transform.GetComponent<PhysicsBody>(); //TODO avoid using GetComponent this much
+                    PhysicsObject body = passenger._transform.GetComponent<PhysicsObject>(); //TODO avoid using GetComponent this much
                     if (body != null) passengerDictionary.Add(passenger._transform, body);
                 }
 
@@ -127,9 +128,9 @@ namespace Mystie.Physics
                             Vector2 pushAmount = new Vector2(pushX, pushY);
 
                             //If moving up, the passenger is above the platform, if moving down, they're below
-                            PassengerInfo info = new PassengerInfo(c.col);
-                            info.below = directionY == 1;
-                            info.above = directionY == -1;
+                            PassengerInfo info = new PassengerInfo(transform, c.col);
+                            info._below = directionY == 1;
+                            info._above = directionY == -1;
 
                             passengers.Add(new Passenger(hit.transform, pushAmount, true, info));
                         }
@@ -171,9 +172,9 @@ namespace Mystie.Physics
 
                             Vector2 pushAmount = new Vector2(pushX, pushY);
 
-                            PassengerInfo info = new PassengerInfo(c.col);
-                            info.right = directionX == -1;
-                            info.left = directionX == 1;
+                            PassengerInfo info = new PassengerInfo(transform, c.col);
+                            info._right = directionX == -1;
+                            info._left = directionX == 1;
 
                             passengers.Add(new Passenger(hit.transform, pushAmount, true, info));
                         }
@@ -208,8 +209,8 @@ namespace Mystie.Physics
                             float pushY = moveAmount.y;
                             Vector2 pushAmount = new Vector2(pushX, pushY);
 
-                            PassengerInfo info = new PassengerInfo(c.col);
-                            info.below = true;
+                            PassengerInfo info = new PassengerInfo(transform, c.col);
+                            info._below = true;
 
                             passengers.Add(new Passenger(hit.transform, pushAmount, false, info));
                         }
@@ -244,19 +245,23 @@ namespace Mystie.Physics
 
     public class PassengerInfo
     {
-        public Collider2D col;
-        public bool below, above;
-        public bool left, right;
+        public Transform _carrier;
+        public Collider2D _col;
+        public bool _below, _above;
+        public bool _left, _right;
         //public bool sliding;
         //public bool hanging;
 
-        public PassengerInfo(Collider2D _col, bool _below = false, bool _above = false, bool _left = false, bool _right = false, bool _sliding = false, bool _hanging = false)
+        public PassengerInfo(Transform carrier, Collider2D col, 
+            bool below = false, bool above = false, 
+            bool left = false, bool right = false)
         {
-            col = _col;
-            below = _below;
-            above = _above;
-            left = _left;
-            right = _right;
+            _carrier = carrier;
+            _col = col;
+            _below = below;
+            _above = above;
+            _left = left;
+            _right = right;
             //sliding = _sliding;
             //hanging = _hanging;
         }

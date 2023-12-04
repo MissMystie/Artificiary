@@ -52,7 +52,7 @@ namespace Mystie.Gameplay
         }
 
         public void OnEnable()
-        { 
+        {
             if (controller != null)
             {
                 controller.attack.performed += OnAttack;

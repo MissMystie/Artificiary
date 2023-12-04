@@ -6,6 +6,7 @@ using Mystie.Core;
 using System;
 using Mystie.Utils;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 namespace Mystie.Physics
 {
@@ -14,6 +15,7 @@ namespace Mystie.Physics
     {
         #region Events
 
+        public event Action<Collider2D> onCollision;
         public event Action onGrounded;
         public event Action onWall;
         public event Action onWallLeft;
@@ -50,8 +52,7 @@ namespace Mystie.Physics
         public float volume = 1f;
         [SerializeField] private Vector2 gravity = new Vector2(0f, -10f);
         public Vector2 Gravity { get => gravity; }
-        public Vector2 velocity;
-        public Vector2 addedVelocity;
+        public Vector2 localVelocity;
         public Stat friction = new Stat(0.4f);
         public StatV2 drag = new StatV2(.005f, 0);
 
@@ -59,6 +60,9 @@ namespace Mystie.Physics
         {
             get { return mass * gravity; }
         }
+
+        private Vector3 lastPos;
+        public Vector2 velocity { get; protected set; }
 
         [Space]
 
@@ -95,6 +99,8 @@ namespace Mystie.Physics
             //Physics2D.queriesHitTriggers = false;                   // Raycast will not collide with triggers
 
             if (anim != null) anim.logWarnings = false;
+
+            lastPos = transform.position;
         }
 
         private void Update()
@@ -109,23 +115,31 @@ namespace Mystie.Physics
             if (simulatePhysics)
             {
                 ApplyForces(Time.fixedDeltaTime);
-
+                Vector2 addedVelocity = GetAddedVelocity();
                 //If colliding upward or downward, reset vertical velocity to avoid accumulation
                 //If bouncing, reset vertical velocity upon reaching minimum threshold
-                if ((body.collisions.below && velocity.y < 0) 
-                    || (body.collisions.above && velocity.y > 0))
+                if ((body.collisions.below && localVelocity.y < 0) 
+                    || (body.collisions.above && localVelocity.y > 0))
                 {
-                    velocity.y *= (1 - data.impactDamp);
+                    localVelocity.y *= (1 - data.impactDamp);
                 }
 
                 if (applyDrag) ApplyDrag(Time.fixedDeltaTime);
                 ApplyVelocityBounds();
 
-                Vector2 moveAmount = (velocity + addedVelocity) * Time.fixedDeltaTime;
-                ApplyConstraints(ref moveAmount);
-
-                body.Move(moveAmount);
+                Vector2 moveAmount = (localVelocity + addedVelocity) * Time.fixedDeltaTime;
+                Move(moveAmount);
             }
+
+            velocity = (transform.position - lastPos) / Time.fixedDeltaTime;
+            lastPos = transform.position;
+        }
+
+        public void Move(Vector2 moveAmount, PassengerInfo passengerInfo = null)
+        {
+            ApplyConstraints(ref moveAmount);
+
+            body.Move(moveAmount, passengerInfo);
         }
 
         #region Status
@@ -193,22 +207,22 @@ namespace Mystie.Physics
 
         public void SetVelocity(Vector2 newVelocity)
         {
-            velocity = newVelocity;
+            localVelocity = newVelocity;
         }
 
         public void AddVelocity(Vector2 newVelocity)
         {
-            velocity += newVelocity;
+            localVelocity += newVelocity;
         }
 
         public void ApplyVelocityBounds()
         {
-            if (velocity.magnitude <= minVelocity)
-                velocity.x = 0f;
-            if (velocity.magnitude <= minVelocity)
-                velocity.x = 0f;
-            if (velocity.magnitude > maxVelocity)
-                velocity = velocity.normalized * maxVelocity;
+            if (localVelocity.magnitude <= minVelocity)
+                localVelocity.x = 0f;
+            if (localVelocity.magnitude <= minVelocity)
+                localVelocity.x = 0f;
+            if (localVelocity.magnitude > maxVelocity)
+                localVelocity = localVelocity.normalized * maxVelocity;
         }
 
         public void TakeHit(Vector2 kb)
@@ -234,12 +248,24 @@ namespace Mystie.Physics
                 forceApplied += effector.GetForce(this);
             }
 
-            velocity += forceApplied * deltaTime;
+            localVelocity += forceApplied * deltaTime;
+        }
+
+        protected Vector2 GetAddedVelocity()
+        {
+            Vector2 addedVelocity = Vector2.zero;
+
+            foreach (IEffector effector in effectors)
+            {
+                addedVelocity += effector.GetAddedVelocity(this);
+            }
+
+            return addedVelocity;
         }
 
         protected void ApplyDrag(float deltaTime)
         {
-            Vector2 v = velocity;
+            Vector2 v = localVelocity;
 
             if (state.grounded) v.x *= (1 - friction);
             else
@@ -248,7 +274,7 @@ namespace Mystie.Physics
                 v.y *= 1 - drag.y;
             }
 
-            velocity = v;
+            localVelocity = v;
         }
 
         public void AddEffector(IEffector effector)
@@ -290,22 +316,30 @@ namespace Mystie.Physics
             {
                 anim.logWarnings = false;
                 anim.SetBool(groundedAnimParam, state.grounded);
-                anim.SetFloat(speedXAnimParam, Math.Abs(velocity.x));
-                anim.SetFloat(speedYAnimParam, velocity.y);
+                anim.SetFloat(speedXAnimParam, Math.Abs(localVelocity.x));
+                anim.SetFloat(speedYAnimParam, localVelocity.y);
                 anim.logWarnings = true;
             }
         }
 
+        /*
         protected void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.IsInLayerMask(body.colMask))
             {
+                onCollision?.Invoke(collision.collider);
                 impactFX?.PlayFeedbacks();
             }
-        }
+        }*/
 
         protected void OnTriggerEnter2D(Collider2D collider)
         {
+            if (collider.gameObject.IsInLayerMask(body.colMask))
+            {
+                onCollision?.Invoke(collider);
+                impactFX?.PlayFeedbacks();
+            }
+
             if (collider.gameObject.IsInLayerMask(waterLayer))
             {
                 waterCol = collider;

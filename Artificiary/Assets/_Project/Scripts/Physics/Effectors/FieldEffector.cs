@@ -17,6 +17,7 @@ namespace Mystie
         protected HashSet<IEffectable> affectedObjects;
 
         public abstract Vector2 GetForce(PhysicsObject target);
+        public abstract Vector2 GetAddedVelocity(PhysicsObject target);
 
         public Vector2 GetAnchorPos(Vector2 anchorPos)
         {

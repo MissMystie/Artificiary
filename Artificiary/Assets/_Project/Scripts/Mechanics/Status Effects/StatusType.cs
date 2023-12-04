@@ -9,6 +9,7 @@ namespace Mystie.ChemEngine
         Burn,
         Shock,
         Wet,
+        Overgrown,
         Cold,
         Frozen,
         Oily,

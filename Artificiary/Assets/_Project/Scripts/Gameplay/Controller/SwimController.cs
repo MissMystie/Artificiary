@@ -79,7 +79,7 @@ namespace Mystie.Gameplay
 
         public override void UpdatePhysics(float deltaTime)
         {
-            Vector2 v = ctx.phys.velocity;
+            Vector2 v = ctx.phys.localVelocity;
 
             // move
             if (input.x != 0)
@@ -106,7 +106,7 @@ namespace Mystie.Gameplay
             if (v.y > 0 && ctx.phys.state.atSurface)
                 v.y = 0f;
 
-            ctx.phys.velocity = v;
+            ctx.phys.SetVelocity(v);
         }
 
         public override bool CheckStateTransitions()
@@ -134,9 +134,9 @@ namespace Mystie.Gameplay
                 ctx.phys.state.immersed = false;
                 ctx.SetState(groundState.GetState());
 
-                Vector2 v = ctx.phys.velocity;
+                Vector2 v = ctx.phys.localVelocity;
                 v.y = jumpVelocity;
-                ctx.phys.velocity = v;
+                ctx.phys.SetVelocity(v);
 
                 RuntimeManager.PlayOneShot(jumpSFX, ctx.transform.position);
             }

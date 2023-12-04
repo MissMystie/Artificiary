@@ -1,3 +1,4 @@
+using LDtkUnity;
 using Mystie.Core;
 using Mystie.Physics;
 using Mystie.Utils;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace Mystie
 {
-    public class BuoyancyEffector : FieldEffector
+    public class BuoyancyEffector : FieldEffector, ILDtkImportedFields
     {
         [SerializeField] private Vector2 gravity = new Vector2(0f, -10f);
         public float density = 4f;
@@ -16,6 +17,8 @@ namespace Mystie
         public float flowStrength = 0f;
         [SerializeField] protected StatV2.Mod drag = new StatV2.Mod(1.5f);
         [SerializeField] protected float margin = 0.25f;
+
+        public Vector2 AddedVelocity { get => Vector2.right.Rotate(flowAngle) * flowStrength; }
 
         protected override void Awake()
         {
@@ -34,8 +37,15 @@ namespace Mystie
 
             Vector2 force = -gravity * density * target.volume;
             force += Vector2.right.Rotate(flowAngle) * flowStrength;
-            //force = flowStrength.normalized.Rotate(transform.eulerAngles.z) * buoyancyStrength;
+            //
             return force;
+        }
+
+        public override Vector2 GetAddedVelocity(PhysicsObject target)
+        {
+            Vector2 addedVelocity = Vector2.right.Rotate(flowAngle + transform.eulerAngles.z) * flowStrength; 
+            //flowStrength.normalized.Rotate() * buoyancyStrength;
+            return addedVelocity;
         }
 
         protected override bool EnterEffector(PhysicsObject physObj)
@@ -52,6 +62,12 @@ namespace Mystie
 
             physObj.drag.RemoveMod(drag);
             return true;
+        }
+
+        public void OnLDtkImportFields(LDtkFields fields)
+        {
+            fields.TryGetFloat("flow_angle", out flowAngle);
+            fields.TryGetFloat("flow_strength", out flowStrength);
         }
 
         protected void Reset()

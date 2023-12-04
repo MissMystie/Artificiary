@@ -1,17 +1,22 @@
 using FMODUnity;
+using Mystie.ChemEngine;
 using Mystie.Core;
 using Mystie.Physics;
 using Mystie.Utils;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Mystie.Gameplay
 {
     public class InteractBehavior : MonoBehaviour
     {
+        public event Action<Collider2D> onCarry;
+        public event Action<Collider2D> onDrop;
+        public event Action<Collider2D, Vector2> onThrow;
+
         protected Entity _entity;
         protected InputController _controller;
         protected Animator _anim;
@@ -23,6 +28,7 @@ namespace Mystie.Gameplay
         [SerializeField] protected float _grabTime = 0f;
         [SerializeField] protected float _dropTime = 0f;
         [SerializeField] protected string _carryableTag = "Carryable";
+        [SerializeField] protected StatusType _carryStatus;
 
         [Space]
 
@@ -30,7 +36,8 @@ namespace Mystie.Gameplay
 
         protected List<Collider2D> _interactibles;
         protected Collider2D _carriedObj;
-        
+        public bool IsCarrying { get => _carriedObj != null; }
+
         [Foldout("Feedback")]
         [SerializeField] protected string _carryingAnimParam = "carrying";
         [Foldout("Feedback")]
@@ -116,7 +123,7 @@ namespace Mystie.Gameplay
             PhysicsObject phys = _carriedObj.GetComponent<PhysicsObject>();
             if (phys != null)
             {
-                phys.velocity = Vector2.zero;
+                phys.SetVelocity(Vector2.zero);
                 phys.simulatePhysics = false;
             }
 
@@ -125,6 +132,8 @@ namespace Mystie.Gameplay
 
             _anim?.SetBool(_carryingAnimParam, true);
             RuntimeManager.PlayOneShot(_dropSFX, transform.position);
+
+            onCarry?.Invoke(obj);
 
             yield return new WaitForSeconds(_grabTime);
 
@@ -143,13 +152,15 @@ namespace Mystie.Gameplay
             if (phys != null)
             {
                 if (_entity.Phys != null)
-                    phys.velocity = _entity.Phys.velocity;
+                    phys.SetVelocity(_entity.Phys.localVelocity);
                 phys.simulatePhysics = true;
             }
 
             _carriedObj.transform.SetParent(null);
 
-            SpriteRenderer renderer = _carriedObj.GetComponent<SpriteRenderer>();
+            //SpriteRenderer renderer = _carriedObj.GetComponent<SpriteRenderer>();
+
+            onCarry?.Invoke(_carriedObj);
 
             _carriedObj = null;
 
@@ -168,6 +179,14 @@ namespace Mystie.Gameplay
             {
                 Vector2 shootV = _entity.Controller.aim.normalized * _throwStrength;
                 physObj.SetVelocity(shootV);
+
+                StatusManager status = physObj.GetComponent<StatusManager>();
+                if (status != null)
+                {
+                    status.ApplyStatus(_carryStatus);
+                }
+
+                onThrow?.Invoke(_carriedObj, shootV);
             }
 
             yield return null;

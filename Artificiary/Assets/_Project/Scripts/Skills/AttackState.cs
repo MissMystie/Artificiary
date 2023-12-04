@@ -102,7 +102,7 @@ namespace Mystie.Gameplay
 
             if (triggerRecoil)
             {
-                Vector2 recoilV = ctx.phys.velocity;
+                Vector2 recoilV = ctx.phys.localVelocity;
                 if (attack.recoilOverrideX 
                     && (Mathf.Sign(recoilV.x) != Mathf.Sign(attack.recoil.x)
                     || Mathf.Abs(attack.recoil.x) > Mathf.Abs(recoilV.x)))
@@ -114,7 +114,8 @@ namespace Mystie.Gameplay
                 phys.SetVelocity(recoilV);
             }
 
-            RuntimeManager.PlayOneShotAttached(attack.hitSfx, ctx.gameObject);
+            if (!attack.hitSfx.IsNull)
+                RuntimeManager.PlayOneShotAttached(attack.hitSfx, ctx.gameObject);
         }
 
         public bool DealDamage(GameObject target)

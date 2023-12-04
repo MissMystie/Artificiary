@@ -12,6 +12,7 @@ namespace Mystie.Physics
     public interface IEffector
     {
         Vector2 GetForce(PhysicsObject target);
+        Vector2 GetAddedVelocity(PhysicsObject target);
     }
 
     public interface IEffectable

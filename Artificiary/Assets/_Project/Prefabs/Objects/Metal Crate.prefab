@@ -5521,8 +5521,7 @@ MonoBehaviour:
     baseValue: 10
   volume: 1.5
   gravity: {x: 0, y: -10}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0.4
   drag:
@@ -5649,7 +5648,7 @@ MonoBehaviour:
   damageFX: {fileID: 0}
   showDebug: 1
   hurtbox: {fileID: 0}
-  minVelocity: 15
+  minVelocity: 10
   disableOnContact: 0
   obstacleMask:
     serializedVersion: 2

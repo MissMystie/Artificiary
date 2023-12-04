@@ -5,6 +5,7 @@ using Mystie.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ namespace Mystie.Gameplay
 
         [SerializeField] private MoveController startState;
         public BaseState _currentState { get; protected set; }
+        public bool carrying = false;
 
         [Header("Physcs")]
 
@@ -49,12 +51,27 @@ namespace Mystie.Gameplay
         {
             SubInputs(controller);
             SubPhysics(phys);
+
+            if (entity.Interactor)
+            {
+                carrying = entity.Interactor.IsCarrying;
+                entity.Interactor.onCarry += OnCarry;
+                entity.Interactor.onDrop += OnDrop;
+                entity.Interactor.onThrow += OnThrow;
+            }
         }
 
         private void OnDisable()
         {
             UnsubInputs(controller);
             UnsubPhysics(phys);
+
+            if (entity.Interactor)
+            {
+                entity.Interactor.onCarry -= OnCarry;
+                entity.Interactor.onDrop -= OnDrop;
+                entity.Interactor.onThrow -= OnThrow;
+            }
         }
 
         private void Start()
@@ -149,6 +166,20 @@ namespace Mystie.Gameplay
         protected virtual void OnDash()
         {
             _currentState?.Dash();
+        }
+
+        protected virtual void OnCarry(Collider2D col)
+        {
+            carrying = true;
+        }
+
+        protected virtual void OnDrop(Collider2D col)
+        {
+            carrying = false;
+        }
+
+        protected virtual void OnThrow(Collider2D col, Vector2 throwVelocity)
+        {
         }
 
         #endregion

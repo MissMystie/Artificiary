@@ -179,6 +179,9 @@ MonoBehaviour:
     - type: 4
       percent: 1
       resistKnockback: 0
+    - type: 2
+      percent: 1
+      resistKnockback: 0
     resistAll: 1
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor: {r: 0, g: 1, b: 0, a: 1}

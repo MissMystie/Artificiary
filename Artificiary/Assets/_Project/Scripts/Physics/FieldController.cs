@@ -1,3 +1,5 @@
+using LDtkUnity;
+using Mystie.Logic;
 using NaughtyAttributes;
 using System;
 using System.Collections;
@@ -6,7 +8,7 @@ using UnityEngine;
 
 namespace Mystie
 {
-    public class FieldController : MonoBehaviour
+    public class FieldController : MonoBehaviour, ILDtkImportedFields
     {
         [SerializeField] protected BoxCollider2D col;
         [SerializeField] protected SpriteRenderer sprite;
@@ -96,6 +98,18 @@ namespace Mystie
         private void Reset()
         {
             col = GetComponent<BoxCollider2D>();
+        }
+
+        public void OnLDtkImportFields(LDtkFields fields)
+        {
+            Vector2 size = transform.localScale;
+            _size = size;
+            transform.localScale = Vector2.one;
+
+            fields.TryGetBool("has_max_size", out hasMaxSize);
+            fields.TryGetFloat("max_size", out maxSize);
+
+            UpdateSize();
         }
     }
 }

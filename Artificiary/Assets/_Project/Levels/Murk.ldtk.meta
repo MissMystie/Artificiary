@@ -52,6 +52,12 @@ ScriptedImporter:
     _asset: {fileID: 1783493426702574042, guid: aadbb35643678404b97233be58248f15, type: 3}
   - _key: Fan
     _asset: {fileID: 4582332384971515442, guid: d313fbd711764684faa6e536e2475e7b, type: 3}
+  - _key: Rock_Wall
+    _asset: {fileID: 4311788281712390929, guid: 8fbc6b15db9336f4b82914a1d98027b3, type: 3}
+  - _key: Water
+    _asset: {fileID: 6402714674190038604, guid: 10a38ecd19070a94094b54de992f5112, type: 3}
+  - _key: Camera_Zone
+    _asset: {fileID: 6787278459595555779, guid: 8f9e74f3b24d2c344b81880b4dc35997, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

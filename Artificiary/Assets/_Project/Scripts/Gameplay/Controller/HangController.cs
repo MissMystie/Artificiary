@@ -86,7 +86,7 @@ namespace Mystie.Gameplay
         public override void UpdatePhysics(float deltaTime)
         {
             Vector2 velocity = new Vector2(input.x * moveSpeed, 0);
-            phys.velocity = velocity;
+            phys.SetVelocity(velocity);
         }
 
         public override void Jump()
