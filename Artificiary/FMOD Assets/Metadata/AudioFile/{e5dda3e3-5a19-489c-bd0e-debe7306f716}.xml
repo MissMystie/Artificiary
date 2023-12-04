@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e5dda3e3-5a19-489c-bd0e-debe7306f716}">
+		<property name="assetPath">
+			<value>Branches_Small_Crunch_PSEM.040.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8879999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>
+		</relationship>
+	</object>
+</objects>
