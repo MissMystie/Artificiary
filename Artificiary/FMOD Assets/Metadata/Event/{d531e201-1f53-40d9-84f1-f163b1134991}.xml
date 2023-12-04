@@ -5,7 +5,7 @@
 			<value>freezer_start</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9b0b4e45-7278-4cb7-b53e-c722ba9a18ec}</destination>
@@ -125,6 +125,7 @@
 	<object class="MixerBusEffectChain" id="{2bbe94cd-8e53-4d46-97eb-57dfdac996f1}">
 		<relationship name="effects">
 			<destination>{5edf5a56-60db-4f93-9531-f712eb62f1f6}</destination>
+			<destination>{a305a083-11bc-4a49-a3e5-606525308b38}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6dc26f02-f095-42ac-ab74-44528bccbbfa}" />
@@ -152,6 +153,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{9a7865b0-eac6-49da-95bf-aca51e90a838}" />
 	<object class="MixerBusFader" id="{5edf5a56-60db-4f93-9531-f712eb62f1f6}" />
+	<object class="SpatialiserEffect" id="{a305a083-11bc-4a49-a3e5-606525308b38}" />
 	<object class="AutomationPoint" id="{153e6a81-22d0-46c9-ba0e-9badad877c85}">
 		<property name="position">
 			<value>0</value>
