@@ -5,7 +5,7 @@
 			<value>wooden_crate_collision</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fbb88606-1ea2-4763-ac0b-1f77e01a8dc4}</destination>
@@ -116,6 +116,7 @@
 	<object class="MixerBusEffectChain" id="{8541cca0-db0f-4bb7-8daf-1b6aa9b79d54}">
 		<relationship name="effects">
 			<destination>{bab56030-fcae-4df1-9474-a1d9e1036d63}</destination>
+			<destination>{f68723a3-7391-4206-83e4-371a8884a60e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8a5cbb0c-d6d4-4668-940b-5a6fb0396fac}" />
@@ -135,6 +136,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{7330c5b2-d7f9-4c7c-bed5-2c00cad500bd}" />
 	<object class="MixerBusFader" id="{bab56030-fcae-4df1-9474-a1d9e1036d63}" />
+	<object class="SpatialiserEffect" id="{f68723a3-7391-4206-83e4-371a8884a60e}" />
 	<object class="AutomationPoint" id="{c89e4a4b-bc2d-4ca8-a189-15b9bd726dcb}">
 		<property name="position">
 			<value>0.10000000000000001</value>

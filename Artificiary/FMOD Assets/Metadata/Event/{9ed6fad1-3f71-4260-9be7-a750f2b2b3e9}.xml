@@ -5,7 +5,7 @@
 			<value>wooden_crate_drop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fbb88606-1ea2-4763-ac0b-1f77e01a8dc4}</destination>
@@ -119,6 +119,7 @@
 	<object class="MixerBusEffectChain" id="{28fcbbb7-eb22-47a8-ae32-9105cafa7b88}">
 		<relationship name="effects">
 			<destination>{552dbe97-5179-4baa-ac50-8e3b2220e9cc}</destination>
+			<destination>{352c5f4a-108f-4038-af2c-e413dbcf5256}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{00a40e67-8a5d-4fb5-ad0f-4dfdcf54b078}" />
@@ -138,6 +139,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{617bf08d-7dd6-4d87-a2bd-23ed43a15d0e}" />
 	<object class="MixerBusFader" id="{552dbe97-5179-4baa-ac50-8e3b2220e9cc}" />
+	<object class="SpatialiserEffect" id="{352c5f4a-108f-4038-af2c-e413dbcf5256}" />
 	<object class="AutomationPoint" id="{40967c3f-9495-4229-8acf-ebf2582cca13}">
 		<property name="position">
 			<value>0.046707627118644068</value>

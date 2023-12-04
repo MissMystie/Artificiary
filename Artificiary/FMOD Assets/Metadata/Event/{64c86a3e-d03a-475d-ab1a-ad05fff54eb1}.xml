@@ -5,7 +5,7 @@
 			<value>wooden_crate_destruction</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fbb88606-1ea2-4763-ac0b-1f77e01a8dc4}</destination>
@@ -110,6 +110,7 @@
 	<object class="MixerBusEffectChain" id="{4671a5a2-5a81-44dc-b2a6-58abc6916ee6}">
 		<relationship name="effects">
 			<destination>{180fa9c0-8e8f-4c0d-b2a0-dc5190d6efec}</destination>
+			<destination>{892549e7-bd04-4708-a7c8-63b020ae3c75}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{43074cba-59af-431e-81fc-f267f61b70e3}" />
@@ -121,5 +122,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{1cff7086-075b-4ce1-97c8-82458028a7ac}" />
 	<object class="MixerBusFader" id="{180fa9c0-8e8f-4c0d-b2a0-dc5190d6efec}" />
+	<object class="SpatialiserEffect" id="{892549e7-bd04-4708-a7c8-63b020ae3c75}" />
 	<object class="MixerBusFader" id="{3a68bd82-b382-4812-8876-424c57729be8}" />
 </objects>
