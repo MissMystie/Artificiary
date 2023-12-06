@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{3ca40e3b-2b8b-4283-8515-8b6bbf61fc54}">
+	<object class="AudioFile" id="{e18dc2c1-972b-4c91-ae2b-86c6f05b5e50}">
 		<property name="assetPath">
-			<value>frostball_expire.wav</value>
+			<value>impact_frostball.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>
