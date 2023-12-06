@@ -76,7 +76,7 @@
 	</object>
 	<object class="GroupTrack" id="{28b92040-7d0c-438f-9826-2384b724c194}">
 		<relationship name="automationTracks">
-			<destination>{f485beef-2430-481a-9ad0-38f6202a42d2}</destination>
+			<destination>{1bac3b8e-a450-47c1-91a4-4f8ec830f67b}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{8a559576-41da-421f-b2e5-2f4fc43cff9c}</destination>
@@ -87,7 +87,7 @@
 	</object>
 	<object class="GroupTrack" id="{359dc61a-314c-4668-9e64-58ea7912a0d0}">
 		<relationship name="automationTracks">
-			<destination>{37fd0c98-d689-4f6f-ab26-19011488e774}</destination>
+			<destination>{ae869351-8368-40e7-9e9a-2d12cec3b96d}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{432e0799-d0ab-40e7-89be-05bc3b3e581d}</destination>
@@ -164,7 +164,7 @@
 			<destination>{665adf8c-27f2-4731-80fe-d73f59c37c36}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{f485beef-2430-481a-9ad0-38f6202a42d2}">
+	<object class="AutomationTrack" id="{1bac3b8e-a450-47c1-91a4-4f8ec830f67b}">
 		<relationship name="automator">
 			<destination>{37c5fcf7-3285-4a6c-864d-9dfb4d94dd72}</destination>
 		</relationship>
@@ -200,7 +200,7 @@
 			<destination>{665adf8c-27f2-4731-80fe-d73f59c37c36}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{37fd0c98-d689-4f6f-ab26-19011488e774}">
+	<object class="AutomationTrack" id="{ae869351-8368-40e7-9e9a-2d12cec3b96d}">
 		<relationship name="automator">
 			<destination>{d03e392a-6208-44cc-8be9-45551f35c132}</destination>
 		</relationship>
@@ -440,7 +440,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>10</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{24eddd81-141a-4eed-8de1-63b279f4c7d1}">
@@ -464,7 +464,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>10</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9ed8818d-bdbe-4c7b-8213-3d0ca9a9091d}">
