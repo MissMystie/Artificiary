@@ -18,6 +18,10 @@ namespace Mystie.ChemEngine
         [Header("VFX")]
 
         public ParticleSystemController wetPFX;
+
+        [Header("Sound effects")]
+
+        public FMODUnity.EventReference vaporizeSFX;
     }
 
     public class WetStatus : StatusEffect<WetStatusData>
@@ -69,8 +73,13 @@ namespace Mystie.ChemEngine
             if (target.HasStatus(StatusType.Burn))
             {
                 Debug.Log("Vaporize!");
+                
                 if (data.steamCloud != null)
                     GameObject.Instantiate(data.steamCloud, target.transform);
+
+                if (!data.vaporizeSFX.IsNull)
+                    FMODUnity.RuntimeManager.PlayOneShot(data.vaporizeSFX.Path, target.transform.position);
+
                 target.RemoveStatus(StatusType.Burn);
                 blocked = true;
             }

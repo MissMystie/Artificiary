@@ -28,8 +28,7 @@ namespace Mystie.Gameplay
         public override SkillState Initiate(Entity entity)
         {
             if (entity == null) return null;
-
-            //Debug.Log("Used skill " + name);
+            RuntimeManager.PlayOneShot(sfx, entity.transform.position);
 
             OnHitFrameStart(entity);
             return null;

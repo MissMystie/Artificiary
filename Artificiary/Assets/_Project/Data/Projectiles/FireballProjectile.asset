@@ -19,11 +19,11 @@ MonoBehaviour:
   hitFrameEnd: 1
   sfx:
     Guid:
-      Data1: -61346143
-      Data2: 1141267688
-      Data3: -2064699734
-      Data4: 865760579
-    Path: event:/sfx/player/player_fireball
+      Data1: 1622029038
+      Data2: 1325708765
+      Data3: 1392062887
+      Data4: 58750197
+    Path: event:/sfx/player/abilities/Fireball/player_fireball
   projectile: {fileID: 4608664112111611831, guid: 72ecab4ceff402842818eff61b814573, type: 3}
   strength: 18
   aimType: 0

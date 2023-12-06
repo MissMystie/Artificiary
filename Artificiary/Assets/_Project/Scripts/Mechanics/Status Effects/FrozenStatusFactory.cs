@@ -20,6 +20,12 @@ namespace Mystie.ChemEngine
 
         public ParticleSystemController frozenPFX;
         public Material frozenMat;
+
+        [Header("Sound effects")]
+
+        public FMODUnity.EventReference freezeSFX;
+        public FMODUnity.EventReference unfreezeSFX;
+        public FMODUnity.EventReference thawSFX;
     }
 
     public class FrozenStatus : StatusEffect<FrozenStatusData>
@@ -55,6 +61,9 @@ namespace Mystie.ChemEngine
             if (data.frozenMat && target.entity.SpriteManager)
                 target.entity.SpriteManager.SetMaterial(data.frozenMat);
 
+            if (!data.freezeSFX.IsNull)
+                FMODUnity.RuntimeManager.PlayOneShot(data.freezeSFX.Path, target.transform.position);
+
             return true;
         }
 
@@ -81,6 +90,9 @@ namespace Mystie.ChemEngine
             if (data.frozenMat && target.entity.SpriteManager)
                 target.entity.SpriteManager.ResetMaterial();
 
+            if (!data.unfreezeSFX.IsNull)
+                FMODUnity.RuntimeManager.PlayOneShot(data.unfreezeSFX.Path, target.transform.position);
+
             target.entity.StatusMngr.ApplyStatus(StatusType.Wet);
         }
 
@@ -92,28 +104,29 @@ namespace Mystie.ChemEngine
             {
                 Debug.Log("Melt!");
                 target.entity.StatusMngr.ApplyStatus(StatusType.Wet);
+
+                if (!data.thawSFX.IsNull)
+                    FMODUnity.RuntimeManager.PlayOneShot(data.thawSFX.Path, target.transform.position);
+                
                 blocked = true;
             }
 
             if (target.HasStatus(StatusType.Cold))
             {
-                Debug.Log("Superconduct!");
+                blocked = true;
             }
 
             if (target.HasStatus(StatusType.Frozen))
             {
-                Debug.Log("Superconduct!");
             }
 
             if (target.HasStatus(StatusType.Wet))
             {
-                Debug.Log("Electrocharge!");
+                blocked = true;
             }
 
             if (target.HasStatus(StatusType.Oily))
             {
-                Debug.Log("Blast!");
-                blocked = true;
             }
 
             return !blocked;

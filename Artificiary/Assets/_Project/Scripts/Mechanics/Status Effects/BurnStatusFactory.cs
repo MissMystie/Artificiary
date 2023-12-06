@@ -33,6 +33,7 @@ namespace Mystie.ChemEngine
         public FMODUnity.EventReference igniteSFX;
         public FMODUnity.EventReference burnSFX;
         public FMODUnity.EventReference extinguishSFX;
+        public FMODUnity.EventReference vaporizeSFX;
     }
     
     public class BurnStatus: StatusEffect<BurnStatusData>
@@ -121,14 +122,23 @@ namespace Mystie.ChemEngine
                 Debug.Log("Melt!");
                 target.RemoveStatus(StatusType.Frozen);
                 target.ApplyStatus(StatusType.Wet);
+
+                if (!data.vaporizeSFX.IsNull)
+                    FMODUnity.RuntimeManager.PlayOneShot(data.vaporizeSFX.Path, target.transform.position);
+
                 blocked = true;
             }
 
             if (target.HasStatus(StatusType.Wet))
             {
                 Debug.Log("Vaporize!");
+                
                 if (data.steamCloud != null)
                     GameObject.Instantiate(data.steamCloud, target.transform.position, Quaternion.identity);
+                
+                if (!data.vaporizeSFX.IsNull)
+                    FMODUnity.RuntimeManager.PlayOneShot(data.vaporizeSFX.Path, target.transform.position);
+
                 blocked = true;
             }
 

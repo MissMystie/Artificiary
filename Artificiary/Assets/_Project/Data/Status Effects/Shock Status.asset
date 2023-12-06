@@ -28,22 +28,22 @@ MonoBehaviour:
     shockProcPFX: {fileID: 0}
     shockSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -63277943
+        Data2: 1136817607
+        Data3: -631055965
+        Data4: 1367310715
+      Path: event:/sfx/status effects/shock/shock_start
     shockProcSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 212253233
+        Data2: 1231698017
+        Data3: 2056929470
+        Data4: -1656208006
+      Path: event:/sfx/status effects/shock/shock_conduct
     shockStopSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1531084180
+        Data2: 1128656428
+        Data3: 291562424
+        Data4: -47480895
+      Path: event:/sfx/status effects/shock/shock_end

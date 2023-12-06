@@ -16,3 +16,10 @@ MonoBehaviour:
     duration: 12
     steamCloud: {fileID: 0}
     wetPFX: {fileID: 7469705026298985746, guid: 85c6991abf28f0541a2ed6f1b3a8fba5, type: 3}
+    vaporizeSFX:
+      Guid:
+        Data1: -216190101
+        Data2: 1182014271
+        Data3: -1287714412
+        Data4: -744650290
+      Path: event:/sfx/status effects/wet/wet_vaporise

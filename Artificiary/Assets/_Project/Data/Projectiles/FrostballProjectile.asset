@@ -19,11 +19,11 @@ MonoBehaviour:
   hitFrameEnd: 1
   sfx:
     Guid:
-      Data1: 1655769122
-      Data2: 1230617819
-      Data3: -1603541594
-      Data4: 1362353725
-    Path: event:/sfx/player/abilities/player_waterball
+      Data1: -230313369
+      Data2: 1099475780
+      Data3: 175951498
+      Data4: -1596424532
+    Path: event:/sfx/player/abilities/Frostball/player_frostball
   projectile: {fileID: 4608664112111611831, guid: 49bd7e5ce2c5d0846b40cdb614103c1a, type: 3}
   strength: 15
   aimType: 0

@@ -38,7 +38,7 @@ namespace Mystie.Gameplay
         {
             if (entity == null) return null;
 
-            Debug.Log("Used skill " + name);
+            RuntimeManager.PlayOneShot(sfx, entity.transform.position);
 
             SkillState skillState = new SkillState(entity.StateManager, this);
             entity.StateManager.SetState(skillState);

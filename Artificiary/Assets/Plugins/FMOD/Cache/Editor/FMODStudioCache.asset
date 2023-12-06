@@ -27,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 162115
---- !u!114 &-8241184112939433698
+--- !u!114 &-9022029880421132456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,14 +37,122 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/burn_start
+  m_Name: event:/sfx/player/abilities/Frostball/player_frostball_water
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/burn_start
+  Path: event:/sfx/player/abilities/Frostball/player_frostball_water
   Guid:
-    Data1: 1093577610
-    Data2: 1330857082
-    Data3: -1891573841
-    Data4: -1199108555
+    Data1: 200291463
+    Data2: 1306040424
+    Data3: 1022289543
+    Data4: -578586571
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-8649263189567053308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/fan/fan_on
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/fan/fan_on
+  Guid:
+    Data1: 1871276037
+    Data2: 1292097217
+    Data3: 1646250145
+    Data4: 325004097
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
+--- !u!114 &-8551003228405960596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/metal crate/metal_crate_destruction
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/metal crate/metal_crate_destruction
+  Guid:
+    Data1: 2044689347
+    Data2: 1249918947
+    Data3: 1738568380
+    Data4: 1904814910
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1600
+--- !u!114 &-8536272220629692020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/footsteps/Land/player_land_rock
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/footsteps/Land/player_land_rock
+  Guid:
+    Data1: -1476694536
+    Data2: 1133241700
+    Data3: 625358976
+    Data4: -1965103895
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &-8513962325197030162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Spark/player_spark
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Spark/player_spark
+  Guid:
+    Data1: -1346984704
+    Data2: 1244289632
+    Data3: 2136591037
+    Data4: 1136552893
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -53,7 +161,358 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 56006
+  Length: 0
+--- !u!114 &-8360426941793808527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/elevator/elevator_off
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/elevator/elevator_off
+  Guid:
+    Data1: 2038565698
+    Data2: 1218116595
+    Data3: -865247612
+    Data4: -870761070
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-7852330341952606999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/fan/fan_off
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/fan/fan_off
+  Guid:
+    Data1: -1618184283
+    Data2: 1317987379
+    Data3: 601472702
+    Data4: 619387074
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-7275069217481152678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/footsteps/Land/player_land_wood
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/footsteps/Land/player_land_wood
+  Guid:
+    Data1: 642058574
+    Data2: 1100121355
+    Data3: -890864719
+    Data4: -193662840
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &-7184025864700553159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/burn/burn_end
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/burn/burn_end
+  Guid:
+    Data1: -446574727
+    Data2: 1100553039
+    Data3: -782180162
+    Data4: -1952235114
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1149
+--- !u!114 &-7166277255418646402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/big_splash
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/big_splash
+  Guid:
+    Data1: -234999293
+    Data2: 1334446775
+    Data3: 591234451
+    Data4: -1534526115
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7138883820902760040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/click
+  m_EditorClassIdentifier: 
+  Path: event:/ui/click
+  Guid:
+    Data1: -882141638
+    Data2: 1328082978
+    Data3: -1304520572
+    Data4: -823816598
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
+--- !u!114 &-7103119513481415217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/drain_close
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/drain_close
+  Guid:
+    Data1: 1237145321
+    Data2: 1331556936
+    Data3: -2141819008
+    Data4: 2013548402
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2983
+--- !u!114 &-6905998860139132231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/burn/burn_extinguish
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/burn/burn_extinguish
+  Guid:
+    Data1: -1754419171
+    Data2: 1148897677
+    Data3: 1903078591
+    Data4: 1109845286
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
+--- !u!114 &-6770307873375931396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/waterwheel/waterwheel_on
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/waterwheel/waterwheel_on
+  Guid:
+    Data1: 597886429
+    Data2: 1135164333
+    Data3: 1052326069
+    Data4: -1511837128
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-6570191698908948164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bgm/underwater_bgm
+  m_EditorClassIdentifier: 
+  Path: event:/bgm/underwater_bgm
+  Guid:
+    Data1: 1585301107
+    Data2: 1126077573
+    Data3: 809504920
+    Data4: -790616023
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 219000
+--- !u!114 &-6503661805903074151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Waterball/player_waterball
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Waterball/player_waterball
+  Guid:
+    Data1: -749099440
+    Data2: 1187477049
+    Data3: -255243348
+    Data4: -569987952
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-6391528405471017071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Waterball/player_waterball_vaporize
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Waterball/player_waterball_vaporize
+  Guid:
+    Data1: -1955814859
+    Data2: 1083369356
+    Data3: -1545863790
+    Data4: -1214779026
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1100
+--- !u!114 &-6331073793378899366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/water_level_down
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/water_level_down
+  Guid:
+    Data1: 1889092984
+    Data2: 1175394291
+    Data3: 1998405021
+    Data4: 2002431316
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &-6292312998474920543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +540,7 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 561
---- !u!114 &-5894648428537198220
+--- !u!114 &-6221233111948500718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,14 +550,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_fireball_impact
+  m_Name: event:/sfx/status effects/wet/wet_vaporise
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_fireball_impact
+  Path: event:/sfx/status effects/wet/wet_vaporise
   Guid:
-    Data1: -230338447
-    Data2: 1185234128
-    Data3: -2092702038
-    Data4: 1289817202
+    Data1: -216190101
+    Data2: 1182014271
+    Data3: -1287714412
+    Data4: -744650290
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -107,7 +566,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 2000
+--- !u!114 &-5780198410102881958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/waterwheel/waterwheel_freeze
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/waterwheel/waterwheel_freeze
+  Guid:
+    Data1: -703789098
+    Data2: 1302916985
+    Data3: -1945809508
+    Data4: 2100240694
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
 --- !u!114 &-5762825623002088148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +621,303 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 600
+--- !u!114 &-5709868010441609592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Frostball/player_frostball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Frostball/player_frostball_impact
+  Guid:
+    Data1: 339496187
+    Data2: 1286650004
+    Data3: -891652433
+    Data4: 520331512
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-5394837719188839121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/fan/fan_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/fan/fan_loop
+  Guid:
+    Data1: -1724229468
+    Data2: 1168450336
+    Data3: 537447574
+    Data4: -1400543554
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7500
+--- !u!114 &-5284354281154021908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/moving platform/moving_platform_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/moving platform/moving_platform_loop
+  Guid:
+    Data1: 423632445
+    Data2: 1097802757
+    Data3: -603085377
+    Data4: 774463632
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9000
+--- !u!114 &-5283563092493209474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Spark/player_spark_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Spark/player_spark_impact
+  Guid:
+    Data1: 1721082750
+    Data2: 1304138966
+    Data3: -2029511259
+    Data4: 71108098
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-5166784988017710323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Fireball/player_fireball
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Fireball/player_fireball
+  Guid:
+    Data1: 1622029038
+    Data2: 1325708765
+    Data3: 1392062887
+    Data4: 58750197
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 762
+--- !u!114 &-5119939564021663398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/furnace/furnace_stop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/furnace/furnace_stop
+  Guid:
+    Data1: -1734924062
+    Data2: 1323119933
+    Data3: 1694690957
+    Data4: 2110262210
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-4939013938226339449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/overgrown/overgrown_active
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/overgrown/overgrown_active
+  Guid:
+    Data1: 86792374
+    Data2: 1253920220
+    Data3: 1247443863
+    Data4: 405452787
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1250
+--- !u!114 &-4762256798264559383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Frostball/player_frostball
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Frostball/player_frostball
+  Guid:
+    Data1: -230313369
+    Data2: 1099475780
+    Data3: 175951498
+    Data4: -1596424532
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2312
+--- !u!114 &-4756589087436007691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/battery station/battery_station_stop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/battery station/battery_station_stop
+  Guid:
+    Data1: -1924005307
+    Data2: 1314139278
+    Data3: 2000508319
+    Data4: 946231550
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-4607548608161182907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/bush/bush_burn
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/bush/bush_burn
+  Guid:
+    Data1: -1007625513
+    Data2: 1224957040
+    Data3: -1434282614
+    Data4: 2104671734
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &-4505595635650800120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/bush/bush_cut
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/bush/bush_cut
+  Guid:
+    Data1: 997167707
+    Data2: 1124563099
+    Data3: -1911358839
+    Data4: 1319370113
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-4304025335971579430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +945,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 168399
---- !u!114 &-4178080009828777014
+--- !u!114 &-3947200136648145093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,14 +955,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/burn_end
+  m_Name: event:/sfx/objects/metal crate/metal_crate_drop
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/burn_end
+  Path: event:/sfx/objects/metal crate/metal_crate_drop
   Guid:
-    Data1: -446574727
-    Data2: 1100553039
-    Data3: -782180162
-    Data4: -1952235114
+    Data1: 1490236273
+    Data2: 1289508342
+    Data3: 414889393
+    Data4: 90427623
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -188,7 +971,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1149
+  Length: 500
+--- !u!114 &-3927810414923478477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/selection
+  m_EditorClassIdentifier: 
+  Path: event:/ui/selection
+  Guid:
+    Data1: -1176255424
+    Data2: 1085286863
+    Data3: 582829734
+    Data4: -1981208919
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-3883524628951338970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +1026,33 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 212
+--- !u!114 &-3855241147048448717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/burn/burn_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/burn/burn_start
+  Guid:
+    Data1: 1093577610
+    Data2: 1330857082
+    Data3: -1891573841
+    Data4: -1199108555
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1137
 --- !u!114 &-3831187590252052720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,12 +1068,12 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638354101721023739
+  lastModified: 638374647428450195
   FileSizes:
   - Name: Desktop
-    Value: 5069632
+    Value: 42795744
   Exists: 1
---- !u!114 &-3333996231085647112
+--- !u!114 &-3561620009999752672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,14 +1083,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_frostball
+  m_Name: event:/sfx/interactible/elevator/elevator_on
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_frostball
+  Path: event:/sfx/interactible/elevator/elevator_on
   Guid:
-    Data1: 755849821
-    Data2: 1175045320
-    Data3: 1754499214
-    Data4: 1313099303
+    Data1: 1916077694
+    Data2: 1101438720
+    Data3: 1334974636
+    Data4: -739224999
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -262,8 +1099,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-841810877428332819
+  Length: 1000
+--- !u!114 &-3105099258460695178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,24 +1110,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_fireball
+  m_Name: event:/sfx/status effects/frozen/frozen_thaw
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_fireball
+  Path: event:/sfx/status effects/frozen/frozen_thaw
   Guid:
-    Data1: -61346143
-    Data2: 1141267688
-    Data3: -2064699734
-    Data4: 865760579
+    Data1: -1968962331
+    Data2: 1340091014
+    Data3: -1218461538
+    Data4: 588881670
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-224578878308504747
+  Length: 2600
+--- !u!114 &-2690380264188860600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,14 +1137,95 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/shock
+  m_Name: event:/ui/selection_02
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/shock
+  Path: event:/ui/selection_02
   Guid:
-    Data1: -63277943
-    Data2: 1136817607
-    Data3: -631055965
-    Data4: 1367310715
+    Data1: -397224649
+    Data2: 1339747273
+    Data3: -1629282173
+    Data4: 479328962
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 762
+--- !u!114 &-2652319158993509815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/footsteps/Land/player_land_metal
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/footsteps/Land/player_land_metal
+  Guid:
+    Data1: 477655036
+    Data2: 1243995241
+    Data3: 545921727
+    Data4: 1175635017
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
+--- !u!114 &-2405052059219365893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/cancel_01
+  m_EditorClassIdentifier: 
+  Path: event:/ui/cancel_01
+  Guid:
+    Data1: -471829546
+    Data2: 1272777651
+    Data3: -2147026258
+    Data4: -2126716382
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 870
+--- !u!114 &-2294263781838480418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/overgrown/overgrown_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/overgrown/overgrown_start
+  Guid:
+    Data1: 973718925
+    Data2: 1112800926
+    Data3: 1772357552
+    Data4: 280053369
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -316,7 +1234,304 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 56006
+  Length: 1750
+--- !u!114 &-1964874683858880678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/wooden crate/wooden_crate_collision
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/wooden crate/wooden_crate_collision
+  Guid:
+    Data1: 1663441346
+    Data2: 1139338664
+    Data3: -2128276312
+    Data4: -1335564000
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
+--- !u!114 &-1900975638848007048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/furnace/furnace_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/furnace/furnace_loop
+  Guid:
+    Data1: -315873578
+    Data2: 1308026190
+    Data3: -850080631
+    Data4: -2016106595
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13013
+--- !u!114 &-1370129290336778471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/cancel_02
+  m_EditorClassIdentifier: 
+  Path: event:/ui/cancel_02
+  Guid:
+    Data1: 235625206
+    Data2: 1143138369
+    Data3: -1865350268
+    Data4: 1862968597
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50
+--- !u!114 &-1231515656833323809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/burn/burn_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/burn/burn_loop
+  Guid:
+    Data1: -1963466496
+    Data2: 1165907085
+    Data3: 125129108
+    Data4: -974088495
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54857
+--- !u!114 &-1007556310335262367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/valve/valve_close
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/valve/valve_close
+  Guid:
+    Data1: -1933937871
+    Data2: 1177557973
+    Data3: -1949994835
+    Data4: 1008923384
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-927691256323404841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/metal crate/metal_crate_carry
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/metal crate/metal_crate_carry
+  Guid:
+    Data1: 183957859
+    Data2: 1253165003
+    Data3: -1729096791
+    Data4: -1837872181
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &-761882183138382428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/overgrown/overgrown_burn
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/overgrown/overgrown_burn
+  Guid:
+    Data1: 1476159129
+    Data2: 1262779022
+    Data3: -1036661606
+    Data4: -2029423257
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4250
+--- !u!114 &-446369472301388313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Frostball/player_frostball_expire
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Frostball/player_frostball_expire
+  Guid:
+    Data1: -451000818
+    Data2: 1172878708
+    Data3: -1401641828
+    Data4: 1390196884
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1699
+--- !u!114 &-433944396784377411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/resume
+  m_EditorClassIdentifier: 
+  Path: event:/ui/resume
+  Guid:
+    Data1: 1008975869
+    Data2: 1076170636
+    Data3: -1676108866
+    Data4: 704731594
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
+--- !u!114 &-423057693771556795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/furnace/furnace_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/furnace/furnace_start
+  Guid:
+    Data1: 1501763259
+    Data2: 1292441665
+    Data3: 159141561
+    Data4: -2123943369
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-272601217777598206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/water_level_up
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/water_level_up
+  Guid:
+    Data1: 2125084038
+    Data2: 1100167136
+    Data3: -226787918
+    Data4: -381134963
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,15 +1548,8 @@ MonoBehaviour:
   - {fileID: 2791742554342978610}
   - {fileID: -3831187590252052720}
   EditorEvents:
-  - {fileID: 4531449864447333099}
-  - {fileID: 2807101910158141322}
-  - {fileID: 1107189414884054865}
   - {fileID: -9110252264866537999}
-  - {fileID: 4278734567894470984}
-  - {fileID: -4178080009828777014}
   - {fileID: 1539313663266708595}
-  - {fileID: -224578878308504747}
-  - {fileID: -8241184112939433698}
   - {fileID: 1587511376912117364}
   - {fileID: 7630289922261138490}
   - {fileID: 5765697812437408968}
@@ -359,22 +1567,140 @@ MonoBehaviour:
   - {fileID: 7033512380334371501}
   - {fileID: 8222177693090476472}
   - {fileID: 8360069818309354304}
-  - {fileID: 3843070655124665700}
-  - {fileID: -841810877428332819}
-  - {fileID: 2558289486273804755}
-  - {fileID: 1667634420139021122}
-  - {fileID: -5894648428537198220}
-  - {fileID: 4994450001864727976}
-  - {fileID: 8848165025013978024}
-  - {fileID: -3333996231085647112}
   - {fileID: 2138595128053532778}
+  - {fileID: -8513962325197030162}
+  - {fileID: -1231515656833323809}
+  - {fileID: 9029524267116041073}
+  - {fileID: 1863551367879008722}
+  - {fileID: 1796141416852780673}
+  - {fileID: -7166277255418646402}
+  - {fileID: -8649263189567053308}
+  - {fileID: -446369472301388313}
+  - {fileID: 1773551223588231017}
+  - {fileID: 1879884365189585878}
+  - {fileID: -6905998860139132231}
+  - {fileID: -1007556310335262367}
+  - {fileID: 2807388965413355371}
+  - {fileID: 8237126101779193696}
+  - {fileID: -6391528405471017071}
+  - {fileID: -2690380264188860600}
+  - {fileID: -7138883820902760040}
+  - {fileID: 8464156577455472910}
+  - {fileID: -5284354281154021908}
+  - {fileID: 9026157954443770954}
+  - {fileID: -3927810414923478477}
+  - {fileID: 9204014449003747309}
+  - {fileID: -8360426941793808527}
+  - {fileID: -4756589087436007691}
+  - {fileID: 346275590535069826}
+  - {fileID: 8155070371863578453}
+  - {fileID: -7275069217481152678}
+  - {fileID: 695586281767618527}
+  - {fileID: -6503661805903074151}
+  - {fileID: 9160082016614235245}
+  - {fileID: 477417792028306432}
+  - {fileID: 3655628749364497525}
+  - {fileID: -4505595635650800120}
+  - {fileID: 3145733752735995592}
+  - {fileID: 1015897164618736612}
+  - {fileID: -927691256323404841}
+  - {fileID: -4762256798264559383}
+  - {fileID: -6221233111948500718}
+  - {fileID: -3947200136648145093}
+  - {fileID: -6570191698908948164}
+  - {fileID: 7920336757511576604}
+  - {fileID: -6331073793378899366}
+  - {fileID: -7184025864700553159}
+  - {fileID: -3561620009999752672}
+  - {fileID: 5850510484728200280}
+  - {fileID: -5283563092493209474}
+  - {fileID: 4335019679155193550}
+  - {fileID: -272601217777598206}
+  - {fileID: -9022029880421132456}
+  - {fileID: 3753662063767385066}
+  - {fileID: 5154317411890276651}
+  - {fileID: -3855241147048448717}
+  - {fileID: 3895961103766918824}
+  - {fileID: 3407752356356543820}
+  - {fileID: -2294263781838480418}
+  - {fileID: 1439725526605805917}
+  - {fileID: 3939450468332573429}
+  - {fileID: 8924484387867685043}
+  - {fileID: -761882183138382428}
+  - {fileID: -5394837719188839121}
+  - {fileID: -7852330341952606999}
+  - {fileID: 8022432500825626822}
+  - {fileID: 7742572703820623747}
+  - {fileID: -4939013938226339449}
+  - {fileID: 5241881180820916929}
+  - {fileID: -423057693771556795}
+  - {fileID: -1964874683858880678}
+  - {fileID: -8551003228405960596}
+  - {fileID: 1163507003348449417}
+  - {fileID: 3003113797743282396}
+  - {fileID: 7593872931326420514}
+  - {fileID: 7654086736371610339}
+  - {fileID: 6069040741297749478}
+  - {fileID: -5780198410102881958}
+  - {fileID: -1900975638848007048}
+  - {fileID: -2405052059219365893}
+  - {fileID: 4844324783562744453}
+  - {fileID: -4607548608161182907}
+  - {fileID: 5414804608647568148}
+  - {fileID: 5770991848958974073}
+  - {fileID: -6770307873375931396}
+  - {fileID: 3784659429613741237}
+  - {fileID: -5119939564021663398}
+  - {fileID: 4381237292309284679}
+  - {fileID: 7247327109954155244}
+  - {fileID: -3105099258460695178}
+  - {fileID: -7103119513481415217}
+  - {fileID: 3587682938212906944}
+  - {fileID: -5166784988017710323}
+  - {fileID: 393151415376236139}
+  - {fileID: 73406048051109517}
+  - {fileID: -1370129290336778471}
+  - {fileID: 8705543130413746875}
+  - {fileID: -8536272220629692020}
+  - {fileID: -5709868010441609592}
+  - {fileID: -2652319158993509815}
+  - {fileID: 6183700963393062526}
+  - {fileID: -433944396784377411}
+  - {fileID: 1211721016704516758}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3831187590252052720}
   StringsBanks:
   - {fileID: 2791742554342978610}
-  cacheTime: 638354101721058770
+  cacheTime: 638374647428505247
   cacheVersion: 131605
+--- !u!114 &73406048051109517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/player_movement
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/player_movement
+  Guid:
+    Data1: 2061689076
+    Data2: 1198890642
+    Data3: 727367090
+    Data4: -872039523
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &284964753893905164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,13 +1721,121 @@ MonoBehaviour:
     Data4: 795771956
   Banks:
   - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 700
+--- !u!114 &346275590535069826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Waterball/player_waterball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Waterball/player_waterball_impact
+  Guid:
+    Data1: 130455625
+    Data2: 1282120124
+    Data3: 1335887745
+    Data4: 1981193443
+  Banks:
+  - {fileID: -3831187590252052720}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 700
+--- !u!114 &393151415376236139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Frostball/player_frostball_fire
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Frostball/player_frostball_fire
+  Guid:
+    Data1: -1256582159
+    Data2: 1128997021
+    Data3: -1331471428
+    Data4: 1092053056
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &477417792028306432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Superseed/player_superseed_cast
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Superseed/player_superseed_cast
+  Guid:
+    Data1: -164932522
+    Data2: 1311888022
+    Data3: -705544059
+    Data4: 1831269968
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &695586281767618527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/footsteps/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/footsteps/Footsteps
+  Guid:
+    Data1: -1816244402
+    Data2: 1261148624
+    Data3: -1525951596
+    Data4: 1065075802
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 375
 --- !u!114 &822159717627347282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +1863,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 451
---- !u!114 &1107189414884054865
+--- !u!114 &1015897164618736612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,14 +1873,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/frozen_start
+  m_Name: event:/sfx/interactible/waterwheel/waterwheel_loop
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/frozen_start
+  Path: event:/sfx/interactible/waterwheel/waterwheel_loop
   Guid:
-    Data1: -110978281
-    Data2: 1078316317
-    Data3: 24276401
-    Data4: 532099387
+    Data1: 729165155
+    Data2: 1111429960
+    Data3: -602868042
+    Data4: -1729080647
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
+--- !u!114 &1163507003348449417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Spark/player_spark_expire
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Spark/player_spark_expire
+  Guid:
+    Data1: -1959738675
+    Data2: 1271306122
+    Data3: -1443354951
+    Data4: 48871579
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -455,7 +1916,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 56006
+  Length: 2000
+--- !u!114 &1211721016704516758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Fireball/player_fireball_impact_wall
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Fireball/player_fireball_impact_wall
+  Guid:
+    Data1: 1760493822
+    Data2: 1299799601
+    Data3: -821146463
+    Data4: 477702150
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1375
+--- !u!114 &1439725526605805917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/moving platform/moving_platform_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/moving platform/moving_platform_start
+  Guid:
+    Data1: 1348689044
+    Data2: 1291553832
+    Data3: 2104647349
+    Data4: 1236103025
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 762
 --- !u!114 &1539313663266708595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,14 +2018,14 @@ MonoBehaviour:
     Data4: -481098691
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &1667634420139021122
+  Length: 1000
+--- !u!114 &1773551223588231017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,14 +2035,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_waterball_impact
+  m_Name: event:/sfx/status effects/frozen/frozen_start
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_waterball_impact
+  Path: event:/sfx/status effects/frozen/frozen_start
   Guid:
-    Data1: -763793619
-    Data2: 1246986382
-    Data3: 2066555012
-    Data4: -1692786189
+    Data1: -110978281
+    Data2: 1078316317
+    Data3: 24276401
+    Data4: 532099387
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -536,7 +2051,88 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 56006
+--- !u!114 &1796141416852780673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/frozen/frozen_end
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/frozen/frozen_end
+  Guid:
+    Data1: 261530882
+    Data2: 1154197520
+    Data3: -1511362390
+    Data4: 1807567763
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1400
+--- !u!114 &1863551367879008722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Fireball/player_fireball_expire
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Fireball/player_fireball_expire
+  Guid:
+    Data1: 1912412930
+    Data2: 1309930172
+    Data3: -352356218
+    Data4: -1840842225
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1044
+--- !u!114 &1879884365189585878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/rock wall/rock_wall_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/rock wall/rock_wall_impact
+  Guid:
+    Data1: -42104549
+    Data2: 1224479120
+    Data3: -270359926
+    Data4: 1080133109
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &2138595128053532778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,33 +2160,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1149
---- !u!114 &2558289486273804755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_waterball
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_waterball
-  Guid:
-    Data1: 1655769122
-    Data2: 1230617819
-    Data3: -1603541594
-    Data4: 1362353725
-  Banks:
-  - {fileID: -3831187590252052720}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2791742554342978610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,12 +2175,12 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638354101721058770
+  lastModified: 638374647428505247
   FileSizes:
   - Name: Desktop
-    Value: 2626
+    Value: 6762
   Exists: 1
---- !u!114 &2807101910158141322
+--- !u!114 &2807388965413355371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,23 +2190,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/frozen_end
+  m_Name: event:/sfx/status effects/shock/shock_conduct
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/frozen_end
+  Path: event:/sfx/status effects/shock/shock_conduct
   Guid:
-    Data1: 261530882
-    Data2: 1154197520
-    Data3: -1511362390
-    Data4: 1807567763
+    Data1: 212253233
+    Data2: 1231698017
+    Data3: 2056929470
+    Data4: -1656208006
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 56006
+  Length: 1000
+--- !u!114 &3003113797743282396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambiance/ambiance_water_drop
+  m_EditorClassIdentifier: 
+  Path: event:/ambiance/ambiance_water_drop
+  Guid:
+    Data1: 1329205966
+    Data2: 1315455073
+    Data3: -78716235
+    Data4: 290000190
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20271
+--- !u!114 &3145733752735995592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/frozen/frozen_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/frozen/frozen_loop
+  Guid:
+    Data1: 166481762
+    Data2: 1103187336
+    Data3: 122059948
+    Data4: 570092620
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2784
 --- !u!114 &3302990861859590692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +2287,142 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2951
+  Length: 2514
+--- !u!114 &3407752356356543820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/battery station/battery_station_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/battery station/battery_station_loop
+  Guid:
+    Data1: -1664216181
+    Data2: 1242999500
+    Data3: 1489330058
+    Data4: -1885231107
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &3587682938212906944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/fan/superfan_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/fan/superfan_loop
+  Guid:
+    Data1: -577995283
+    Data2: 1244776015
+    Data3: 660133552
+    Data4: -744736851
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2125
+--- !u!114 &3655628749364497525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Superseed/player_superseed_cancel
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Superseed/player_superseed_cancel
+  Guid:
+    Data1: 875244632
+    Data2: 1244184146
+    Data3: -790810489
+    Data4: -462007415
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &3753662063767385066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/bush/bush_walk_through
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/bush/bush_walk_through
+  Guid:
+    Data1: -393386361
+    Data2: 1166699046
+    Data3: -2053434461
+    Data4: -1553672087
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1888
+--- !u!114 &3784659429613741237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/waterwheel/waterwheel_off
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/waterwheel/waterwheel_off
+  Guid:
+    Data1: 1705771488
+    Data2: 1115497605
+    Data3: 340671130
+    Data4: -1070981562
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1926
 --- !u!114 &3788462509663825992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,8 +2449,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 888
---- !u!114 &3843070655124665700
+  Length: 780
+--- !u!114 &3895961103766918824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -702,14 +2460,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_spark
+  m_Name: event:/sfx/interactible/moving platform/moving_platform_stop
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_spark
+  Path: event:/sfx/interactible/moving platform/moving_platform_stop
   Guid:
-    Data1: -2105390536
-    Data2: 1151067912
-    Data3: -1961539662
-    Data4: 341072251
+    Data1: -32702838
+    Data2: 1321753985
+    Data3: -1409282430
+    Data4: -283121489
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -718,8 +2476,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &4278734567894470984
+  Length: 531
+--- !u!114 &3939450468332573429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -729,24 +2487,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/frozen_loop
+  m_Name: event:/sfx/status effects/shock/shock_end
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/frozen_loop
+  Path: event:/sfx/status effects/shock/shock_end
   Guid:
-    Data1: 166481762
-    Data2: 1103187336
-    Data3: 122059948
-    Data4: 570092620
+    Data1: 1531084180
+    Data2: 1128656428
+    Data3: 291562424
+    Data4: -47480895
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &4335019679155193550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/valve/valve_open
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/valve/valve_open
+  Guid:
+    Data1: -1469176443
+    Data2: 1320701080
+    Data3: 344191883
+    Data4: -1477876746
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2784
---- !u!114 &4531449864447333099
+  Length: 1000
+--- !u!114 &4381237292309284679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -756,14 +2541,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/status effects/burn_loop
+  m_Name: event:/sfx/interactible/freezer/freezer_loop
   m_EditorClassIdentifier: 
-  Path: event:/sfx/status effects/burn_loop
+  Path: event:/sfx/interactible/freezer/freezer_loop
   Guid:
-    Data1: -1963466496
-    Data2: 1165907085
-    Data3: 125129108
-    Data4: -974088495
+    Data1: 1025706212
+    Data2: 1267228999
+    Data3: -1241364065
+    Data4: -45910666
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
@@ -772,7 +2557,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 54857
+  Length: 10600
 --- !u!114 &4597948873741300108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,8 +2584,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 174
---- !u!114 &4994450001864727976
+  Length: 718
+--- !u!114 &4844324783562744453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -810,14 +2595,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_spark_impact
+  m_Name: event:/sfx/interactible/fan/superfan_off
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_spark_impact
+  Path: event:/sfx/interactible/fan/superfan_off
   Guid:
-    Data1: -1807931485
-    Data2: 1212561203
-    Data3: 1360064396
-    Data4: 1294115840
+    Data1: -490754858
+    Data2: 1163855216
+    Data3: -2011822696
+    Data4: -280961090
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &5154317411890276651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/shock/shock_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/shock/shock_start
+  Guid:
+    Data1: -63277943
+    Data2: 1136817607
+    Data3: -631055965
+    Data4: 1367310715
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -826,7 +2638,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1000
+--- !u!114 &5241881180820916929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Fireball/player_fireball_water
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Fireball/player_fireball_water
+  Guid:
+    Data1: 2064243386
+    Data2: 1276220387
+    Data3: -1675107433
+    Data4: 851609668
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &5414804608647568148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/wet/wet_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/wet/wet_loop
+  Guid:
+    Data1: -2142983464
+    Data2: 1133149557
+    Data3: 1533063839
+    Data4: -1766336482
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
 --- !u!114 &5765697812437408968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,13 +2713,121 @@ MonoBehaviour:
     Data4: -1232539072
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 850
+--- !u!114 &5770991848958974073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/wooden crate/wooden_crate_carry
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/wooden crate/wooden_crate_carry
+  Guid:
+    Data1: -673465382
+    Data2: 1197774454
+    Data3: 1127063434
+    Data4: -1217022538
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
+--- !u!114 &5850510484728200280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/waterwheel/waterwheel_fast_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/waterwheel/waterwheel_fast_loop
+  Guid:
+    Data1: -746888578
+    Data2: 1306917665
+    Data3: 1868978344
+    Data4: 1849211656
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 114065
+--- !u!114 &6069040741297749478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/wooden crate/wooden_crate_drop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/wooden crate/wooden_crate_drop
+  Guid:
+    Data1: -1630078255
+    Data2: 1113603953
+    Data3: 1353181083
+    Data4: -374099214
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 246
+--- !u!114 &6183700963393062526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/fan/superfan_on
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/fan/superfan_on
+  Guid:
+    Data1: -50366979
+    Data2: 1140604792
+    Data3: 1118437542
+    Data4: 125913920
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
 --- !u!114 &6998641743387914903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,7 +2854,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1002
+  Length: 908
 --- !u!114 &7033512380334371501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +2909,60 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 433
+--- !u!114 &7247327109954155244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambiance/waterfall
+  m_EditorClassIdentifier: 
+  Path: event:/ambiance/waterfall
+  Guid:
+    Data1: -1398772252
+    Data2: 1268036325
+    Data3: -1710387836
+    Data4: 574502619
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 94404
+--- !u!114 &7593872931326420514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/metal crate/metal_crate_collision
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/metal crate/metal_crate_collision
+  Guid:
+    Data1: -1212640305
+    Data2: 1302891683
+    Data3: -818263655
+    Data4: -480624479
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &7630289922261138490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,13 +2983,148 @@ MonoBehaviour:
     Data4: 2042811169
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 20
   MaxDistance: 30
-  Length: 783
+  Length: 611
+--- !u!114 &7654086736371610339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/status effects/shock/shock_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/status effects/shock/shock_loop
+  Guid:
+    Data1: 1836064464
+    Data2: 1208114759
+    Data3: -480556866
+    Data4: -1253004761
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
+--- !u!114 &7742572703820623747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/small_splash
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/small_splash
+  Guid:
+    Data1: -698592335
+    Data2: 1261889098
+    Data3: 302989447
+    Data4: 508221021
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3220
+--- !u!114 &7920336757511576604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/abilities/Fireball/player_fireball_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/abilities/Fireball/player_fireball_impact
+  Guid:
+    Data1: 1676909684
+    Data2: 1313825905
+    Data3: -178954877
+    Data4: -347382426
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
+--- !u!114 &8022432500825626822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/water_freeze
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/water_freeze
+  Guid:
+    Data1: 1164989606
+    Data2: 1138989332
+    Data3: 328238730
+    Data4: -588560511
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1400
+--- !u!114 &8155070371863578453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/rock wall/rock_wall_destruction
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/rock wall/rock_wall_destruction
+  Guid:
+    Data1: -1658717108
+    Data2: 1302693275
+    Data3: -2146164301
+    Data4: 1216879415
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3098
 --- !u!114 &8222177693090476472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,6 +3152,33 @@ MonoBehaviour:
   MinDistance: 20
   MaxDistance: 30
   Length: 203
+--- !u!114 &8237126101779193696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/freezer/freezer_stop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/freezer/freezer_stop
+  Guid:
+    Data1: 1616852274
+    Data2: 1227684157
+    Data3: -131689595
+    Data4: 1346411351
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &8360069818309354304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,8 +3205,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &8848165025013978024
+  Length: 800
+--- !u!114 &8464156577455472910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1026,14 +3216,95 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/player/abilities/player_frostball_impact
+  m_Name: event:/ambiance/ambiance_water_iddle
   m_EditorClassIdentifier: 
-  Path: event:/sfx/player/abilities/player_frostball_impact
+  Path: event:/ambiance/ambiance_water_iddle
   Guid:
-    Data1: -350300415
-    Data2: 1177881379
-    Data3: -621239146
-    Data4: 1739913135
+    Data1: 214759228
+    Data2: 1104226025
+    Data3: 500539009
+    Data4: 428695248
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &8705543130413746875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/water level/drain_open
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/water level/drain_open
+  Guid:
+    Data1: 808536568
+    Data2: 1309767255
+    Data3: 1173345453
+    Data4: 765435323
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2896
+--- !u!114 &8924484387867685043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/player_hurt
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/player_hurt
+  Guid:
+    Data1: 689869976
+    Data2: 1260479667
+    Data3: 1720562832
+    Data4: 1083066281
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 530
+--- !u!114 &9026157954443770954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/objects/wooden crate/wooden_crate_destruction
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/objects/wooden crate/wooden_crate_destruction
+  Guid:
+    Data1: 1690855998
+    Data2: 1197330490
+    Data3: 95230635
+    Data4: -1320225281
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
@@ -1042,4 +3313,85 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1000
+--- !u!114 &9029524267116041073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/freezer/freezer_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/freezer/freezer_start
+  Guid:
+    Data1: -718151167
+    Data2: 1087971155
+    Data3: 1676800388
+    Data4: -1857481807
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 817
+--- !u!114 &9160082016614235245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/elevator/elevator_loop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/elevator/elevator_loop
+  Guid:
+    Data1: -1581712813
+    Data2: 1309659331
+    Data3: 137726361
+    Data4: 97642504
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2593
+--- !u!114 &9204014449003747309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/interactible/battery station/battery_station_start
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/interactible/battery station/battery_station_start
+  Guid:
+    Data1: -1032798143
+    Data2: 1185091537
+    Data3: 1943366296
+    Data4: 1344350525
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500

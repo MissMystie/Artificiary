@@ -90,10 +90,10 @@
 	<object class="MixerBusPanner" id="{f3f894a4-29c5-45f4-bdf3-5f68b63dbbde}" />
 	<object class="SingleSound" id="{99a93408-ac89-4854-9c08-927c89945494}">
 		<property name="length">
-			<value>4</value>
+			<value>2.6000000000000001</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>22</value>
+			<value>22.199999999999999</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{01966f2b-6b62-4e16-9670-27144ff42a18}</destination>
@@ -145,7 +145,7 @@
 	<object class="SpatialiserEffect" id="{938662f7-45a9-4162-b72e-75af9dc874de}" />
 	<object class="AutomationPoint" id="{cd5e8bf8-fe3d-4413-a45e-bc605b5f3290}">
 		<property name="position">
-			<value>2</value>
+			<value>0.60000000000000009</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -156,7 +156,7 @@
 	</object>
 	<object class="AutomationPoint" id="{58723901-ff8c-4e14-a2fa-ac5407e876c4}">
 		<property name="position">
-			<value>4</value>
+			<value>2.6000000000000001</value>
 		</property>
 		<property name="value">
 			<value>0</value>

@@ -21,22 +21,22 @@ MonoBehaviour:
     bloomPFX: {fileID: 9215545120092293376, guid: 09534b117a092eb46b3c38b005c9fa95, type: 3}
     applySFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 973718925
+        Data2: 1112800926
+        Data3: 1772357552
+        Data4: 280053369
+      Path: event:/sfx/status effects/overgrown/overgrown_start
     bloomSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 86792374
+        Data2: 1253920220
+        Data3: 1247443863
+        Data4: 405452787
+      Path: event:/sfx/status effects/overgrown/overgrown_active
     burnSFX:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1476159129
+        Data2: 1262779022
+        Data3: -1036661606
+        Data4: -2029423257
+      Path: event:/sfx/status effects/overgrown/overgrown_burn

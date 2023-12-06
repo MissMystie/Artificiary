@@ -32,7 +32,7 @@ MonoBehaviour:
         Data2: 1330857082
         Data3: -1891573841
         Data4: -1199108555
-      Path: event:/SFX/Status Effects/burn_start
+      Path: event:/sfx/status effects/burn/burn_start
     burnSFX:
       Guid:
         Data1: 0
@@ -46,4 +46,11 @@ MonoBehaviour:
         Data2: 1100553039
         Data3: -782180162
         Data4: -1952235114
-      Path: event:/SFX/Status Effects/burn_end
+      Path: event:/sfx/status effects/burn/burn_end
+    vaporizeSFX:
+      Guid:
+        Data1: -1955814859
+        Data2: 1083369356
+        Data3: -1545863790
+        Data4: -1214779026
+      Path: event:/sfx/player/abilities/Waterball/player_waterball_vaporize

@@ -15,12 +15,29 @@ MonoBehaviour:
   data:
     duration: 12
     accMod:
-      rate: 0.1
-      mod: 0
-      flat: 0
+      _rate: 0.15
     frictionMod:
-      rate: 0.01
-      mod: 0
-      flat: 0
+      _rate: 0.1
     frozenPFX: {fileID: 366695169004246644, guid: 4b6b1a55d6235e14985f4af1e70a4ae3, type: 3}
     frozenMat: {fileID: 2100000, guid: f9488ddc58be03446beef575c9c5e4d0, type: 2}
+    freezeSFX:
+      Guid:
+        Data1: -110978281
+        Data2: 1078316317
+        Data3: 24276401
+        Data4: 532099387
+      Path: event:/sfx/status effects/frozen/frozen_start
+    unfreezeSFX:
+      Guid:
+        Data1: 261530882
+        Data2: 1154197520
+        Data3: -1511362390
+        Data4: 1807567763
+      Path: event:/sfx/status effects/frozen/frozen_end
+    thawSFX:
+      Guid:
+        Data1: -1968962331
+        Data2: 1340091014
+        Data3: -1218461538
+        Data4: 588881670
+      Path: event:/sfx/status effects/frozen/frozen_thaw

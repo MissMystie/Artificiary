@@ -32,6 +32,7 @@ namespace Mystie.Core
         public const string JUMP_ACTION = "jump";
         public const string DASH_ACTION = "dash";
         public const string INTERACT_ACTION = "interact";
+        public const string TRANSMUTE_ACTION = "transmute";
 
         public const string ATTACK_ACTION = "attack";
         public const string SHOOT_ACTION = "shoot";
@@ -45,6 +46,7 @@ namespace Mystie.Core
         public ActionInput jump;
         public ActionInput dash;
         public ActionInput interact;
+        public ActionInput transmute;
         public ActionInput attack;
         public ActionInput shoot;
         public ActionInput skill1;
@@ -60,6 +62,7 @@ namespace Mystie.Core
                 (jump = new ActionInput(JUMP_ACTION)),
                 (dash = new ActionInput(DASH_ACTION)),
                 (interact = new ActionInput(INTERACT_ACTION)),
+                (transmute = new ActionInput(TRANSMUTE_ACTION)),
                 (attack = new ActionInput(ATTACK_ACTION)),
                 (shoot = new ActionInput(SHOOT_ACTION)),
                 (skill1 = new ActionInput(SKILL1_ACTION)),

@@ -45,6 +45,10 @@ namespace Mystie.Gameplay
         [Foldout("Feedback")]
         [SerializeField] protected EventReference _dropSFX;
         [Foldout("Feedback")]
+        [SerializeField] protected EventReference _superseedSFX;
+        [Foldout("Feedback")]
+        [SerializeField] protected EventReference _superseedCancelSFX;
+        [Foldout("Feedback")]
         [SerializeField] protected GameObject _interactiblePrompt;
 
         [Header("Debug")]
@@ -64,12 +68,14 @@ namespace Mystie.Gameplay
         {
             _controller.shoot.performed += OnShoot;
             _controller.interact.performed += OnInteract;
+            _controller.transmute.performed += OnTransmute;
         }
 
         protected void OnDisable()
         {
             _controller.shoot.performed -= OnShoot;
             _controller.interact.performed -= OnInteract;
+            _controller.transmute.performed -= OnTransmute;
         }
 
         protected void FixedUpdate()
@@ -131,7 +137,7 @@ namespace Mystie.Gameplay
             //if (renderer != null) renderer.sortingLayerName = carriedObjectsSortingLayer;
 
             _anim?.SetBool(_carryingAnimParam, true);
-            RuntimeManager.PlayOneShot(_dropSFX, transform.position);
+            RuntimeManager.PlayOneShot(_grabSFX, transform.position);
 
             onCarry?.Invoke(obj);
 
@@ -180,12 +186,6 @@ namespace Mystie.Gameplay
                 Vector2 shootV = _entity.Controller.aim.normalized * _throwStrength;
                 physObj.SetVelocity(shootV);
 
-                StatusManager status = physObj.GetComponent<StatusManager>();
-                if (status != null)
-                {
-                    status.ApplyStatus(_carryStatus);
-                }
-
                 onThrow?.Invoke(_carriedObj, shootV);
             }
 
@@ -207,6 +207,29 @@ namespace Mystie.Gameplay
             Drop();
 
             yield return null;
+        }
+
+        private void OnTransmute()
+        {
+            if (_carriedObj == null) return;
+
+            StatusManager status = _carriedObj.GetComponent<StatusManager>();
+            if (status != null)
+            {
+                if (!status.HasStatus(_carryStatus))
+                {
+                    status.ApplyStatus(_carryStatus);
+                    RuntimeManager.PlayOneShot(_superseedSFX, transform.position);
+                }
+                else
+                {
+                    status.RemoveStatus(_carryStatus);
+                    RuntimeManager.PlayOneShot(_superseedCancelSFX, transform.position);
+                }
+                    
+            }
+
+            
         }
 
         private void OnDrawGizmos()
