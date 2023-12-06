@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3ca40e3b-2b8b-4283-8515-8b6bbf61fc54}">
+		<property name="assetPath">
+			<value>frostball_expire.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea1368a2-101b-4477-9436-7a8455276d35}</destination>
+		</relationship>
+	</object>
+</objects>
