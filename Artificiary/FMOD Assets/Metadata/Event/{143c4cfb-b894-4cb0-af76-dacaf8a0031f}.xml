@@ -128,10 +128,10 @@
 	</object>
 	<object class="SingleSound" id="{e0cab3e4-3dff-4503-8156-bc671dbd3e53}">
 		<property name="start">
-			<value>0.20000000000000001</value>
+			<value>0.15000000000000002</value>
 		</property>
 		<property name="length">
-			<value>0.80000000000000004</value>
+			<value>1.25</value>
 		</property>
 		<property name="pitch">
 			<value>-8</value>
@@ -239,18 +239,18 @@
 	<object class="MixerBusFader" id="{0caeb270-bbab-43d0-9da9-a261859d81b9}" />
 	<object class="AutomationPoint" id="{f5b78b61-9697-49b8-b1b3-b5c0a227cdea}">
 		<property name="position">
-			<value>0.20000000000000001</value>
+			<value>0.59999999999999964</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>0.187274978</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1f791f99-255d-4b5c-82aa-956241f2c303}">
 		<property name="position">
-			<value>1</value>
+			<value>1.3999999999999997</value>
 		</property>
 		<property name="value">
 			<value>0</value>
