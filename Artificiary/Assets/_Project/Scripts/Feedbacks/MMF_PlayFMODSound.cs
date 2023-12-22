@@ -44,9 +44,13 @@ namespace Mista.Feedbacks
         {
             if (!Active || !FeedbackTypeAuthorized) return;
 
-            if (soundOrigin != null) RuntimeManager.PlayOneShot(soundEvent, soundOrigin.position);
-            else RuntimeManager.PlayOneShot(soundEvent);
-
+            if (!soundEvent.IsNull)
+            {
+                if (soundOrigin != null) 
+                    RuntimeManager.PlayOneShot(soundEvent, soundOrigin.position);
+                else RuntimeManager.PlayOneShot(soundEvent);
+            }
+            
             //RuntimeManager.PlayOneShotAttached(soundEvent, soundOrigin);
 
             //_duration = ms * 0.001f;

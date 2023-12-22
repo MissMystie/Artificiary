@@ -17,5 +17,5 @@ MonoBehaviour:
     type: 1
     factory: {fileID: 11400000, guid: 67b17237ac56e7f4994f5b8b6c870218, type: 2}
   - name: Cold
-    type: 3
+    type: 5
     factory: {fileID: 11400000, guid: 2a1e7200f37e5cf469bb44f6477ea4ff, type: 2}

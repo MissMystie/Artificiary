@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Waterball
   icon: {fileID: 0}
-  animController: {fileID: 9100000, guid: 65b4bb8a48e77cb4c99363d63f0328ff, type: 2}
+  animController: {fileID: 9100000, guid: c3ca9fc817d962f4db3f9f466b3d0f7f, type: 2}
   mode: 0
   cdTime: 0.5
   chargeTime: 0.5

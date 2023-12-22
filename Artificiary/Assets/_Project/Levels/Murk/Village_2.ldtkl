@@ -29,6 +29,51 @@
 	"fieldInstances": [],
 	"layerInstances": [
 		{
+			"__identifier": "Camera",
+			"__type": "Entities",
+			"__cWid": 52,
+			"__cHei": 24,
+			"__gridSize": 16,
+			"__opacity": 1,
+			"__pxTotalOffsetX": 0,
+			"__pxTotalOffsetY": 0,
+			"__tilesetDefUid": null,
+			"__tilesetRelPath": null,
+			"iid": "8d0e0480-8990-11ee-8c24-0df99953b1d8",
+			"levelId": 349,
+			"layerDefUid": 413,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"visible": true,
+			"optionalRules": [],
+			"intGridCsv": [],
+			"autoLayerTiles": [],
+			"seed": 2811723,
+			"overrideTilesetUid": null,
+			"gridTiles": [],
+			"entityInstances": [
+				{
+					"__identifier": "Camera_Zone",
+					"__grid": [26,11],
+					"__pivot": [0.5,0.5],
+					"__tags": ["camera"],
+					"__tile": null,
+					"__smartColor": "#FFFFFF",
+					"__worldX": 1056,
+					"__worldY": -200,
+					"iid": "bc8bb920-8990-11ee-83cb-83fbc10b7234",
+					"width": 832,
+					"height": 368,
+					"defUid": 394,
+					"px": [416,184],
+					"fieldInstances": [
+						{ "__identifier": "follow_player", "__type": "Bool", "__value": false, "__tile": null, "defUid": 397, "realEditorValues": [] },
+						{ "__identifier": "use_confiner", "__type": "Bool", "__value": false, "__tile": null, "defUid": 398, "realEditorValues": [] }
+					]
+				}
+			]
+		},
+		{
 			"__identifier": "Effectors",
 			"__type": "Entities",
 			"__cWid": 52,
@@ -126,27 +171,7 @@
 			"seed": 8501902,
 			"overrideTilesetUid": null,
 			"gridTiles": [],
-			"entityInstances": [
-				{
-					"__identifier": "Camera_Zone",
-					"__grid": [26,11],
-					"__pivot": [0.5,0.5],
-					"__tags": [],
-					"__tile": null,
-					"__smartColor": "#FFFFFF",
-					"__worldX": 1056,
-					"__worldY": -200,
-					"iid": "bc8bb920-8990-11ee-83cb-83fbc10b7234",
-					"width": 832,
-					"height": 368,
-					"defUid": 394,
-					"px": [416,184],
-					"fieldInstances": [
-						{ "__identifier": "follow_player", "__type": "Bool", "__value": false, "__tile": null, "defUid": 397, "realEditorValues": [] },
-						{ "__identifier": "use_confiner", "__type": "Bool", "__value": false, "__tile": null, "defUid": 398, "realEditorValues": [] }
-					]
-				}
-			]
+			"entityInstances": []
 		},
 		{
 			"__identifier": "Props",

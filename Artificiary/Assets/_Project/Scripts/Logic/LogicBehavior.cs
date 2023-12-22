@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMODUnity;
 using LDtkUnity;
 using MoreMountains.Feedbacks;
@@ -31,7 +32,7 @@ namespace Mystie.Logic
         protected Animator anim;
 
         [SerializeField]
-        protected bool _on = false;
+        protected bool _on = true;
         [SerializeField]
         protected bool _locked = false;
         [SerializeField]
@@ -42,6 +43,8 @@ namespace Mystie.Logic
 
         [Foldout("Feedback")]
         [SerializeField] protected string onAnimParam = "On";
+        [Foldout("Feedback")]
+        [SerializeField] protected string toggleAnimParam = "Toggle";
 
         [Space]
 
@@ -63,6 +66,19 @@ namespace Mystie.Logic
 
         [Space]
 
+        [Foldout("Feedback")]
+        [SerializeField] protected EventReference toggleSFX;
+        [Foldout("Feedback")]
+        [SerializeField] protected MMFeedbacks toggleFX;
+
+        [Space]
+
+        [Foldout("Feedback")]
+        [SerializeField] protected EventReference onLoop;
+        protected EventInstance onLoopInstance;
+
+        [Space]
+
         [Header("Debug")]
 
         [SerializeField] protected bool showDebug = true;
@@ -70,6 +86,10 @@ namespace Mystie.Logic
         protected virtual void Awake()
         {
             anim = GetComponentInChildren<Animator>();
+
+            if (!onLoop.IsNull)
+                onLoopInstance = RuntimeManager.CreateInstance(onLoop);
+            RuntimeManager.AttachInstanceToGameObject(onLoopInstance, transform);
         }
 
         protected virtual void OnEnable()
@@ -80,7 +100,8 @@ namespace Mystie.Logic
             {
                 anim.logWarnings = false;
                 string animState = _on ? onAnimState : offAnimState;
-                if (!animState.IsNullOrEmpty()) anim.Play(animState);
+                if (!animState.IsNullOrEmpty()) 
+                    anim.Play(animState);
                 anim.Update(0);
             }
         }
@@ -88,6 +109,8 @@ namespace Mystie.Logic
         [Button()]
         public virtual void Toggle()
         {
+            anim?.SetTrigger(toggleAnimParam);
+            toggleFX?.PlayFeedbacks();
             SetOnValue(!_on);
         }
 
@@ -103,6 +126,7 @@ namespace Mystie.Logic
             _on = true;
             anim?.SetBool(onAnimParam, true);
             onFX?.PlayFeedbacks();
+            onLoopInstance.start();
 
             OnSwitchEvent();
         }
@@ -114,6 +138,7 @@ namespace Mystie.Logic
             anim?.SetBool(onAnimParam, false);
             onFX?.StopFeedbacks();
             offFX?.PlayFeedbacks();
+            onLoopInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
             OnSwitchEvent();
         }

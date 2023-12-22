@@ -1,3 +1,4 @@
+using Mystie.Gameplay;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,7 @@ namespace Mystie.Physics
 
     public interface ICarryable
     {
-        void Carry();
+        void OnCarry(InteractBehavior interactor);
+        void OnDrop(InteractBehavior interactor);
     }
 }

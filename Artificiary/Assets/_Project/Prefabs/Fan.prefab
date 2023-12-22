@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8058608777828882961}
   - component: {fileID: 6142776808857517416}
   - component: {fileID: 4402456461933223091}
+  - component: {fileID: 7688707865900957793}
   m_Layer: 11
   m_Name: Wind
   m_TagString: Untagged
@@ -95,7 +96,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 1472
+    m_Bits: 5568
   gravity: {x: 0, y: -10}
   density: 4
   flowAngle: 0
@@ -121,6 +122,39 @@ MonoBehaviour:
   col: {fileID: 8058608777828882961}
   pfx: {fileID: 6511434103990357026}
   emissionRate: 5
+--- !u!114 &7688707865900957793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504564597133862768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11f1536070605148b4ffb68b90fbf0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 8058608777828882961}
+  sprite: {fileID: 0}
+  _size: {x: 1, y: 4}
+  minSize: 0.125
+  hasMaxSize: 0
+  maxSize: 12
+  direction: 1
+  volumeIncreaseLoop:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  volumeDecreaseLoop:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &4582332384971515442
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +171,6 @@ GameObject:
   - component: {fileID: 2322091427162128076}
   - component: {fileID: 711327229450400720}
   - component: {fileID: 5702540097705776080}
-  - component: {fileID: 5453749091972350599}
   - component: {fileID: 7525150980876035245}
   - component: {fileID: 7873902799666436975}
   - component: {fileID: 7366793127621279267}
@@ -334,8 +367,12 @@ MonoBehaviour:
   col: {fileID: 0}
   active: 1
   vulnerabilities:
-    vulnerabilities: []
+    vulnerabilities:
+    - type: 1
+      percent: 0
+      resistKnockback: 1
     resistAll: 0
+    resistKnockback: 1
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor: {r: 0, g: 1, b: 0, a: 1}
   hitFX: {fileID: 0}
@@ -355,31 +392,47 @@ MonoBehaviour:
   _locked: 0
   _invertOutput: 0
   onAnimParam: On
+  toggleAnimParam: Toggle
   onAnimState: On
   onSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1871276037
+      Data2: 1292097217
+      Data3: 1646250145
+      Data4: 325004097
+    Path: event:/sfx/interactible/fan/fan_on
   onFX: {fileID: 0}
   offAnimState: Off
   offSFX:
     Guid:
+      Data1: -1618184283
+      Data2: 1317987379
+      Data3: 601472702
+      Data4: 619387074
+    Path: event:/sfx/interactible/fan/fan_off
+  offFX: {fileID: 0}
+  toggleSFX:
+    Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  offFX: {fileID: 0}
+  toggleFX: {fileID: 0}
+  onLoop:
+    Guid:
+      Data1: -1724229468
+      Data2: 1168450336
+      Data3: 537447574
+      Data4: -1400543554
+    Path: event:/sfx/interactible/fan/fan_loop
   showDebug: 1
   _input: {fileID: 0}
   _inputLock: {fileID: 0}
   _inputInverter: {fileID: 0}
   _invertInput: 0
   statusMngr: {fileID: 0}
-  field: {fileID: 5453749091972350599}
+  field: {fileID: 7688707865900957793}
   effector: {fileID: 6142776808857517416}
   width: 1
   normalField:
@@ -388,29 +441,19 @@ MonoBehaviour:
   chargedField:
     strength: 8
     range: 12
+  activateDmgType: 1
   _charged: 0
   chargedStatus: 1
+  chargedAnimParam: Charged
   chargedAnimState: Charged
   chargedFX: {fileID: 0}
---- !u!114 &5453749091972350599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4582332384971515442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11f1536070605148b4ffb68b90fbf0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 8058608777828882961}
-  sprite: {fileID: 0}
-  _size: {x: 1, y: 4}
-  minSize: 0.125
-  hasMaxSize: 0
-  maxSize: 12
-  direction: 1
+  chargedLoop:
+    Guid:
+      Data1: -577995283
+      Data2: 1244776015
+      Data3: 660133552
+      Data4: -744736851
+    Path: event:/sfx/interactible/fan/superfan_loop
 --- !u!95 &7525150980876035245
 Animator:
   serializedVersion: 5
@@ -461,7 +504,7 @@ MonoBehaviour:
   - {fileID: 7873902799666436975}
   colMask:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 4360
   wallAngle: 80
   faceDir: 1
   passThrough: 0
@@ -481,6 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
+  col: {fileID: 0}
   state:
     velocity: {x: 0, y: 0}
     grounded: 0
@@ -498,11 +542,10 @@ MonoBehaviour:
   applyGravity: 1
   applyDrag: 1
   mass:
-    baseValue: 1
+    baseValue: 6
   volume: 1
   gravity: {x: 0, y: -10}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0.4
   drag:
@@ -510,6 +553,7 @@ MonoBehaviour:
       baseValue: 0.005
     y:
       baseValue: 0
+  immersedOffset: 0
   waterCol: {fileID: 0}
   waterLayer:
     serializedVersion: 2

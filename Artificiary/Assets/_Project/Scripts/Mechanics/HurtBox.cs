@@ -39,9 +39,12 @@ namespace Mystie.Core
 
             TakeDamage(dmg);
 
-            foreach (IHittable hittable in hittables)
-                hittable.TakeHit(kbVelocity);
-
+            if (!vulnerabilities.ResistKnockback(dmg.type))
+            {
+                foreach (IHittable hittable in hittables)
+                    hittable.TakeHit(kbVelocity);
+            }
+            
             hitFX?.PlayFeedbacks();
         }
 

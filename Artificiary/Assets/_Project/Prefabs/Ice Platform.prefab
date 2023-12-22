@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: -487924435715876046}
   - component: {fileID: -3214860629662848294}
   - component: {fileID: 3262888055409252098}
+  - component: {fileID: 3457009149939100190}
+  - component: {fileID: 6907196104270750256}
   - component: {fileID: 409040400055594979}
   - component: {fileID: 5504178433366736084}
   m_Layer: 8
@@ -213,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
+  col: {fileID: 0}
   state:
     velocity: {x: 0, y: 0}
     grounded: 0
@@ -233,8 +236,7 @@ MonoBehaviour:
     baseValue: 3
   volume: 2
   gravity: {x: 0, y: -10}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0.4
   drag:
@@ -242,6 +244,7 @@ MonoBehaviour:
       baseValue: 0.005
     y:
       baseValue: 0
+  immersedOffset: 0
   waterCol: {fileID: 0}
   waterLayer:
     serializedVersion: 2
@@ -272,6 +275,60 @@ MonoBehaviour:
     m_Bits: 448
   detectRange: 0.0625
   showDebug: 0
+--- !u!114 &3457009149939100190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801113611627639525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0251e5f5c0f00458253a7ec12db48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 7222289266253097860}
+  active: 1
+  vulnerabilities:
+    vulnerabilities:
+    - type: 10
+      percent: 1
+      resistKnockback: 0
+    resistAll: 1
+  inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
+  hitFX: {fileID: 0}
+--- !u!114 &6907196104270750256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801113611627639525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b815d682caa5b448641b394ee28d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 0}
+  stateManager: {fileID: 0}
+  maxHealth: 1
+  iFramesDuration: 0.125
+  stunDuration: 0.125
+  disableOnDeath: 1
+  deathDelay: 0
+  deathAnimParam: death
+  stunAnimParam: stunned
+  deathFXPrefab: {fileID: 0}
+  hurtFX: {fileID: 0}
+  deathFX: {fileID: 0}
+  iFramesFX: {fileID: 0}
+  stunFX: {fileID: 0}
+  shieldFX: {fileID: 0}
+  shieldHurtFX: {fileID: 0}
+  iFramesShieldFX: {fileID: 0}
+  shieldGainFX: {fileID: 0}
+  shieldExpireFX: {fileID: 0}
 --- !u!114 &409040400055594979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eecd1ca9b9c0d4d82ef49f5133d5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  properties:
+    ctx: {fileID: 0}
+    flammable: 0
+    conductive: 0
 --- !u!114 &5504178433366736084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,4 +361,6 @@ MonoBehaviour:
   - Name: PassThrough
     ID: 0
   - Name: OneWay
+    ID: 0
+  - Name: Carryable
     ID: 0

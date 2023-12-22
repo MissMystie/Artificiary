@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _colliderType: 2
   _customPhysicsSprite: {fileID: 0}
-  _tilemapTag: PassThrough
+  _tilemapTag: OneWay
   _tilemapLayerMask: 3
   _physicsMaterial: {fileID: 0}
   _gameObject: {fileID: 0}

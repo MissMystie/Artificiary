@@ -70,7 +70,8 @@ namespace Mystie.UI
 
             Cursor.visible = showCursor;
 
-            RuntimeManager.PlayOneShot(displaySFX);
+            if (!displaySFX.IsNull)
+                RuntimeManager.PlayOneShot(displaySFX);
         }
 
         public virtual void PauseState()

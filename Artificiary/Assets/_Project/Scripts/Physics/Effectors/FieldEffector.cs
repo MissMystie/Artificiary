@@ -9,7 +9,7 @@ namespace Mystie
 {
     public abstract class FieldEffector : MonoBehaviour, IEffector
     {
-        [SerializeField] protected BoxCollider2D collider;
+        [SerializeField] protected new BoxCollider2D collider;
         [SerializeField] protected LayerMask mask = -1;
 
         [Space]

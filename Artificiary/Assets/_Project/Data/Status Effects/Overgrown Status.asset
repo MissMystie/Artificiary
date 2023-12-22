@@ -17,8 +17,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 8
     smokeCloud: {fileID: 0}
-    overgrownPFX: {fileID: 0}
-    bloomPFX: {fileID: 9215545120092293376, guid: 09534b117a092eb46b3c38b005c9fa95, type: 3}
+    overgrownPFX: {fileID: 9215545120092293376, guid: 09534b117a092eb46b3c38b005c9fa95, type: 3}
+    bloomPFX: {fileID: 9215545120092293376, guid: f741fc7c332cc53478a87bb405b74ad8, type: 3}
     applySFX:
       Guid:
         Data1: 973718925

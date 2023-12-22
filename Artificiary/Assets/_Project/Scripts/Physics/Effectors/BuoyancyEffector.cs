@@ -27,7 +27,7 @@ namespace Mystie
 
         public override Vector2 GetForce(PhysicsObject target)
         {
-            float posY = target.col.bounds.center.y;
+            float posY = target.YLevel;
             bool atSurface = posY >= (collider.bounds.max.y - margin);
 
             if (atSurface)

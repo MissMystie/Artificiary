@@ -136,6 +136,11 @@ namespace Mystie.Gameplay
             SpriteRenderer renderer = _carriedObj.GetComponent<SpriteRenderer>();
             //if (renderer != null) renderer.sortingLayerName = carriedObjectsSortingLayer;
 
+            ICarryable[] carryables = _carriedObj.GetComponents<ICarryable>();
+            foreach (ICarryable c in carryables) {
+                c.OnCarry(this);
+            }
+
             _anim?.SetBool(_carryingAnimParam, true);
             RuntimeManager.PlayOneShot(_grabSFX, transform.position);
 
@@ -164,9 +169,15 @@ namespace Mystie.Gameplay
 
             _carriedObj.transform.SetParent(null);
 
+            ICarryable[] carryables = _carriedObj.GetComponents<ICarryable>();
+            foreach (ICarryable c in carryables)
+            {
+                c.OnDrop(this);
+            }
+
             //SpriteRenderer renderer = _carriedObj.GetComponent<SpriteRenderer>();
 
-            onCarry?.Invoke(_carriedObj);
+            onDrop?.Invoke(_carriedObj);
 
             _carriedObj = null;
 

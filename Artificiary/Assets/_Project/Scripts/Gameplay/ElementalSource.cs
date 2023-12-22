@@ -67,6 +67,4 @@ namespace Mystie.Logic
             fields.TryGetBool("unlimited", out unlimitedCharges);
         }
     }
-
-    
 }

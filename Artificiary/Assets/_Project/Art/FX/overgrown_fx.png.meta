@@ -382,6 +382,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: flowers_fx_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 10
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a37b0cf18a06947a1ec6331fa78238
+      internalID: -487132707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers_fx_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 10
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efe6cd4e967e1b40996d5a8a289644f
+      internalID: -56815780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers_fx_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 4
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df4b45494dd2a5408a555dae8da0b89
+      internalID: 45128060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers_fx_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 4
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0190fc1178b348846840183e24bb1ebd
+      internalID: -1810476469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers_fx_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 10
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efdca6825576ab4da6b0b6760b13faa
+      internalID: 1161254269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -393,6 +498,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      flowers_fx_0: 1161254269
+      flowers_fx_1: -487132707
+      flowers_fx_2: -56815780
+      flowers_fx_3: 45128060
+      flowers_fx_4: -1810476469
       overgrown_fx_0: -2036772066
       overgrown_fx_1: 1285245640
       overgrown_fx_10: -251920463

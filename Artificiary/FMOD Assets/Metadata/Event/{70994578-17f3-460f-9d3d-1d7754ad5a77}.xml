@@ -5,7 +5,7 @@
 			<value>water_level_down</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bc1204a6-16ad-49ed-aef1-4fa1acd70bd9}</destination>
@@ -57,7 +57,14 @@
 			<destination>{3c3fe18a-d873-41ef-9509-999df8dc343d}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{4f90c718-9c83-453a-aa32-d7ee431e7217}" />
+	<object class="EventAutomatableProperties" id="{4f90c718-9c83-453a-aa32-d7ee431e7217}">
+		<property name="minimumDistance">
+			<value>20</value>
+		</property>
+		<property name="maximumDistance">
+			<value>30</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{587a45ff-b6ef-488f-a54d-e9120ef7b154}" />
 	<object class="GroupTrack" id="{2e9561cd-adbf-4c01-a86e-ff38797a8069}">
 		<relationship name="modules">
@@ -168,6 +175,7 @@
 	<object class="MixerBusEffectChain" id="{2b7b01df-12e5-419c-86c9-a7916f021ec7}">
 		<relationship name="effects">
 			<destination>{8085e4f3-054d-46ab-8a17-0d859776b0ee}</destination>
+			<destination>{8985cf83-88d7-4766-af83-0664ad92afb9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bb6b54f2-5945-44d4-8899-89c1e20388d4}" />
@@ -201,6 +209,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{a46668f7-1c35-4ebf-8310-0fd4d42e45ca}" />
 	<object class="MixerBusFader" id="{8085e4f3-054d-46ab-8a17-0d859776b0ee}" />
+	<object class="SpatialiserEffect" id="{8985cf83-88d7-4766-af83-0664ad92afb9}" />
 	<object class="AutomationPoint" id="{4ce19dc4-2252-49bd-a4cf-e0f8aa62916a}">
 		<property name="position">
 			<value>3</value>

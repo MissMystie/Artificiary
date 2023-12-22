@@ -1,5 +1,6 @@
 using Mystie.Utils;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Mystie
     public class ParticleSystemController : MonoBehaviour
     {
         [SerializeField] private List<ParticleSystem> effects = new List<ParticleSystem>();
+        [SerializeField] private List<System> systems = new List<System>();
 
         public enum Shape { CUSTOM, POINT, SPRITE, CIRCLE, BOX, LINE, EDGE }
         [SerializeField] private Shape shape = Shape.CUSTOM;
@@ -40,13 +42,15 @@ namespace Mystie
             {
                 if (ps == null)
                 {
-                    //Debug.LogWarning("Missing particle system.", this);
+                    Debug.LogWarning("Missing particle system.", this);
                     continue;
                 }
 
                 if (setShape)
                 {
                     ParticleSystem.ShapeModule s = ps.shape;
+
+                    s.scale = Vector2.one;
 
                     switch (shape)
                     {
@@ -230,6 +234,7 @@ namespace Mystie
             s.shapeType = ParticleSystemShapeType.SpriteRenderer;
             s.meshShapeType = ParticleSystemMeshShapeType.Triangle;
             s.spriteRenderer = _sprite;
+            s.scale = _sprite.transform.localScale;
         }
 
         public void UpdateCircleShape(ParticleSystem.ShapeModule s)
@@ -239,7 +244,7 @@ namespace Mystie
             s.shapeType = ParticleSystemShapeType.Circle;
             s.radius = circle.radius * _col.transform.localScale.x;
 
-            s.position = new Vector2(circle.offset.x * _col.transform.localScale.x, 
+            s.position = new Vector2(circle.offset.x * _col.transform.localScale.x,
                 circle.offset.y * _col.transform.localScale.y);
         }
 
@@ -248,12 +253,12 @@ namespace Mystie
             BoxCollider2D box = (BoxCollider2D)_col;
             s.shapeType = ParticleSystemShapeType.Rectangle;
 
-            Vector3 scale = new Vector2(box.size.x * _col.transform.localScale.x, 
+            Vector3 scale = new Vector2(box.size.x * _col.transform.localScale.x,
                 box.size.y * _col.transform.localScale.y);
             scale.z = 1;
             s.scale = scale;
 
-            s.position = new Vector2(box.offset.x * _col.transform.localScale.x, 
+            s.position = new Vector2(box.offset.x * _col.transform.localScale.x,
                 box.offset.y * _col.transform.localScale.y);
         }
 
@@ -262,12 +267,12 @@ namespace Mystie
             BoxCollider2D box = (BoxCollider2D)_col;
             s.shapeType = ParticleSystemShapeType.BoxEdge;
 
-            Vector3 scale = new Vector2(box.size.x * _col.transform.localScale.x, 
+            Vector3 scale = new Vector2(box.size.x * _col.transform.localScale.x,
                 box.size.y * _col.transform.localScale.y);
             scale.z = 1;
             s.scale = scale;
 
-            s.position = new Vector2(box.offset.x * _col.transform.localScale.x, 
+            s.position = new Vector2(box.offset.x * _col.transform.localScale.x,
                 box.offset.y * _col.transform.localScale.y);
         }
 
@@ -283,7 +288,7 @@ namespace Mystie
 
             s.radius = halfLength * _col.transform.localScale.x;
 
-            s.position = new Vector2(line.offset.x * _col.transform.localScale.x, 
+            s.position = new Vector2(line.offset.x * _col.transform.localScale.x,
                 line.offset.y * _col.transform.localScale.y);
         }
 
@@ -300,7 +305,6 @@ namespace Mystie
                     break;
                 case Shape.CIRCLE:
                     area = Mathf.PI * Mathf.Pow(s.radius, 2);
-
                     break;
                 case Shape.BOX:
                     area = s.scale.x * s.scale.y;
@@ -332,5 +336,14 @@ namespace Mystie
             effects = new List<ParticleSystem>();
             effects = GetComponentsInChildren<ParticleSystem>().ToList();
         }
+
+        [Serializable]
+        public class System 
+        {
+            public string name;
+            public ParticleSystem ps;
+            public bool _scaleToArea = false;
+            [ ShowIf("scaleToArea")] public float _emissionRate = 10f;
+        } 
     }
 }

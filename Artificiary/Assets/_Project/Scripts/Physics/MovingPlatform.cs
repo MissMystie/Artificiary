@@ -172,10 +172,9 @@ namespace Mystie.Physics
 
         protected virtual void OnDrawGizmos()
         {
-            if (body != null && col != null && 
-                !_waypoints.IsNullOrEmpty() && _waypoints.Length >= 2)
+            if (body != null && !_waypoints.IsNullOrEmpty() && _waypoints.Length >= 2)
             {
-                Vector2 offset = col.bounds.center - body.transform.position;
+                Vector2 offset = col != null? col.bounds.center - body.transform.position : Vector2.zero;
 
                 for (int i = 0; i < _waypoints.Length; i++)
                 {
@@ -194,7 +193,7 @@ namespace Mystie.Physics
                     Gizmos.color = Color.red;
                     GizmosExtensions.DrawCross(waypoint + offset, .3f);
 
-                    if (showPlatforms && body && col)
+                    if (showPlatforms && body && col != null)
                     {
                         Gizmos.DrawWireCube(waypoint + offset, col.bounds.size);
                     }

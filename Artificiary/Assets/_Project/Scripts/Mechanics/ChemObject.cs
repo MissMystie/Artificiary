@@ -52,7 +52,9 @@ namespace Mystie.ChemEngine
             {
                 get
                 {
-                    return flammable && !ctx.statusMngr.HasStatus(StatusType.Wet);
+                    return (flammable && !ctx.statusMngr.HasStatus(StatusType.Wet)) 
+                        || ctx.statusMngr.HasStatus(StatusType.Overgrown)
+                        || ctx.statusMngr.HasStatus(StatusType.Shock);
                 }
             }
 
@@ -60,7 +62,9 @@ namespace Mystie.ChemEngine
             {
                 get
                 {
-                    return conductive || ctx.statusMngr.HasStatus(StatusType.Wet);
+                    return conductive 
+                        || ctx.statusMngr.HasStatus(StatusType.Wet)
+                        || ctx.statusMngr.HasStatus(StatusType.Burn);
                 }
             }
         }

@@ -212,7 +212,7 @@ MonoBehaviour:
   - {fileID: 2858052546674267517}
   colMask:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 4360
   wallAngle: 80
   faceDir: 1
   passThrough: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
+  col: {fileID: 0}
   state:
     velocity: {x: 0, y: 0}
     grounded: 0
@@ -272,8 +273,7 @@ MonoBehaviour:
     baseValue: 5
   volume: 1.5
   gravity: {x: 0, y: -10}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0.4
   drag:
@@ -281,6 +281,7 @@ MonoBehaviour:
       baseValue: 0.005
     y:
       baseValue: 0
+  immersedOffset: 0
   waterCol: {fileID: 0}
   waterLayer:
     serializedVersion: 2
@@ -308,6 +309,7 @@ MonoBehaviour:
   vulnerabilities:
     vulnerabilities: []
     resistAll: 0
+    resistKnockback: 0
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor: {r: 0, g: 1, b: 0, a: 1}
   hitFX: {fileID: 0}
@@ -384,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 5865249188017934290}
-  dealsDmg: 1
+  dealsDmg: 0
   dmg:
     value: 1
     type: 2
@@ -398,7 +400,7 @@ MonoBehaviour:
     angle: 90
   disableOnDmgDealt: 0
   damageFX: {fileID: 0}
-  showDebug: 1
+  showDebug: 0
   hurtbox: {fileID: 0}
   minVelocity: 15
   disableOnContact: 0

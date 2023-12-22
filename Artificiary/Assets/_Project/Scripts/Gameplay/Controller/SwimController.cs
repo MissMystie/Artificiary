@@ -102,9 +102,9 @@ namespace Mystie.Gameplay
             {
                 v.y *= (1 - friction.y);
             }
-
-            if (v.y > 0 && ctx.phys.state.atSurface)
-                v.y = 0f;
+            
+            //if (v.y > 0 && ctx.phys.state.atSurface)
+                //v.y = 0f;
 
             ctx.phys.SetVelocity(v);
         }
@@ -129,6 +129,7 @@ namespace Mystie.Gameplay
 
         public override void Jump()
         {
+            Debug.Log("At surface: " + ctx.phys.state.atSurface);
             if (ctx.phys.state.atSurface)
             {
                 ctx.phys.state.immersed = false;

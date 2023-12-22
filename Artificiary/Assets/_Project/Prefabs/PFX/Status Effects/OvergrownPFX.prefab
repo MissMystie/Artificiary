@@ -4879,6 +4879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 358311602444951717}
+  systems: []
   shape: 0
   _sprite: {fileID: 0}
   _col: {fileID: 0}
@@ -4887,7 +4888,7 @@ MonoBehaviour:
   _scaleToArea: 1
   _emissionRate: 10
   _scaleMaxParticles: 1
-  _maxParticles: 20
+  _maxParticles: 15
 --- !u!198 &358311602444951717
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5459,7 +5460,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 1
-    maxNumParticles: 20
+    maxNumParticles: 15
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5527,7 +5528,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 1, y: 1, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0

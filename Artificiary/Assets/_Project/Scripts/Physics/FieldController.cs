@@ -1,10 +1,12 @@
+using FMODUnity;
+using FMOD.Studio;
 using LDtkUnity;
 using Mystie.Logic;
 using NaughtyAttributes;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mystie.Systems;
 
 namespace Mystie
 {
@@ -19,6 +21,23 @@ namespace Mystie
         protected float maxSize = 1f;
         [SerializeField] int direction = 1;
 
+        [SerializeField] protected EventReference volumeIncreaseLoop;
+        [SerializeField] protected EventReference volumeDecreaseLoop;
+
+        protected EventInstance volumeIncresaeInstance;
+        protected EventInstance volumeDecreaseInstance;
+
+        public bool IsFull { get => hasMaxSize && _size.y >= maxSize; }
+        public bool IsEmpty { get => _size.y <= minSize; }
+
+        private void Start()
+        {
+            if (!volumeIncreaseLoop.IsNull)
+                volumeIncresaeInstance = AudioManager.Instance.CreateEventInstance(volumeIncreaseLoop);
+            if (!volumeDecreaseLoop.IsNull)
+                volumeDecreaseInstance = AudioManager.Instance.CreateEventInstance(volumeDecreaseLoop);
+        }
+
         void Update()
         {
             UpdateSize();
@@ -28,7 +47,8 @@ namespace Mystie
         {
             if (hasMaxSize)
                 _size.y = Mathf.Min(maxSize, _size.y);
-            bool enabled = _size.x >= minSize && _size.y >= minSize;
+            //bool enabled = _size.x >= minSize && _size.y >= minSize;
+            bool enabled = true;
 
             if (col != null) 
             {
@@ -45,7 +65,8 @@ namespace Mystie
                 sprite.enabled = enabled;
                 if (enabled)
                 {
-                    sprite.size = col.size;
+                    sprite.transform.localScale = col.size;
+                    //sprite.size = col.size;
                     sprite.gameObject.transform.localPosition = col.offset;
                 }
             }
@@ -87,7 +108,7 @@ namespace Mystie
 
         private void OnValidate()
         {
-            direction = direction != 0? Math.Sign(direction) : 1;
+            direction = direction != 0? System.Math.Sign(direction) : 1;
 
             if (hasMaxSize)
             {

@@ -29,6 +29,57 @@
 	"fieldInstances": [],
 	"layerInstances": [
 		{
+			"__identifier": "Camera",
+			"__type": "Entities",
+			"__cWid": 44,
+			"__cHei": 44,
+			"__gridSize": 16,
+			"__opacity": 1,
+			"__pxTotalOffsetX": 0,
+			"__pxTotalOffsetY": 0,
+			"__tilesetDefUid": null,
+			"__tilesetRelPath": null,
+			"iid": "8d1334a0-8990-11ee-8c24-5dcc4c91019f",
+			"levelId": 382,
+			"layerDefUid": 413,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"visible": true,
+			"optionalRules": [],
+			"intGridCsv": [],
+			"autoLayerTiles": [],
+			"seed": 5173443,
+			"overrideTilesetUid": null,
+			"gridTiles": [],
+			"entityInstances": [
+				{
+					"__identifier": "Camera_Zone",
+					"__grid": [22,21],
+					"__pivot": [0.5,0.5],
+					"__tags": ["camera"],
+					"__tile": null,
+					"__smartColor": "#FFFFFF",
+					"__worldX": -160,
+					"__worldY": 344,
+					"iid": "f2949410-8990-11ee-83cb-0d5b74fd95d5",
+					"width": 704,
+					"height": 688,
+					"defUid": 394,
+					"px": [352,344],
+					"fieldInstances": [
+						{ "__identifier": "follow_player", "__type": "Bool", "__value": true, "__tile": null, "defUid": 397, "realEditorValues": [{
+							"id": "V_Bool",
+							"params": [ true ]
+						}] },
+						{ "__identifier": "use_confiner", "__type": "Bool", "__value": true, "__tile": null, "defUid": 398, "realEditorValues": [{
+							"id": "V_Bool",
+							"params": [ true ]
+						}] }
+					]
+				}
+			]
+		},
+		{
 			"__identifier": "Effectors",
 			"__type": "Entities",
 			"__cWid": 44,
@@ -273,7 +324,10 @@
 					"height": 16,
 					"defUid": 335,
 					"px": [216,656],
-					"fieldInstances": [{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] }]
+					"fieldInstances": [
+						{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] },
+						{ "__identifier": "rotation", "__type": "Float", "__value": 0, "__tile": null, "defUid": 402, "realEditorValues": [] }
+					]
 				},
 				{
 					"__identifier": "Pressure_plate",
@@ -289,7 +343,10 @@
 					"height": 16,
 					"defUid": 335,
 					"px": [312,528],
-					"fieldInstances": [{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] }]
+					"fieldInstances": [
+						{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] },
+						{ "__identifier": "rotation", "__type": "Float", "__value": 0, "__tile": null, "defUid": 402, "realEditorValues": [] }
+					]
 				},
 				{
 					"__identifier": "Inverter",
@@ -363,25 +420,6 @@
 							"id": "V_Bool",
 							"params": [ false ]
 						}] }
-					]
-				},
-				{
-					"__identifier": "Camera_Zone",
-					"__grid": [22,21],
-					"__pivot": [0.5,0.5],
-					"__tags": [],
-					"__tile": null,
-					"__smartColor": "#FFFFFF",
-					"__worldX": -160,
-					"__worldY": 344,
-					"iid": "f2949410-8990-11ee-83cb-0d5b74fd95d5",
-					"width": 704,
-					"height": 688,
-					"defUid": 394,
-					"px": [352,344],
-					"fieldInstances": [
-						{ "__identifier": "follow_player", "__type": "Bool", "__value": false, "__tile": null, "defUid": 397, "realEditorValues": [] },
-						{ "__identifier": "use_confiner", "__type": "Bool", "__value": false, "__tile": null, "defUid": 398, "realEditorValues": [] }
 					]
 				}
 			]

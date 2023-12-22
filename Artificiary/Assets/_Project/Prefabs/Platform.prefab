@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 145263860826421783}
   - component: {fileID: 3875116625867083414}
   - component: {fileID: 5441215125645871210}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
+  col: {fileID: 0}
   state:
     velocity: {x: 0, y: 0}
     grounded: 0
@@ -252,8 +253,7 @@ MonoBehaviour:
     baseValue: 1
   volume: 1
   gravity: {x: 0, y: 0}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0.4
   drag:
@@ -261,6 +261,7 @@ MonoBehaviour:
       baseValue: 0.1
     y:
       baseValue: 0.1
+  immersedOffset: 0
   waterCol: {fileID: 0}
   waterLayer:
     serializedVersion: 2

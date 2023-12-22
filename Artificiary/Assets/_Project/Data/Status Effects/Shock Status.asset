@@ -15,14 +15,14 @@ MonoBehaviour:
   data:
     dmgPerTick:
       value: 0
-      type: 0
+      type: 12
       triggersIFrames: 0
       triggersStun: 0
     tickTime: 2
     expires: 1
     duration: 12
     electroBlast: {fileID: 3492715842263141201, guid: 9ba4f67c6c4f0594d9edc62d5055043e, type: 3}
-    spreadRadius: 2
+    spreadRadius: 3
     spreadChance: 1
     shockPFX: {fileID: 1194698839081208875, guid: a06d732c425d842498de1a58b1a381ee, type: 3}
     shockProcPFX: {fileID: 0}

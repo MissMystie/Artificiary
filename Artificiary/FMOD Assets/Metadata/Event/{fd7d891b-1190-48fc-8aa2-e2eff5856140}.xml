@@ -5,7 +5,7 @@
 			<value>rock_wall_impact</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4004a01e-25cd-4dbd-9d3b-9cca11be87b6}</destination>
@@ -56,7 +56,14 @@
 			<destination>{3c3fe18a-d873-41ef-9509-999df8dc343d}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{113ab84c-0abd-47c8-a45e-3a0fa23cc52d}" />
+	<object class="EventAutomatableProperties" id="{113ab84c-0abd-47c8-a45e-3a0fa23cc52d}">
+		<property name="minimumDistance">
+			<value>20</value>
+		</property>
+		<property name="maximumDistance">
+			<value>30</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{55a3ae12-0344-4057-bc8a-795443a02b71}" />
 	<object class="GroupTrack" id="{e71696ce-dbe0-48d9-89cf-b3da20a872d7}">
 		<relationship name="modules">
@@ -122,6 +129,7 @@
 	<object class="MixerBusEffectChain" id="{1fccfbde-4413-4b75-af29-33f0d3b6d2a5}">
 		<relationship name="effects">
 			<destination>{2c39850d-aa40-48f7-ac36-ea9acc2a12ef}</destination>
+			<destination>{840659f2-54a2-426b-8762-00ee1361d12f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a46e8130-d86c-453f-a3f0-7fde37b58ccb}" />
@@ -141,6 +149,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{6d8c6960-61fb-4a93-afb2-0a72efec8fa4}" />
 	<object class="MixerBusFader" id="{2c39850d-aa40-48f7-ac36-ea9acc2a12ef}" />
+	<object class="SpatialiserEffect" id="{840659f2-54a2-426b-8762-00ee1361d12f}" />
 	<object class="AutomationPoint" id="{d743fbb4-ee6f-4662-988e-a7745d6da8e2}">
 		<property name="position">
 			<value>2</value>

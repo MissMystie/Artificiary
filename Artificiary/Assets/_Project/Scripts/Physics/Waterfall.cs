@@ -1,14 +1,22 @@
+using FMOD.Studio;
+using FMODUnity;
+using LDtkUnity;
 using Mystie.ChemEngine;
+using Mystie.Systems;
 using Mystie.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mystie
+namespace Mystie.Logic
 {
-    public class Waterfall : MonoBehaviour
+    [RequireComponent(typeof(Collider2D))]
+    public class Waterfall : Device, ILDtkImportedFields
     {
+        [SerializeField] protected bool _open;
+        [SerializeField] protected Collider2D col;
+        [SerializeField] protected SpriteRenderer sprite;
         [SerializeField] protected FieldController controller;
         [SerializeField] protected FieldController source;
         [SerializeField] protected float flowVolume = 1.0f;
@@ -16,23 +24,68 @@ namespace Mystie
 
         protected FieldController field;
 
+        [SerializeField] protected EventReference waterfallLoop;
+
+        protected EventInstance waterfallInstance;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            if (col == null) col = GetComponent<Collider2D>();
+
+            if (!waterfallLoop.IsNull)
+                waterfallInstance = RuntimeManager.CreateInstance(waterfallLoop);
+            RuntimeManager.AttachInstanceToGameObject(waterfallInstance, transform);
+        }
+
         private void FixedUpdate()
         {
-            float volumeDelta = flowVolume * Time.deltaTime;
-
-            if (source != null)
+            if (!_on || (_open && source != null && source.IsEmpty))
             {
-                volumeDelta = -source.ChangeVolume(-volumeDelta);
+                Close();
+            }
+            else if (_on && !_open && (source == null || !source.IsEmpty))
+            {
+                Open();
             }
 
-            if (field != null)
+            if (_open)
             {
-                field.ChangeVolume(volumeDelta);
+                float volumeDelta = flowVolume * Time.deltaTime;
+
+                if (source != null)
+                {
+                    volumeDelta = -source.ChangeVolume(-volumeDelta);
+                }
+
+                if (field != null)
+                {
+                    field.ChangeVolume(volumeDelta);
+                }
             }
+        }
+
+        public void Open()
+        {
+            _open = true;
+            controller.enabled = true;
+            sprite.gameObject.SetActive(true);
+            waterfallInstance.start();
+            col.enabled = true;
+        }
+
+        public void Close()
+        {
+            _open = false;
+            controller.enabled = false;
+            sprite.gameObject.SetActive(false);
+            waterfallInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            col.enabled = false;
         }
 
         private void Reset()
         {
+            col = GetComponent<Collider2D>();
             controller = GetComponent<FieldController>();
         }
 
@@ -52,6 +105,20 @@ namespace Mystie
             {
                 field = null;
             }
+        }
+
+        public override void OnLDtkImportFields(LDtkFields fields)
+        {
+            base.OnLDtkImportFields(fields);
+
+            LDtkReferenceToAnEntityInstance sourceEntity;
+            
+            if (fields.TryGetEntityReference("source", out sourceEntity) && sourceEntity != null)
+            {
+                source = sourceEntity.FindEntity()?.gameObject?.GetComponent<FieldController>();
+            }
+            
+            fields.TryGetFloat("rate", out flowVolume);
         }
     }
 }

@@ -1,13 +1,15 @@
+using LDtkUnity;
 using Mystie.Logic;
 using Mystie.Utils;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Mystie
 {
-    public class PressurePlate : LogicBehavior
+    public class PressurePlate : LogicBehavior, ILDtkImportedFields
     {
         [SerializeField] protected LayerMask triggerMask = -1;
 
@@ -42,6 +44,15 @@ namespace Mystie
         {
             // removes the collider if it's present in the list of colliders
             _targets.Remove(col); 
+        }
+
+        public override void OnLDtkImportFields(LDtkFields fields)
+        {
+            base.OnLDtkImportFields(fields);
+
+            float rot = 0f;
+            fields.TryGetFloat("rotation", out rot);
+            transform.eulerAngles = new Vector3(0,0,rot);
         }
     }
 }

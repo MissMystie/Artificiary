@@ -4991,6 +4991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
+  col: {fileID: 0}
   state:
     velocity: {x: 0, y: 0}
     grounded: 0
@@ -5009,10 +5010,9 @@ MonoBehaviour:
   applyDrag: 1
   mass:
     baseValue: 1.5
-  volume: 1
+  volume: 0.5
   gravity: {x: 0, y: -10}
-  velocity: {x: 0, y: 0}
-  addedVelocity: {x: 0, y: 0}
+  localVelocity: {x: 0, y: 0}
   friction:
     baseValue: 0
   drag:
@@ -5020,6 +5020,7 @@ MonoBehaviour:
       baseValue: 0.005
     y:
       baseValue: 0
+  immersedOffset: 0
   waterCol: {fileID: 0}
   waterLayer:
     serializedVersion: 2
@@ -5045,7 +5046,7 @@ MonoBehaviour:
   col: {fileID: 4673749931780136098}
   dealsDmg: 1
   dmg:
-    value: 0
+    value: 1
     type: 10
     triggersIFrames: 1
     triggersStun: 1
@@ -5058,6 +5059,7 @@ MonoBehaviour:
   disableOnDmgDealt: 1
   damageFX: {fileID: 3233997203617828965, guid: cf1a2c456ed87ab4f82c86d089bb8354, type: 3}
   showDebug: 1
+  hurtbox: {fileID: 0}
   minVelocity: 0
   disableOnContact: 1
   obstacleMask:
@@ -5066,6 +5068,7 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 912
+  dmgSelf: 0
 --- !u!114 &8742233099267050801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,6 +5138,7 @@ MonoBehaviour:
   - {fileID: 9179649754925234390}
   - {fileID: 0}
   - {fileID: 0}
+  systems: []
   shape: 1
   _sprite: {fileID: 0}
   _col: {fileID: 0}
@@ -10542,6 +10546,7 @@ MonoBehaviour:
   - {fileID: 939752757010466520}
   - {fileID: 6322682327609377501}
   - {fileID: 2851873061431055223}
+  systems: []
   shape: 1
   _sprite: {fileID: 0}
   _col: {fileID: 0}

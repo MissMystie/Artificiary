@@ -17,7 +17,7 @@ MonoBehaviour:
     accMod:
       _rate: 0.15
     frictionMod:
-      _rate: 0.1
+      _rate: 0.05
     frozenPFX: {fileID: 366695169004246644, guid: 4b6b1a55d6235e14985f4af1e70a4ae3, type: 3}
     frozenMat: {fileID: 2100000, guid: f9488ddc58be03446beef575c9c5e4d0, type: 2}
     freezeSFX:

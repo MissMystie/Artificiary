@@ -145,26 +145,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _on: 0
+  _locked: 0
   _invertOutput: 0
   onAnimParam: on
+  toggleAnimParam: Toggle
   onAnimState: on
   onSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1891636635
+      Data2: 1120271633
+      Data3: -1387756617
+      Data4: -481098691
+    Path: event:/sfx/interactible/pressure plate/pressure_plate_on
   onFX: {fileID: 0}
   offAnimState: off
   offSFX:
     Guid:
+      Data1: 990184875
+      Data2: 1225538131
+      Data3: 172400554
+      Data4: -1232539072
+    Path: event:/sfx/interactible/pressure plate/pressure_plate_off
+  offFX: {fileID: 0}
+  toggleSFX:
+    Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  offFX: {fileID: 0}
+  toggleFX: {fileID: 0}
+  onLoop:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   showDebug: 1
   triggerMask:
     serializedVersion: 2

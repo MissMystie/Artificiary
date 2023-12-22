@@ -51,8 +51,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2000
 --- !u!114 &-8649263189567053308
 MonoBehaviour:
@@ -78,8 +78,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1125
 --- !u!114 &-8551003228405960596
 MonoBehaviour:
@@ -105,8 +105,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1600
 --- !u!114 &-8536272220629692020
 MonoBehaviour:
@@ -159,9 +159,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 500
 --- !u!114 &-8360426941793808527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +213,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1500
 --- !u!114 &-7275069217481152678
 MonoBehaviour:
@@ -267,8 +267,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1149
 --- !u!114 &-7166277255418646402
 MonoBehaviour:
@@ -345,11 +345,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2983
 --- !u!114 &-6905998860139132231
 MonoBehaviour:
@@ -375,9 +375,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 200
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 175
 --- !u!114 &-6770307873375931396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,9 +402,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2500
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 2100
 --- !u!114 &-6570191698908948164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,8 +456,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 500
 --- !u!114 &-6391528405471017071
 MonoBehaviour:
@@ -483,8 +483,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1100
 --- !u!114 &-6331073793378899366
 MonoBehaviour:
@@ -507,11 +507,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 6000
 --- !u!114 &-6292312998474920543
 MonoBehaviour:
@@ -564,8 +564,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2000
 --- !u!114 &-5780198410102881958
 MonoBehaviour:
@@ -591,8 +591,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2500
 --- !u!114 &-5762825623002088148
 MonoBehaviour:
@@ -645,9 +645,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 1400
 --- !u!114 &-5394837719188839121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,8 +672,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 7500
 --- !u!114 &-5284354281154021908
 MonoBehaviour:
@@ -726,8 +726,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 500
 --- !u!114 &-5166784988017710323
 MonoBehaviour:
@@ -753,8 +753,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 762
 --- !u!114 &-5119939564021663398
 MonoBehaviour:
@@ -780,8 +780,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1500
 --- !u!114 &-4939013938226339449
 MonoBehaviour:
@@ -807,8 +807,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1250
 --- !u!114 &-4762256798264559383
 MonoBehaviour:
@@ -834,8 +834,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2312
 --- !u!114 &-4756589087436007691
 MonoBehaviour:
@@ -861,8 +861,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &-4607548608161182907
 MonoBehaviour:
@@ -886,11 +886,11 @@ MonoBehaviour:
   - {fileID: -3831187590252052720}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5000
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 2800
 --- !u!114 &-4505595635650800120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,8 +915,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2000
 --- !u!114 &-4304025335971579430
 MonoBehaviour:
@@ -969,8 +969,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 500
 --- !u!114 &-3927810414923478477
 MonoBehaviour:
@@ -1050,8 +1050,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1137
 --- !u!114 &-3831187590252052720
 MonoBehaviour:
@@ -1068,10 +1068,10 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638374647428450195
+  lastModified: 638382520503435350
   FileSizes:
   - Name: Desktop
-    Value: 42795744
+    Value: 43081600
   Exists: 1
 --- !u!114 &-3561620009999752672
 MonoBehaviour:
@@ -1124,8 +1124,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2600
 --- !u!114 &-2690380264188860600
 MonoBehaviour:
@@ -1232,8 +1232,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1750
 --- !u!114 &-1964874683858880678
 MonoBehaviour:
@@ -1259,8 +1259,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 300
 --- !u!114 &-1900975638848007048
 MonoBehaviour:
@@ -1286,8 +1286,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 13013
 --- !u!114 &-1370129290336778471
 MonoBehaviour:
@@ -1340,8 +1340,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 54857
 --- !u!114 &-1007556310335262367
 MonoBehaviour:
@@ -1394,8 +1394,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 800
 --- !u!114 &-761882183138382428
 MonoBehaviour:
@@ -1421,9 +1421,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4250
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 210
 --- !u!114 &-446369472301388313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,9 +1448,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1699
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 1750
 --- !u!114 &-433944396784377411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,8 +1502,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1500
 --- !u!114 &-272601217777598206
 MonoBehaviour:
@@ -1526,11 +1526,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 6000
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1585,7 +1585,6 @@ MonoBehaviour:
   - {fileID: -6391528405471017071}
   - {fileID: -2690380264188860600}
   - {fileID: -7138883820902760040}
-  - {fileID: 8464156577455472910}
   - {fileID: -5284354281154021908}
   - {fileID: 9026157954443770954}
   - {fileID: -3927810414923478477}
@@ -1667,12 +1666,14 @@ MonoBehaviour:
   - {fileID: 6183700963393062526}
   - {fileID: -433944396784377411}
   - {fileID: 1211721016704516758}
+  - {fileID: 1118607680718317482}
+  - {fileID: 9023352351225137904}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3831187590252052720}
   StringsBanks:
   - {fileID: 2791742554342978610}
-  cacheTime: 638374647428505247
+  cacheTime: 638382520503495396
   cacheVersion: 131605
 --- !u!114 &73406048051109517
 MonoBehaviour:
@@ -1698,8 +1699,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 0
 --- !u!114 &284964753893905164
 MonoBehaviour:
@@ -1725,8 +1726,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 700
 --- !u!114 &346275590535069826
 MonoBehaviour:
@@ -1752,8 +1753,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 700
 --- !u!114 &393151415376236139
 MonoBehaviour:
@@ -1779,8 +1780,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1500
 --- !u!114 &477417792028306432
 MonoBehaviour:
@@ -1806,8 +1807,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &695586281767618527
 MonoBehaviour:
@@ -1832,7 +1833,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2500225211540949284}
   MinDistance: 1
   MaxDistance: 20
   Length: 375
@@ -1860,8 +1862,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 451
 --- !u!114 &1015897164618736612
 MonoBehaviour:
@@ -1887,9 +1889,37 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 16000
+--- !u!114 &1118607680718317482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/player/footsteps/Land/player_land
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/player/footsteps/Land/player_land
+  Guid:
+    Data1: 1880317539
+    Data2: 1083137736
+    Data3: -184520547
+    Data4: 1002573099
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6279661952253039816}
   MinDistance: 1
   MaxDistance: 20
-  Length: 16000
+  Length: 800
 --- !u!114 &1163507003348449417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,8 +1944,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2000
 --- !u!114 &1211721016704516758
 MonoBehaviour:
@@ -1941,8 +1971,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1375
 --- !u!114 &1439725526605805917
 MonoBehaviour:
@@ -2022,8 +2052,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &1773551223588231017
 MonoBehaviour:
@@ -2049,8 +2079,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 56006
 --- !u!114 &1796141416852780673
 MonoBehaviour:
@@ -2076,8 +2106,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1400
 --- !u!114 &1863551367879008722
 MonoBehaviour:
@@ -2103,8 +2133,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1044
 --- !u!114 &1879884365189585878
 MonoBehaviour:
@@ -2127,11 +2157,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 4000
 --- !u!114 &2138595128053532778
 MonoBehaviour:
@@ -2157,9 +2187,36 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1149
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 2000
+--- !u!114 &2500225211540949284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/surface
+  m_EditorClassIdentifier: 
+  Name: surface
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1929727139
+    data2: 1758766291
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Metal
+  - Rock
+  Exists: 1
 --- !u!114 &2791742554342978610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2175,10 +2232,10 @@ MonoBehaviour:
   Path: FMOD Assets/Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638374647428505247
+  lastModified: 638382520503495396
   FileSizes:
   - Name: Desktop
-    Value: 6762
+    Value: 6852
   Exists: 1
 --- !u!114 &2807388965413355371
 MonoBehaviour:
@@ -2204,8 +2261,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &3003113797743282396
 MonoBehaviour:
@@ -2258,8 +2315,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2784
 --- !u!114 &3302990861859590692
 MonoBehaviour:
@@ -2285,8 +2342,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2514
 --- !u!114 &3407752356356543820
 MonoBehaviour:
@@ -2312,8 +2369,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 12000
 --- !u!114 &3587682938212906944
 MonoBehaviour:
@@ -2339,8 +2396,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2125
 --- !u!114 &3655628749364497525
 MonoBehaviour:
@@ -2366,8 +2423,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2000
 --- !u!114 &3753662063767385066
 MonoBehaviour:
@@ -2393,8 +2450,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1888
 --- !u!114 &3784659429613741237
 MonoBehaviour:
@@ -2420,9 +2477,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1926
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 1626
 --- !u!114 &3788462509663825992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,8 +2504,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 780
 --- !u!114 &3895961103766918824
 MonoBehaviour:
@@ -2501,8 +2558,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 800
 --- !u!114 &4335019679155193550
 MonoBehaviour:
@@ -2555,8 +2612,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 10600
 --- !u!114 &4597948873741300108
 MonoBehaviour:
@@ -2582,8 +2639,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 718
 --- !u!114 &4844324783562744453
 MonoBehaviour:
@@ -2609,8 +2666,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 500
 --- !u!114 &5154317411890276651
 MonoBehaviour:
@@ -2632,13 +2689,13 @@ MonoBehaviour:
     Data4: 1367310715
   Banks:
   - {fileID: -3831187590252052720}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 2359
 --- !u!114 &5241881180820916929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,8 +2720,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 800
 --- !u!114 &5414804608647568148
 MonoBehaviour:
@@ -2690,8 +2747,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 12000
 --- !u!114 &5765697812437408968
 MonoBehaviour:
@@ -2717,8 +2774,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 850
 --- !u!114 &5770991848958974073
 MonoBehaviour:
@@ -2744,8 +2801,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 300
 --- !u!114 &5850510484728200280
 MonoBehaviour:
@@ -2771,8 +2828,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 114065
 --- !u!114 &6069040741297749478
 MonoBehaviour:
@@ -2798,8 +2855,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 246
 --- !u!114 &6183700963393062526
 MonoBehaviour:
@@ -2825,9 +2882,36 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1125
+--- !u!114 &6279661952253039816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/player_land/surface
+  m_EditorClassIdentifier: 
+  Name: surface
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1929727139
+    data2: 1758766291
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Metal
+  - Rock
+  Exists: 1
 --- !u!114 &6998641743387914903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2933,8 +3017,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 40
   Length: 94404
 --- !u!114 &7593872931326420514
 MonoBehaviour:
@@ -2960,8 +3044,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &7630289922261138490
 MonoBehaviour:
@@ -3014,8 +3098,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 16000
 --- !u!114 &7742572703820623747
 MonoBehaviour:
@@ -3038,11 +3122,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 3220
 --- !u!114 &7920336757511576604
 MonoBehaviour:
@@ -3068,8 +3152,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1125
 --- !u!114 &8022432500825626822
 MonoBehaviour:
@@ -3092,11 +3176,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1400
 --- !u!114 &8155070371863578453
 MonoBehaviour:
@@ -3119,11 +3203,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 3098
 --- !u!114 &8222177693090476472
 MonoBehaviour:
@@ -3176,8 +3260,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &8360069818309354304
 MonoBehaviour:
@@ -3203,36 +3287,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 800
---- !u!114 &8464156577455472910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ambiance/ambiance_water_iddle
-  m_EditorClassIdentifier: 
-  Path: event:/ambiance/ambiance_water_iddle
-  Guid:
-    Data1: 214759228
-    Data2: 1104226025
-    Data3: 500539009
-    Data4: 428695248
-  Banks:
-  - {fileID: -3831187590252052720}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 128000
 --- !u!114 &8705543130413746875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,11 +3311,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -3831187590252052720}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 2896
 --- !u!114 &8924484387867685043
 MonoBehaviour:
@@ -3284,9 +3341,36 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 20
+  MaxDistance: 30
+  Length: 530
+--- !u!114 &9023352351225137904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambiance/ambiance_water_idle
+  m_EditorClassIdentifier: 
+  Path: event:/ambiance/ambiance_water_idle
+  Guid:
+    Data1: 214759228
+    Data2: 1104226025
+    Data3: 500539009
+    Data4: 428695248
+  Banks:
+  - {fileID: -3831187590252052720}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 530
+  Length: 128000
 --- !u!114 &9026157954443770954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,8 +3395,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1000
 --- !u!114 &9029524267116041073
 MonoBehaviour:
@@ -3338,8 +3422,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 817
 --- !u!114 &9160082016614235245
 MonoBehaviour:
@@ -3392,6 +3476,6 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 20
+  MaxDistance: 30
   Length: 1500

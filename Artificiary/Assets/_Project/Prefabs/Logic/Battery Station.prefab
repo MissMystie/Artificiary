@@ -50,6 +50,7 @@ MonoBehaviour:
   effects:
   - {fileID: 8590406510084893142}
   - {fileID: 1958659290691814476}
+  systems: []
   shape: 2
   _sprite: {fileID: 5655700342223861327}
   _col: {fileID: 0}
@@ -4881,7 +4882,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4897,13 +4898,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -4960,6 +4963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effects: []
+  systems: []
   shape: 1
   _sprite: {fileID: 0}
   _col: {fileID: 0}
@@ -9790,7 +9794,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9806,13 +9810,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -9922,6 +9928,91 @@ MonoBehaviour:
   minIntensity: 0.2
   maxIntensity: 0.6
   smoothing: 5
+--- !u!1 &5698347447851650894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866483228866746668}
+  - component: {fileID: 731913332434767885}
+  - component: {fileID: 2953610302527104837}
+  m_Layer: 11
+  m_Name: ElectroField
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &866483228866746668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698347447851650894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2968909133817883663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &731913332434767885
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698347447851650894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4
+--- !u!114 &2953610302527104837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698347447851650894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac08dd37c9a2b648b930d83ca19acfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 1
+  reapplyRate: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6747025917730086576
 GameObject:
   m_ObjectHideFlags: 0
@@ -9936,6 +10027,7 @@ GameObject:
   - component: {fileID: 5655700342223861327}
   - component: {fileID: 946481302413136276}
   - component: {fileID: 7072254920158766260}
+  - component: {fileID: 304575291338099805}
   - component: {fileID: 7944884127426503848}
   m_Layer: 9
   m_Name: Battery Station
@@ -9957,6 +10049,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 866483228866746668}
   - {fileID: 7479000038736479901}
   - {fileID: 6568000468104078239}
   - {fileID: 5597603913067450499}
@@ -10103,6 +10196,7 @@ MonoBehaviour:
   vulnerabilities:
     vulnerabilities: []
     resistAll: 0
+    resistKnockback: 0
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor: {r: 0, g: 1, b: 0, a: 1}
   hitFX: {fileID: 0}
@@ -10122,25 +10216,42 @@ MonoBehaviour:
   _locked: 0
   _invertOutput: 0
   onAnimParam: on
+  toggleAnimParam: Toggle
   onAnimState: on
   onSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1032798143
+      Data2: 1185091537
+      Data3: 1943366296
+      Data4: 1344350525
+    Path: event:/sfx/interactible/battery station/battery_station_start
   onFX: {fileID: 0}
   offAnimState: off
   offSFX:
     Guid:
+      Data1: -1924005307
+      Data2: 1314139278
+      Data3: 2000508319
+      Data4: 946231550
+    Path: event:/sfx/interactible/battery station/battery_station_stop
+  offFX: {fileID: 0}
+  toggleSFX:
+    Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  offFX: {fileID: 0}
+  toggleFX: {fileID: 0}
+  onLoop:
+    Guid:
+      Data1: -1664216181
+      Data2: 1242999500
+      Data3: 1489330058
+      Data4: -1885231107
+    Path: event:/sfx/interactible/battery station/battery_station_loop
   showDebug: 1
+  canBeCharged: 1
   damageType: 12
   charge:
     element: 2
@@ -10148,6 +10259,19 @@ MonoBehaviour:
   value: 0
   maxValue: 1
   unlimitedCharges: 0
+--- !u!114 &304575291338099805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747025917730086576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768f36456c395aa4086c52d1e52a96d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusList: {fileID: 11400000, guid: 1dda23708d8ee224fa9ae788cd544e26, type: 2}
 --- !u!95 &7944884127426503848
 Animator:
   serializedVersion: 5
@@ -10216,6 +10340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effects: []
+  systems: []
   shape: 1
   _sprite: {fileID: 0}
   _col: {fileID: 0}
@@ -14995,7 +15120,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -15011,13 +15136,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

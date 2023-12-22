@@ -54,6 +54,18 @@ namespace Mystie.Systems
 
             return 1f;
         }
+    
+        public void PlayOneShot(EventReference sound, Vector3 worldPos)
+        {
+            RuntimeManager.PlayOneShot(sound, worldPos);
+
+        }
+
+        public EventInstance CreateEventInstance(EventReference eventReference) 
+        {
+            EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+            return eventInstance;
+        }
     }
 
     [System.Serializable]

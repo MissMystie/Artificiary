@@ -265,7 +265,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,6 +294,90 @@ TextureImporter:
       bones: []
       spriteID: e8849e931c4256b4eb6749c5ef62addd
       internalID: -674673841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ability_ui_frost_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc63329d435c72a408d99b962e5eb888
+      internalID: 1897310929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ability_ui_frost_idle_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60461341438962e4ba95216be0799e89
+      internalID: -422019253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ability_ui_droplet_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1d5d9018247c847a5f103c3e9cdb4f
+      internalID: 646589018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ability_ui_droplet_idle_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c7756c3c755c2489bf2fa39d3231fa
+      internalID: -2031280965
       vertices: []
       indices: 
       edges: []
@@ -311,11 +395,15 @@ TextureImporter:
     nameFileIdTable:
       ability_ui_container: -709083075
       ability_ui_container_small: -508812673
+      ability_ui_droplet_idle_0: 646589018
+      ability_ui_droplet_idle_1: -2031280965
       ability_ui_fire_burst_0: 598446631
       ability_ui_fire_burst_1: 413687633
       ability_ui_fire_burst_2: -905728291
       ability_ui_fire_idle_0: -1617897608
       ability_ui_fire_idle_1: 511042100
+      ability_ui_frost_idle_0: 1897310929
+      ability_ui_frost_idle_1: -422019253
       ability_ui_shock_idle_0: 1110186070
       ability_ui_shock_idle_1: -674673841
       lever_0: 744272024

@@ -1,6 +1,9 @@
+using FMOD.Studio;
+using FMODUnity;
 using Mystie.ChemEngine;
 using Mystie.Logic;
 using Mystie.Utils;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,9 +32,20 @@ namespace Mystie.Physics
 
         [Space]
 
+        public StatusType frictionlessStatus;
         public StatusType lockedStatus;
 
+        protected bool noFriction = false;
+
         public float Circumference { get => Mathf.PI * radius; }
+
+        [Foldout("Feedback")]
+        [SerializeField] protected EventReference wheelLoop;
+        [Foldout("Feedback")]
+        [SerializeField] protected EventReference fastWheelLoop;
+
+        protected EventInstance wheelLoopInstance;
+        protected EventInstance fastWheelLoopInstance;
 
         protected override void Awake()
         {
@@ -42,6 +56,14 @@ namespace Mystie.Physics
             }
 
             base.Awake();
+
+            if (!wheelLoop.IsNull)
+                wheelLoopInstance = RuntimeManager.CreateInstance(wheelLoop);
+            RuntimeManager.AttachInstanceToGameObject(wheelLoopInstance, transform);
+
+            if (!fastWheelLoop.IsNull)
+                fastWheelLoopInstance = RuntimeManager.CreateInstance(fastWheelLoop);
+            RuntimeManager.AttachInstanceToGameObject(fastWheelLoopInstance, transform);
         }
 
         protected override void OnEnable()
@@ -73,7 +95,7 @@ namespace Mystie.Physics
                     platform.body.Move(moveAmount);
                 }
 
-                rotSpeed *= (1f - friction);
+                if (!noFriction) rotSpeed *= (1f - friction);
                 if (Mathf.Abs(rotSpeed) < minSpeed) rotSpeed = 0f;
                 rotSpeed = Mathf.Clamp(rotSpeed, -maxRotSpeed, maxRotSpeed);
             }
@@ -109,6 +131,11 @@ namespace Mystie.Physics
             {
                 if (!_locked) SetLocked(true);
             }
+
+            if (statusInflicted == frictionlessStatus)
+            {
+                noFriction = true;
+            }
         }
 
         protected void OnStatusExpired(StatusType statusInflicted)
@@ -116,6 +143,11 @@ namespace Mystie.Physics
             if (statusInflicted == lockedStatus)
             {
                 if (_locked) SetLocked(false);
+            }
+
+            if (statusInflicted == frictionlessStatus)
+            {
+                noFriction = false;
             }
         }
 

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{0cccf73c-26e9-41d1-819e-d51dd05e8d19}">
 		<property name="name">
-			<value>ambiance_water_iddle</value>
+			<value>ambiance_water_idle</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -101,7 +101,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{fee19629-ce69-4f47-a4ff-0f39fbac663e}">
 		<property name="volume">
-			<value>-30</value>
+			<value>-17.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>

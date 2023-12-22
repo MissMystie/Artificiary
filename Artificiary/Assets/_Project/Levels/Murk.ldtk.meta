@@ -48,6 +48,8 @@ ScriptedImporter:
     _asset: {fileID: 419666080107785807, guid: c11aa746560f48a498e6126aae539cd8, type: 3}
   - _key: Furnace
     _asset: {fileID: 5989627731290050275, guid: 5a5de0227f1d6324da3222f5ad33d154, type: 3}
+  - _key: Freezer
+    _asset: {fileID: 5989627731290050275, guid: b23714ce57c634c49b82c5fd454a54e4, type: 3}
   - _key: Bounce_pad
     _asset: {fileID: 1783493426702574042, guid: aadbb35643678404b97233be58248f15, type: 3}
   - _key: Fan
@@ -58,6 +60,22 @@ ScriptedImporter:
     _asset: {fileID: 6402714674190038604, guid: 10a38ecd19070a94094b54de992f5112, type: 3}
   - _key: Camera_Zone
     _asset: {fileID: 6787278459595555779, guid: 8f9e74f3b24d2c344b81880b4dc35997, type: 3}
+  - _key: Valve
+    _asset: {fileID: 5304116766806012438, guid: 8ffd65c2ba2373646b47c5b517f1aef7, type: 3}
+  - _key: Wheel
+    _asset: {fileID: 1752375707323434605, guid: 2e196da4e9e94154780bb0cba3960c69, type: 3}
+  - _key: Waterfall
+    _asset: {fileID: 5868907025618831844, guid: e8ebeac261de585408d47d3202064456, type: 3}
+  - _key: Bush
+    _asset: {fileID: 2967889807110042466, guid: 2d372f5edc8f93d44b5a8b031a09916a, type: 3}
+  - _key: Drain
+    _asset: {fileID: 7667308985413517246, guid: 8dc248a6220f5bd41acc09fae80a73e6, type: 3}
+  - _key: Pillar
+    _asset: {fileID: 6622021251034964473, guid: bd62aee19924628428c83523f1860b2d, type: 3}
+  - _key: Cable
+    _asset: {fileID: 3229749174052042027, guid: 4c90af31087d972418f1d81bb119c66f, type: 3}
+  - _key: Generator
+    _asset: {fileID: 2072774230778408135, guid: 9133725ad5366274d8785fd5c5c84a85, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

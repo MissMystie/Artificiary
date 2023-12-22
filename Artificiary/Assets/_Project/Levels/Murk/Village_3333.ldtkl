@@ -29,6 +29,31 @@
 	"fieldInstances": [],
 	"layerInstances": [
 		{
+			"__identifier": "Camera",
+			"__type": "Entities",
+			"__cWid": 52,
+			"__cHei": 24,
+			"__gridSize": 16,
+			"__opacity": 1,
+			"__pxTotalOffsetX": 0,
+			"__pxTotalOffsetY": 0,
+			"__tilesetDefUid": null,
+			"__tilesetRelPath": null,
+			"iid": "8d144610-8990-11ee-8c24-8bd19afee76b",
+			"levelId": 348,
+			"layerDefUid": 413,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"visible": true,
+			"optionalRules": [],
+			"intGridCsv": [],
+			"autoLayerTiles": [],
+			"seed": 1823898,
+			"overrideTilesetUid": null,
+			"gridTiles": [],
+			"entityInstances": []
+		},
+		{
 			"__identifier": "Effectors",
 			"__type": "Entities",
 			"__cWid": 52,
@@ -334,7 +359,10 @@
 					"height": 16,
 					"defUid": 335,
 					"px": [432,320],
-					"fieldInstances": [{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] }]
+					"fieldInstances": [
+						{ "__identifier": "invert_output", "__type": "Bool", "__value": false, "__tile": null, "defUid": 345, "realEditorValues": [] },
+						{ "__identifier": "rotation", "__type": "Float", "__value": 0, "__tile": null, "defUid": 402, "realEditorValues": [] }
+					]
 				},
 				{
 					"__identifier": "Inverter",

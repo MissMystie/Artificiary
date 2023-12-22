@@ -25,7 +25,7 @@ namespace Mystie.Physics
         #region Variables
 
         public Entity entity;
-        public Collider2D col { get; private set; }
+        public Collider2D col;
         public PhysicsState state;
 
         #endregion
@@ -55,11 +55,11 @@ namespace Mystie.Physics
         public Vector2 localVelocity;
         public Stat friction = new Stat(0.4f);
         public StatV2 drag = new StatV2(.005f, 0);
+        public float immersedOffset = 0f;
 
-        public Vector2 Weight
-        {
-            get { return mass * gravity; }
-        }
+        public float YLevel { get => col.bounds.center.y + immersedOffset; }
+
+        public Vector2 Weight { get => mass * gravity; }
 
         private Vector3 lastPos;
         public Vector2 velocity { get; protected set; }
@@ -186,9 +186,11 @@ namespace Mystie.Physics
         public bool CheckImmersed()
         {
             bool wasImmersed = state.immersed;
-            bool isImmersed = state.inWater && col.bounds.center.y <= waterCol.bounds.max.y;
+            bool isImmersed = state.inWater && (YLevel <= waterCol.bounds.max.y);
 
             state.immersed = isImmersed;
+
+            state.atSurface = isImmersed && YLevel >= (waterCol.bounds.max.y - immersedOffset);
 
             return state.immersed;
         }
@@ -353,6 +355,24 @@ namespace Mystie.Physics
             {
                 state.inWater = false;
                 waterCol = null;
+            }
+        }
+
+        protected void Reset()
+        {
+            col = GetComponent<Collider2D>();
+        }
+
+        protected void OnDrawGizmosSelected()
+        {
+            if (!showDebug) return;
+
+            if (col != null)
+            {
+                Gizmos.color = Color.cyan;
+                Vector2 center = col.bounds.center.xy() + Vector2.up * immersedOffset;
+                Vector2 offset = Vector2.right * 0.5f;
+                Gizmos.DrawLine(center - offset, center + offset);
             }
         }
 

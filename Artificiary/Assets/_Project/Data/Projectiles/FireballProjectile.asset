@@ -25,7 +25,7 @@ MonoBehaviour:
       Data4: 58750197
     Path: event:/sfx/player/abilities/Fireball/player_fireball
   projectile: {fileID: 4608664112111611831, guid: 72ecab4ceff402842818eff61b814573, type: 3}
-  strength: 18
+  strength: 24
   aimType: 0
   fixedAngle: 0
   recoilStrength: 0

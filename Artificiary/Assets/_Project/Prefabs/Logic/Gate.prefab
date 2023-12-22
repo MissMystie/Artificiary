@@ -147,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -400215571
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2041149850, guid: 5a993702c6237ad4190802fc6ab4f857, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -176,14 +176,15 @@ MonoBehaviour:
   _locked: 0
   _invertOutput: 0
   onAnimParam: open
+  toggleAnimParam: Toggle
   onAnimState: open
   onSFX:
     Guid:
-      Data1: -1903416476
-      Data2: 1074580618
-      Data3: -351411070
-      Data4: -864695738
-    Path: event:/sfx/interactible/door/door_open
+      Data1: 1385714842
+      Data2: 1294485915
+      Data3: 1831610785
+      Data4: -1975966394
+    Path: event:/sfx/interactible/door/door_unlock
   onFX: {fileID: 0}
   offAnimState: closed
   offSFX:
@@ -194,6 +195,14 @@ MonoBehaviour:
       Data4: -1890089665
     Path: event:/sfx/interactible/door/door_close
   offFX: {fileID: 0}
+  toggleSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  toggleFX: {fileID: 0}
   showDebug: 1
   _input: {fileID: 0}
   _inputLock: {fileID: 0}

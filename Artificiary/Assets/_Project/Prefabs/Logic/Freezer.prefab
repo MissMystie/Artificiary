@@ -4803,7 +4803,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5069,6 +5069,7 @@ MonoBehaviour:
   vulnerabilities:
     vulnerabilities: []
     resistAll: 0
+    resistKnockback: 0
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   activeColor: {r: 0, g: 1, b: 0, a: 1}
   hitFX: {fileID: 0}
@@ -5088,25 +5089,42 @@ MonoBehaviour:
   _locked: 0
   _invertOutput: 0
   onAnimParam: on
+  toggleAnimParam: Toggle
   onAnimState: on
   onSFX:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -718151167
+      Data2: 1087971155
+      Data3: 1676800388
+      Data4: -1857481807
+    Path: event:/sfx/interactible/freezer/freezer_start
   onFX: {fileID: 0}
   offAnimState: off
   offSFX:
     Guid:
+      Data1: 1616852274
+      Data2: 1227684157
+      Data3: -131689595
+      Data4: 1346411351
+    Path: event:/sfx/interactible/freezer/freezer_stop
+  offFX: {fileID: 0}
+  toggleSFX:
+    Guid:
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
-  offFX: {fileID: 0}
+  toggleFX: {fileID: 0}
+  onLoop:
+    Guid:
+      Data1: 1025706212
+      Data2: 1267228999
+      Data3: -1241364065
+      Data4: -45910666
+    Path: event:/sfx/interactible/freezer/freezer_loop
   showDebug: 1
+  canBeCharged: 1
   damageType: 11
   charge:
     element: 3
@@ -9931,7 +9949,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 381627133
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0

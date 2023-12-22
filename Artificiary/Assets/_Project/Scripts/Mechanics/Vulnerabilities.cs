@@ -11,6 +11,7 @@ namespace Mystie
     {
         public List<Vulnerability> vulnerabilities = new List<Vulnerability>();
         public bool resistAll = false;
+        public bool resistKnockback = false;
 
         private Dictionary<DamageType, Vulnerability> vulnerabilitiesDict;
         private Dictionary<DamageType, Vulnerability> VulnerabilitiesDict
@@ -42,6 +43,13 @@ namespace Mystie
             if (VulnerabilitiesDict.ContainsKey(type)) 
                 return VulnerabilitiesDict[type].percent;
             else return resistAll ? 0f : 1f;
+        }
+
+        public bool ResistKnockback(DamageType type)
+        {
+            if (VulnerabilitiesDict.ContainsKey(type))
+                return VulnerabilitiesDict[type].resistKnockback;
+            else return resistKnockback ? true : false;
         }
 
         [System.Serializable]
